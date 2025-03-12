@@ -7,7 +7,7 @@ If you have any questions,welcome use discussion.
 
 
 
-#introduction to theory
+#introduction to Theory
 
 1.BCS theory
 
@@ -22,15 +22,13 @@ If you have any questions,welcome use discussion.
 6.Eliash-berg spectral function
 
 
-#introduction to First principle
+#introduction to The theory of First principle
 
-1.Density functional theory
+1.Density functional theory and Density-functional-perturbation theory
 
-2.Density-functional-perturbation theory
+2.Hellman-Feynman Theory
 
-3.Hellman-Feynman Theory
-
-4.Connected  electron-phonon coupling
+3.Connected  electron-phonon coupling
 
 
 
