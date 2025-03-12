@@ -61,7 +61,7 @@ If considering the normalization of the electron wavefunction, the second term c
 若考慮對電子wavefunction歸一化,則第二項可以消去:
 
 $$
-\int \phi^{*}(r_{i} ,R_{a}) \frac{\partial }{\partial R_{a}} \phi(r_{i} ,R_{a}) \, dr_{i} = \frac{1}{2} \frac{\partial }{\partial R_{a}} \int \phi^{*}(r_{i} ,R_{a}) \phi(r_{i} ,R_{a}) \, dr_{i}= 0
+\int \phi* (r_{i} ,R_{a}) \frac{\partial }{\partial R_{a}} \phi(r_{i} ,R_{a}) \, dr_{i} = \frac{1}{2} \frac{\partial }{\partial R_{a}} \int \phi^{*}(r_{i} ,R_{a}) \phi(r_{i} ,R_{a}) \, dr_{i}= 0
 $$
 
 Assuming that the electron is bound near the atomic nucleus, $\phi(r_{i} ,R_{a})$->$\phi(r_{i}-R_{a})$ and the first term can be written as:
@@ -74,7 +74,7 @@ $$
 = -\frac{m_{\text{electron}}}{m_{a}} \sum_{a=1}^{k} \frac{1}{2m_{\text{electron}}} \frac{\partial^2}{\partial r_i^2} \phi(r_{i}, R_{a}) \chi(R_{a})
 $$
 
-This term represents the kinetic energy of the electron at $R_{a}$. Due to the significant mass difference between the electron and the atomic nucleus, the value of $\frac{m_{electron}}{m_{a} }$ is approximately $10^{-4} to $10^{-5} times the electron's kinetic energy, so this term can also be neglected.
+This term represents the kinetic energy of the electron at $R_{a}$. Due to the significant mass difference between the electron and the atomic nucleus, the value of $\frac{m_{electron}}{m_{a} }$ is approximately $10^{-4}$ to $10^{-5}$ times the electron's kinetic energy, so this term can also be neglected.
 
 這項代表電子處於$R_{a}$的動能,由於電子和原子核的質量差距非常大,因此$\frac{m_{electron}}{m_{a} }$的值約為電子動能的$10^{-4} $ 至 $10^{-5} $倍,所以這項也能略去.
 
