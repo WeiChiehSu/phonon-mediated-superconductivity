@@ -34,6 +34,17 @@ If you have any questions,welcome use discussion.
 
 #tutorial for QE
 
-1.calculation
+1.How to install quantum-espresso
 
-2.Discussion on Convergence Properties
+2.calculation
+
+3.Discussion on Convergence Properties
+
+
+#Special Cases:
+
+SSCHA:
+
+1.SSCHA-Theory
+
+2.How to install SSCHA
