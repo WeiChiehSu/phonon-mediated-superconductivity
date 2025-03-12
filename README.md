@@ -5,6 +5,7 @@ This is a tutorial on QE calculations for phonon-mediated superconductivity (to 
 
 #introduction to theory
 1.BCS theory
+
 2.Born-Oppenheimer approximation
 3.harmonic approximation
 4.ELECTRON-PHONON COUPLING
