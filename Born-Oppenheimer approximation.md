@@ -53,12 +53,7 @@ The kinetic energy term for nuclear motion can eventually be simplified into thr
 處理核運動的動能項部分,最後能變成三項:
 
 $$
--\sum_{a=1 }^{k} \frac{1}{2m_{a}} \nabla_{R_{a}}^2 \left[ \phi (r_{i} ,R_{a}) \chi (R_{a}) \right] = -\sum_{a=1 }^{k} \frac{1}{2m_{a}} \nabla_{R_{a}} \left[ \nabla_{R_{a}} \phi (r_{i} ,R_{a}) \chi (R_{a}) + \phi (r_{i} ,R_{a}) \nabla_{R_{a}} \chi (R_{a}) \right]
-$$
-
-$$
-\nabla_{R_{a}} \left[ \nabla_{R_{a}} \phi (r_{i}, R_{a}) \chi (R_{a}) + \phi (r_{i}, R_{a}) \nabla_{R_{a}} \chi (R_{a}) \right] 
-= \nabla_{R_{a}}^2 \phi (r_{i}, R_{a}) \chi (R_{a}) + 2 \nabla_{R_{a}} \phi (r_{i}, R_{a}) \nabla_{R_{a}} \chi (R_{a}) + \phi (r_{i}, R_{a}) \nabla_{R_{a}}^2 \chi (R_{a})
+-\sum_{a=1 }^{k} \frac{1}{2m_{a}} \nabla_{R_{a}}^2 \left[ \phi (r_{i} ,R_{a}) \chi (R_{a}) \right] = -\sum_{a=1 }^{k} \frac{1}{2m_{a}} \nabla_{R_{a}} \left[ \nabla_{R_{a}}^2 \phi (r_{i}, R_{a}) \chi (R_{a}) + 2 \nabla_{R_{a}} \phi (r_{i}, R_{a}) \nabla_{R_{a}} \chi (R_{a}) + \phi (r_{i}, R_{a}) \nabla_{R_{a}}^2 \chi (R_{a}) \right]
 $$
 
 If considering the normalization of the electron wavefunction, the second term can be eliminated:
