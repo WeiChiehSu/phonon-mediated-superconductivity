@@ -1,4 +1,5 @@
 The Schrödinger equation and Hamiltonian of the (electron + nucleus) system:
+
 (電子+核)運動系統的Schrödinger equation和Hamilton:
 
 
