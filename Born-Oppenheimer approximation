@@ -1,1 +1,11 @@
 為了計算電子聲子耦合的影響，首先要了解(電子+核)運動系統的Schrödinger equation和Hamilton:
+```latex
+$$
+\widehat{H}\Psi (r_{i} ;R_{a} )=\varepsilon \Psi (r_{i} ;R_{a} )
+$$
+```
+```latex
+$$
+\widehat{H} =-\sum_{a=1 }^{k} \frac{\nabla^{2} _{R_{a}  }  } {2m_{a}} +\sum_{a=1 }^{k} \sum_{b>a }^{k} \frac{Z_{a}Z_{b} }{R_{ab}}-\sum_{i=1}^{n} \frac{\nabla^{2} _{r_{i}  }  } {2} +\sum_{i=1 }^{n} \sum_{j>i }^{n} \frac{1 }{r_{ij}}+ \sum_{i=1 }^{n} \sum_{a=1 }^{k} \frac{Z_{a} }{r_{ia}}
+$$
+```
