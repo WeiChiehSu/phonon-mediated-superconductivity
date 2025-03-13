@@ -172,7 +172,7 @@ echo -e "you are acquiring the resoures\n$(cat $SLURM_JOB_NODELIST)"
 
 source ~/intel/oneapi/setvars.sh
 
-export PATH=/home/l26111201/qe_code/qe-6.8/bin:$PATH
+export PATH=/home/XXXXXXXX/qe_code/qe-6.8/bin:$PATH
 
 echo -e "using MPI: mpiexec is \n$(type -p mpiexec)"
 
