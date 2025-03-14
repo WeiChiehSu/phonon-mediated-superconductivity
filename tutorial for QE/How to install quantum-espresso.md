@@ -13,6 +13,8 @@ sh ./l_BaseKit_p_2022.1.1.119_offline.sh
 
 sh ./l_HPCKit_p_2022.1.1.97_offline.sh
 
+########################################################################
+
 When we finish installing oneapi, we can start to install quantum espresso
 
 # download quantum espresso 6.8
