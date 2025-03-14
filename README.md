@@ -48,3 +48,8 @@ SSCHA:
 1.SSCHA-Theory
 
 2.How to install SSCHA
+
+---
+layout: default
+---
+
