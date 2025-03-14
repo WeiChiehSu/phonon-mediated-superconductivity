@@ -37,6 +37,8 @@ make epw
 
 when we finish installing quantum espresso 6.8, we need to add source ~/intel/oneapi/setvars.sh in the script to run quantum espresso 6.8 with oneapi.
 
+########################################################################
+
 That is example for PBS system and SLURM system:
 
 
