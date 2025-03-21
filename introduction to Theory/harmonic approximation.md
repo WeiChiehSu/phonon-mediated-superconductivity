@@ -2,6 +2,4 @@
 
 原子勢能振動曲線$V(r_{i}-R_{0})$:
 
-$$ 
-V(r_{i}-R_{0})= -V(r_{i}-R_{0})|_{r_{i}=R_{0}} -\frac{\partial V(r_{i}-R_{0})}{\partial r_{i}} (r_{i}-R_{0})|_{r_{i}=R_{0}}-\frac{1}{2!} \frac{\partial^{2}  V(r_{i}-R_{0})}{\partial^{2}  r_{i}} (r_{i}-R_{0})^{2}-\frac{1}{n!} \frac{\partial^{n}  V(r_{i}-R_{0})}{\partial^{n}  r_{i}} (r_{i}-R_{0})^{n}+....
-$$
+![公式](https://latex.codecogs.com/png.latex?V(r_{i}-R_{0})%3D-V(r_{i}-R_{0})|_{r_{i}%3DR_{0}}-\frac{\partial%20V(r_{i}-R_{0})}{\partial%20r_{i}}%20(r_{i}-R_{0})|_{r_{i}%3DR_{0}}-\frac{1}{2!}%20\frac{\partial^{2}%20V(r_{i}-R_{0})}{\partial^{2}%20r_{i}}%20(r_{i}-R_{0})^{2}-\frac{1}{n!}%20\frac{\partial^{n}%20V(r_{i}-R_{0})}{\partial^{n}%20r_{i}}%20(r_{i}-R_{0})^{n}+....)
