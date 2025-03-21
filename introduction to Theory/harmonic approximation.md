@@ -16,6 +16,21 @@ $V(r_{i}-R_{0})$可以近似成:
 
 C 稱為諧和力常數
 
+$$
+harmonic-phonon\left\{\begin{matrix} energy-temperature:independent\\ infinite-lifetime\end{matrix}\right.\Longrightarrow harmonic-defect
+$$
+
+$$
+Anharmonicity-effect\left\{\begin{matrix} energy-phonon-coupling\\ phonon-phonon-coupling\end{matrix}\right.\Longrightarrow \left\{\begin{matrix} energy-temperature:dependent\\ have-finite-lifetime\end{matrix}\right.
+$$
+
+$$
+Anharmonicity < harmonic \Longrightarrow Perturbation-theory;Anharmonicity > harmonic \Longrightarrow lose-efficacy
+$$
+$$
+Anharmonicity-effect\left\{\begin{matrix}light-ions-exist \\system-close-melting \\ferroelectric-phase-transition \\charge-density wave (CDW)\end{matrix}\right.
+$$
+
 # Harmonic approximation : phonon-dynamics matrix
 
 原子間存在諧和勢的一維原子鍊的示意圖,第j個cell內有兩個原子j,1和j,2,質量為m$_1$和m$_2$,偏移平衡點的位移為$u_{j_{1} }$和$u_{j_{2} }$,其Kinetic energy和potential為:
