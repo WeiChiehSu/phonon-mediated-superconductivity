@@ -21,13 +21,12 @@ $$
 
 $$
 \text{temperature: } r = \alpha (T - T_{c})
-\left\{
-\begin{array}{l}
-  T > T_{c}, \; r > 0 \\
-  T < T_{c}, \; r < 0
-\end{array}
-\right.
+\begin{cases}
+  T > T_{c}, & r > 0 \\
+  T < T_{c}, & r < 0
+\end{cases}
 $$
+
 
 
 $$
