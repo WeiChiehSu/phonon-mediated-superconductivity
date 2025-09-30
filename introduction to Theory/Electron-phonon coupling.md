@@ -123,5 +123,9 @@ $$
 $$
 
 $$
-根據Phonon dispersion,可知acoustic mode 在q=0時,\omega _{q}=0,即晶格不在振動,同時el-ph項將變為0,Hamilton將退化回Born-Oppenheimer approximation近似的形式.
+G_{q}=-\frac{1}{N_{p} }\frac{1}{\sqrt{2M\omega _{q}} }iqe^{i(k+q-k^{'} )r_{i} }V_{K-S}(q)
+$$
+
+$$
+根據Phonon{}dispersion,可知acoustic{}mode 在q=0時,\omega _{q}=0,即晶格不在振動,同時el-ph項將變為0,Hamilton將退化回Born-Oppenheimer{}approximation近似的形式.
 $$
