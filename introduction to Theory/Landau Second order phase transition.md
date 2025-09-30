@@ -1,8 +1,4 @@
-$$
-Order-parameter:\Psi \left\{\begin{matrix}order\ne 0 \\disorder=0\end{matrix}\right.\Longrightarrow \approx phase-transition:\Psi \approx 0
-$$
 
-$$
 \text{Order-parameter: }\;
 \Psi =
 \begin{cases}
