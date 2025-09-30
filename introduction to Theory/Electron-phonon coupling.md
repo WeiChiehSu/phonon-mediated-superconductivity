@@ -17,5 +17,5 @@ $$
 因此電子的Hamilton的最終形式為:
 
 $$
-\widehat{H}_{electron}= -\sum_{i=1}^{n} \frac{\nabla^{2} _{r_{i}  }  } {2} +V_{el_{r_{i}-R_{j}} }
+\widehat{H}_{electron}= -\sum_{i=1}^{n} \frac{\nabla^{2} _{r_{i}  }  } {2} +V_{el_{r_{i}-R_{j}} } ;
 $$
