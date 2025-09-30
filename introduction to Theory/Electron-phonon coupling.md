@@ -65,5 +65,5 @@ $$
 $$
 
 $$
-同時對電子的kohn-sham{} potential{}V_{K-S}(r_{i}-R_{j})進行Fouier transfrom (實空間\longrightarrow k空間):
+同時對電子的kohn-sham{} potential{}V_{K-S}(r_{i}-R_{j})進行Fouier{}transfrom (實空間\longrightarrow k空間):
 $$
