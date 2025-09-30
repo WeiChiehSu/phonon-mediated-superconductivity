@@ -1,1 +1,1 @@
-
+引入Born-Oppenheimer approximation後,電子的Hamilton被簡化為:
