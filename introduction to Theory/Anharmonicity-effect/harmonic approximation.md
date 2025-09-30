@@ -129,7 +129,7 @@ $$
 -c(e^{iqa}+1) & 2c
 \end{bmatrix}, \\
 \text{eigenvector: } \vec{A} = 
-\begin{bmatrix} A_1 & A_2 \end{bmatrix}, \\
+\begin{bmatrix} A_1 \\ A_2 \end{bmatrix}, \\
 [m] = 
 \begin{bmatrix}
 m_1 & 0 \\
