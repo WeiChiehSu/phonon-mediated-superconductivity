@@ -71,3 +71,11 @@ $$
 $$
 設自由單電子的能量為\frac{k^{2} }{2m},Fermi{}surface的電子能量為E_{F},則相對於Fermi{}surface的單電子能量為\varepsilon _{k} = \frac{k^{2} }{2m} -E_{F} ,則式子變為:
 $$
+
+$$
+(2\varepsilon _{k}+2E_{F} -E+\frac{q^{2} }{4m})\psi (k)+\sum_{k'}^{}V( \vec{k'}-\vec{k})\psi (k') =0
+$$
+
+$$
+從前面已知電子非直接相互作用H_{eff}在|\varepsilon _ {k} -\varepsilon _{k'}| <\omega _{q}時,也就是在Fermi-surface附近上下一點的範圍內,V_{kq}<0存在吸引相互作用,所以相互作用項可設為:
+$$
