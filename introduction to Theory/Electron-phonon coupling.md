@@ -63,3 +63,7 @@ $$
 $$
 其中\hat{r_{q}}和\omega _{q}和是phonon的eigenvector和頻率,可從計算phonon的dynamics matrix得到(supplementary1),N_{p}為單位晶格的數量.
 $$
+
+$$
+同時對電子的potential{}V_{K-S}(r_{i}-R_{j})進行Fouier transfrom (實空間\longrightarrowk空間):
+$$
