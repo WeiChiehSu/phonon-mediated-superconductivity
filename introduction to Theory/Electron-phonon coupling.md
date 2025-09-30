@@ -135,5 +135,5 @@ $$
 $$
 
 $$
-H_{ep}=\sum_{qknn^{'}}^{} $\langle n,k | G_q | n', k' \rangle$C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
+H_{ep}=\sum_{qknn^{'}}^{} $\langle n,k | G_q | n', k' \rangle$ C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
 $$
