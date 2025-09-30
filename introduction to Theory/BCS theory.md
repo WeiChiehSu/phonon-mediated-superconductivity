@@ -29,3 +29,19 @@ $$
 可發現質心運動和相對運動分離,而質心運動屬於自由運動,系統波函數和eigenfuction可寫成:
 
 $$
+\Psi (r_{1} ,r_{2})=\Psi (R ,r)=\frac{e^{iqR} }{\sqrt{N_{p} } } \psi (r);H\Psi (R ,r)=E\Psi (R ,r)
+$$
+
+Hamilition作用在波函數後,eigenfuction為:
+
+$$
+[\frac{q^{2} }{4m} -2\frac{1}{2m} \frac{\partial^{2} }{\partial r^{2}}+V(r)]\psi (r)\Longrightarrow [-2\frac{1}{2m} \frac{\partial^{2} }{\partial r^{2}}+V(r)]\psi (r) =[E-\frac{q^{2} }{4m}]\psi (r)
+$$
+
+$$
+兩個電子的總能為E=\frac{q^{2} }{4m} -2\frac{1}{2m} \frac{\partial^{2} }{\partial r^{2}}+V(r),接著對相對運動波函數和相互作用進行fouier trnsform:設兩個電子的動量分別為\vec{k}和\vec{k'},具有下列性質:
+$$
+
+$$
+|\vec{k}|= |\vec{k'}|,\Delta k=\vec{k'}-\vec{k}
+$$
