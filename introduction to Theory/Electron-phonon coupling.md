@@ -135,7 +135,7 @@ $$
 $$
 
 $$
-H_{el-ph}=\sum_{qknn^{'}}^{} \langle n,k | G_q | n', k' \rangle C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
+H_{el-ph}=\sum_{qknn^{'}}^{} \langle n,k | G_q | n', k' \rangle C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})=\sum_{qknn^{'}}^{} g_{nn^{'}}(k,q)C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
 $$
 
 $$
