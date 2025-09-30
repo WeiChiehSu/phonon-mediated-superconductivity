@@ -20,8 +20,15 @@ free-energy:F(\Psi)=F_{0}+\frac{r}{2}\Psi^{2}+\frac{u}{4}\Psi^{4}+....
 $$
 
 $$
-temperature:r=\alpha (T-T_{c})\left\{\begin{matrix}T>T_{c},r>0 \\T<T_{c},r<0\end{matrix}\right.
+\text{temperature: } r = \alpha (T - T_{c})
+\left\{
+\begin{array}{l}
+  T > T_{c}, \; r > 0 \\
+  T < T_{c}, \; r < 0
+\end{array}
+\right.
 $$
+
 
 $$
 T > T_{c} \;\Longrightarrow\;
