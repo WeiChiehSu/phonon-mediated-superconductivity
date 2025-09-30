@@ -104,3 +104,18 @@ $$
 $$
 a為晶格的間距,將{u}_{j,n}和\ddot{u}_{j,1}代入運動方程中,並寫成矩陣形式:
 $$
+
+$$
+\begin{equation}
+\begin{cases}
+(2c - \omega_q^2 m_1) A_1 - c(e^{-iqa} + 1) A_2 = 0 \\
+(2c - \omega_q^2 m_2) A_2 - c(e^{iqa} + 1) A_1 = 0
+\end{cases}
+\;\Longrightarrow\;
+\begin{bmatrix}
+2c - \omega_q^2 m_1 & -c(e^{-iqa}+1) \\
+-c(e^{iqa}+1) & 2c - \omega_q^2 m_2
+\end{bmatrix}
+\begin{bmatrix} A_1 \\ A_2 \end{bmatrix} = 0
+\end{equation}
+$$
