@@ -1,4 +1,4 @@
-
+$$
 \text{Order-parameter: }\;
 \Psi =
 \begin{cases}
