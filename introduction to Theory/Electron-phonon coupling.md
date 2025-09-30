@@ -97,5 +97,10 @@ $$
 $$
 
 $$
-接下來計算系統的
+接下來計算系統的總el-ph的能量密度,將V_{el_{-ph} }以kohn-sham orbital展開,得H_{el-ph}:
 $$
+
+$$
+H_{el-ph}=\sum_{n,k;n^{'},k^{'} }^{}\hat{\psi}_{n ,k}^{+} V_{el}\hat{\psi}_{n^{'} ,k^{'}}
+$$
+
