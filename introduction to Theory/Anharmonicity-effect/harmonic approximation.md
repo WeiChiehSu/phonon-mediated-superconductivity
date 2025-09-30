@@ -69,11 +69,15 @@ $$
 
 c代表force constant,計算該系統的Lagrangian(L),並解Lagrange equation:
 
-![Lagrange Equation](https://latex.codecogs.com/svg.latex?L=K-U;\quad\text{Lagrange-equation:}\quad\frac{d}{dt}%20\frac{\partial%20L}{\partial%20\dot{r}%20}%20=%20\frac{\partial%20L}{\partial%20r})
+$$
+L=K-U;Lagrange-equation:\frac{d}{dt} \frac{\partial L}{\partial \dot{r} } =\frac{\partial L}
+$$
 
 得該系統的兩個原子j,1和j,2的運動方程:
 
-![Equation](https://latex.codecogs.com/svg.latex?j,1%3A%20-m_{1}\ddot{u}_{j,1}%20=%20c[%20{u}_{j-1,2}-2{u}_{j,1}+{u}_{j,2}]%5C%5Cj,2%3A%20-m_{2}\ddot{u}_{j,2}%20=%20c[%20{u}_{j,1}-2{u}_{j,2}+{u}_{j+1,1}])
+$$
+j,1: -m_{1}\ddot{u}_{j,1} = c[ {u}_{j-1,2}-2{u}_{j,1}+{u}_{j,2}]\\j,2: -m_{2}\ddot{u}_{j,2} = c[ {u}_{j,1}-2{u}_{j,2}+{u}_{j+1,1}]
+$$
 
 設運動方程的解為平面波:
 
