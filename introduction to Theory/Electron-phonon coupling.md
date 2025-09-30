@@ -51,3 +51,8 @@ $$
 $$
 V_{el-ph }=-\frac{\partial V_{K-S}(r_{i}-R_{j})}{\partial R_{j} } r_{j}\hat{r_{j}} 
 $$
+
+$$
+將第二項中的\hat{r_{j}}進行Fouier transfrom (實空間->q空間),再將r_{j}以phonon的算符形式展開:
+$$
+
