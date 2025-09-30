@@ -135,7 +135,7 @@ $$
 $$
 
 $$
-H_{ep}=\sum_{qknn^{'}}^{} \langle n,k | G_q | n', k' \rangle C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
+H_{el-ph}=\sum_{qknn^{'}}^{} \langle n,k | G_q | n', k' \rangle C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
 $$
 
 $$
@@ -153,7 +153,7 @@ $$
 $$
 
 $$
-H =H_{0}+H_{ep}=\sum_{q}^{}\hbar \omega _{q}a_{-q}^{+}a_{q}+\sum_{k}^{}\varepsilon _{k} C_{n,k}^{+}C_{n^{'} ,k^{'}}+\sum_{qknn^{'}}^{} g_{nn^{'}}(k,q)C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
+H =H_{0}+H_{el-ph}=\sum_{q}^{}\hbar \omega _{q}a_{-q}^{+}a_{q}+\sum_{k}^{}\varepsilon _{k} C_{n,k}^{+}C_{n^{'} ,k^{'}}+\sum_{qknn^{'}}^{} g_{nn^{'}}(k,q)C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
 $$
 
 $$
@@ -161,5 +161,5 @@ H_{0}=H_{phonon}+ H_{electron}=\sum_{q}^{}\hbar \omega _{q}a_{-q}^{+}a_{q}+\sum_
 $$
 
 $$
-H_{ep}=\sum_{qknn^{'}}^{} g_{nn^{'}}(k,q)C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
+H_{el-ph}=\sum_{qknn^{'}}^{} g_{nn^{'}}(k,q)C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
 $$
