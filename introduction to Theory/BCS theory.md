@@ -19,3 +19,13 @@ $$
 $$
 \frac{\partial }{\partial r_{2}}=\frac{\partial  }{\partial R}\frac{\partial R }{\partial r_{2}}+\frac{\partial  }{\partial r}\frac{\partial r }{\partial r_{2}}=\frac{1}{2}\frac{\partial  }{\partial R}-\frac{\partial  }{\partial r} 
 $$
+
+Hamilition可改為:
+
+$$
+H=-\frac{1}{2m} (\frac{\partial^{2} }{\partial r_{1}^{2}} +\frac{\partial^{2} }{\partial r_{2}^{2}})+V(r_{1}-r_{2})=-\frac{1}{4m} \frac{\partial^{2} }{\partial R^{2}}-\frac{1}{m} \frac{\partial^{2} }{\partial r^{2}}+V(r) 
+$$
+
+可發現質心運動和相對運動分離,而質心運動屬於自由運動,系統波函數和eigenfuction可寫成:
+
+$$
