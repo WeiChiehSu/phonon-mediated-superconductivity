@@ -17,10 +17,6 @@ $V(r_{i}-R_{0})$可以近似成:
 C 稱為諧和力常數
 
 $$
-harmonic-phonon\left\{\begin{matrix} energy-temperature:independent\\ infinite-lifetime\end{matrix}\right.\Longrightarrow harmonic-defect
-$$
-
-$$
 \text{harmonic-phonon: } 
 \begin{cases}
   \text{energy-temperature: independent} \\
