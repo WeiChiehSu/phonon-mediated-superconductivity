@@ -139,7 +139,7 @@ H_{ep}=\sum_{qknn^{'}}^{} \langle n,k | G_q | n', k' \rangle C_{n,k}^{+}C_{n^{'}
 $$
 
 $$
-\langle n,k | G_q | n', k' \rangle為電聲耦合矩陣元素,描述受到phonon散射後,電子從state(n^{'} ,k^{'})散射到state(n^{'} ,k^{'})的概率幅:
+g_{nn^{'}}(k,q)為電聲耦合矩陣元素,描述受到phonon散射後,電子從state(n^{'} ,k^{'})散射到state(n^{'} ,k^{'})的概率幅:
 $$
 
 $$
