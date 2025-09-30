@@ -53,6 +53,10 @@ V_{el-ph }=-\frac{\partial V_{K-S}(r_{i}-R_{j})}{\partial R_{j} } r_{j}\hat{r_{j
 $$
 
 $$
-將第二項中的\hat{r_{j}}進行Fouier transfrom (實空間->q空間),再將r_{j}以phonon的算符形式展開:
+將electron-phonon{} coupling項中的\hat{r_{j}}進行Fouier transfrom (實空間->q空間),再將r_{j}以phonon的算符形式展開:
+$$
+
+$$
+r_{j}\hat{r_{j}}=\frac{1}{\sqrt{N_{p} } } \sum_{q}^{} e^{iqR_{j}  } r_{j}\hat{r_{q}} = \frac{1}{\sqrt{N_{p} } } \sum_{q}^{} e^{iqR_{j}  }\frac{1}{\sqrt{2M\omega _{q}} }(a_{q}+a_{-q}^{+}) \hat{r_{q}}
 $$
 
