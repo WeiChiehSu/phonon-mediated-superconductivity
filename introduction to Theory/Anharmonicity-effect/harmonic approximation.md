@@ -59,6 +59,9 @@ $$
 原子間存在諧和勢的一維原子鍊的示意圖,第j個cell內有兩個原子j,1和j,2,質量為m_1和m_2,偏移平衡點的位移為u_{j_{1} }和u_{j_{2} },其Kinetic energy和potential為:
 $$
 
+$$
+Kinetic-energy:\sum_{j}^{} (\frac{m_{1} }{2} \dot{u}_{j,1}^{2} + \frac{m_{2} }{2} \dot{u}_{j,2}^{2})
+$$
 
 ![Kinetic Energy](https://latex.codecogs.com/svg.latex?Kinetic-energy:\sum_{j}^{}%20\left(\frac{m_{1}%20}{2}%20\dot{u}_{j,1}^{2}%20+%20\frac{m_{2}%20}{2}%20\dot{u}_{j,2}^{2}\right))
 
