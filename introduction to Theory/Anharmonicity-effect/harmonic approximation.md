@@ -123,7 +123,6 @@ $$
 $$
 
 $$
-\begin{cases}
 [c_q] = 
 \begin{bmatrix}
 2c & -c(e^{-iqa}+1) \\
@@ -136,5 +135,4 @@ $$
 m_1 & 0 \\
 0 & m_2
 \end{bmatrix}
-\end{cases}
 $$
