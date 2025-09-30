@@ -13,7 +13,7 @@ If you have any questions,welcome use discussion.
 
 2.Born-Oppenheimer approximation
 
-3.Harmonic approximation
+3.Harmonic approximation : phonon-dynamics matrix
 
 4.Electron-phonon coupling
 
