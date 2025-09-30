@@ -55,3 +55,9 @@ Hamilition作用在相對運動波函數後,eigenfuction為:
 $$
 2\frac{k^{2} }{2m}\sum_{k}^{}\frac{e^{ikr} }{\sqrt{N_{p}} }\psi (k)+\sum_{k,\Delta k}^{} \frac{e^{i(k+\Delta k)r} }{\sqrt{N_{p}} }\psi (k)V( \Delta k) =[E-\frac{q^{2} }{4m}]\frac{1}{\sqrt{N_{p} } } \sum_{k}^{} e^{ikr} \psi (k)
 $$
+
+可改寫為:
+
+$$  
+\sum_{k}^{}[2\frac{k^{2}}{2m}-E+\frac{q^{2} }{4m}]\frac{e^{ikr} }{\sqrt{N_{p}} }\psi (k)+\sum_{k,k'}^{} \frac{e^{ik'r} }{\sqrt{N_{p}} }\psi (k')V( \vec{k'}-\vec{k}) =0
+$$
