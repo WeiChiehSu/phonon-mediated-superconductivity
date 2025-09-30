@@ -76,8 +76,9 @@ $$
 得該系統的兩個原子j,1和j,2的運動方程:
 
 $$
-j,1: -m_{1}\ddot{u}_{j,1} = c[ {u}_{j-1,2}-2{u}_{j,1}+{u}_{j,2}]\\j,2: -m_{2}\ddot{u}_{j,2} = c[ {u}_{j,1}-2{u}_{j,2}+{u}_{j+1,1}]
+L = K - U, \quad \text{Lagrange equation: } \frac{d}{dt} \frac{\partial L}{\partial \dot{r}} = \frac{\partial L}{\partial r}
 $$
+
 
 設運動方程的解為平面波:
 
