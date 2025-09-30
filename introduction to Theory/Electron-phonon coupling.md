@@ -60,3 +60,6 @@ $$
 r_{j}\hat{r_{j}}=\frac{1}{\sqrt{N_{p} } } \sum_{q}^{} e^{iqR_{j}  } r_{j}\hat{r_{q}} = \frac{1}{\sqrt{N_{p} } } \sum_{q}^{} e^{iqR_{j}  }\frac{1}{\sqrt{2M\omega _{q}} }(a_{q}+a_{-q}^{+}) \hat{r_{q}}
 $$
 
+$$
+其中\hat{r_{q}}和\omega _{q}和是phonon的eigenvector和頻率,可從計算phonon的dynamics matrix得到(supplementary1),N_{p}為單位晶格的數量.
+$$
