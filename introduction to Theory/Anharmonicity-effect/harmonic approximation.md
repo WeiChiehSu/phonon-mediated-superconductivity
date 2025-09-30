@@ -229,3 +229,33 @@ $$
 $$
 qa<<1;\sin qa\approx qa;\cos qa\approx1-\frac{ qa }{2} ;tan qa\approx qa
 $$
+
+$$
+代入\omega,optical branch可變為:
+$$
+
+$$
+\omega_{+} =\sqrt{\frac{2C(M_{1}+M_{2})}{M_{1}M_{2}}-\frac{(ka)^{2}}{2C(M_{1}+M_{2})} }\Longrightarrow\omega_{+}^{2}  =\frac{2C(M_{1}+M_{2})}{M_{1}M_{2}}
+$$
+
+$$
+將\omega代入振幅公式中:
+$$
+
+$$
+A_{1}^{+} =\frac{2C}{(2C-2C-\frac{2CM_{1} }{M_{2}}) }A_{2}^{+}  =-\frac{M_{1} }{M_{2}} A_{2}^{+}
+$$
+
+同理,若 q-->0(長波長極限時),Acoustic branch可變為:
+
+$$
+\omega_{-}=\sqrt{\frac{C}{2(M_{1}+M_{2})}}ka=0
+$$
+
+振幅關係變為:
+
+$$
+A_{1}^{-}=\frac{C(1+e^{-ika})}{(2C-M_{1}\omega _{-}^{2})}A_{2}^{-}\Longrightarrow  A_{1}^{-}=A_{2}^{-}
+$$
+
+
