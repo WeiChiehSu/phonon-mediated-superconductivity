@@ -136,3 +136,40 @@ m_1 & 0 \\
 0 & m_2
 \end{bmatrix}
 $$
+
+矩陣可改寫為另一種形式:
+
+$$
+([c_{q}]-\omega _{q} ^{2}[m])\vec{A}=0\to  [c_{q}]\vec{A}=\omega _{q} ^{2}[m]\vec{A} 
+$$
+
+$$
+同乘[m]^{-\frac{1}{2} },將式子改寫:
+$$
+
+$$
+[m]^{-\frac{1}{2} } [c_{q}][m]^{-\frac{1}{2} }[m]^{\frac{1}{2} }\vec{A}=\omega _{q} ^{2}[m]^{-\frac{1}{2} }[m]\vec{A}\to[m]^{-\frac{1}{2} }[c_{q}][m]^{-\frac{1}{2} }[m]^{\frac{1}{2} }\vec{A}= \omega _{q} ^{2}[m]^{\frac{1}{2} }\vec{A}
+$$
+
+$$
+定義dynamics matrix([c_{q}])和\widehat{\varrho }_{q}:
+$$
+
+$$
+Dynamics-matrix:[D_{q}] =[m]^{-\frac{1}{2} }[c_{q}][m]^{-\frac{1}{2} };\widehat{\varrho }_{q}  =[m]^{\frac{1}{2} }\vec{A}
+$$
+
+式子可寫成eigenvalue equation形式:
+
+$$
+eigenvalue-equation:[D_{q}]\widehat{\varrho }_{q}  =\omega _{q}  ^{2} \widehat{\varrho }_{q}
+$$
+
+$$
+接下來解[D_{q}]\widehat{\varrho }_{q}的行列式:
+$$
+
+$$
+\begin{bmatrix} 2c-\omega _{q} ^{2} m_{1} & -c(e^{-iqa}+1)\\ -c(e^{iqa}+1) & 2c-\omega _{q} ^{2} m_{2}\end{bmatrix}\begin{bmatrix}A_{1} \\A_{2}\end{bmatrix}=0=>4c^{2}-2c(m_{1}+ m_{2})\omega _{q} ^{2}+\omega _{q} ^{4}m_{1}m_{2}-c^{2}(2+e^{iqa}+e^{-iqa})=0
+$$
+
