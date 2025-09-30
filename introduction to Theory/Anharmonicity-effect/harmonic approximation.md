@@ -63,10 +63,9 @@ $$
 Kinetic-energy:\sum_{j}^{} (\frac{m_{1} }{2} \dot{u}_{j,1}^{2} + \frac{m_{2} }{2} \dot{u}_{j,2}^{2})
 $$
 
-![Kinetic Energy](https://latex.codecogs.com/svg.latex?Kinetic-energy:\sum_{j}^{}%20\left(\frac{m_{1}%20}{2}%20\dot{u}_{j,1}^{2}%20+%20\frac{m_{2}%20}{2}%20\dot{u}_{j,2}^{2}\right))
-
-
-![Potential Energy](https://latex.codecogs.com/svg.latex?potential:\sum_{j}^{}%20\frac{c}{2}%20\left[(u_{j,1}-u_{j-1,2})^{2}+(u_{j,2}-u_{j,1})^{2}+(u_{j+1,1}-u_{j,2})^{2}\right])
+$$
+potential:\sum_{j}^{} \frac{c}{2} [(u_{j,1}- u_{j-1,2})^{2}+(u_{j,2}- u_{j,1})^{2} +(u_{j+1,1}- u_{j,2})^{2}]   
+$$
 
 c代表force constant,計算該系統的Lagrangian(L),並解Lagrange equation:
 
