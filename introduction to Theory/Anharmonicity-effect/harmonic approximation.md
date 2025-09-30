@@ -116,7 +116,7 @@ $$
 2c - \omega_q^2 m_1 & -c(e^{-iqa}+1) \\
 -c(e^{iqa}+1) & 2c - \omega_q^2 m_2
 \end{bmatrix}
-\begin{bmatrix} A_1 & A_2 \end{bmatrix} = 0
+\begin{bmatrix} A_1 \\ A_2 \end{bmatrix} = 0
 \end{equation}
 $$
 
