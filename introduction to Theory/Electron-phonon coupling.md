@@ -139,5 +139,5 @@ H_{ep}=\sum_{qknn^{'}}^{} $\langle n,k | G_q | n', k' \rangle$ C_{n,k}^{+}C_{n^{
 $$
 
 $$
-$\langle n,k | G_q | n', k' \rangle$為電聲耦合矩陣元素:
+\langle n,k | G_q | n', k' \rangle為電聲耦合矩陣元素:
 $$
