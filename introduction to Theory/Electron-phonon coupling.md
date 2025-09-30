@@ -75,3 +75,7 @@ $$
 $$
 對Fouier{}transfrom後的kohn-sham{} potential{}V_{K-S}(r_{i}-R_{j})偏微分:
 $$
+
+$$
+\frac{\partial V_{K-S}(r_{i}-R_{j})}{\partial R_{j} }=-\frac{1}{\sqrt{N_{p} } } ike^{ik(r_{i}-R_{j})}V_{K-S}(k)
+$$
