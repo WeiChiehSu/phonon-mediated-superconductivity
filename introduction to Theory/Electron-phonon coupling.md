@@ -31,3 +31,7 @@ $$
 $$
 對代表離子實和電子位置間距r_{i}-R_{j}展開晶格位移r_{j}對kohn-sham potential的修正項(泰勒展開式):
 $$
+
+$$
+V_{el_{r_{i}-R_{j}+r_{j}} }=-V_{K-S }(r_{i}-R_{j}+r_{j}) =\sum_{ij}^{}[-V_{K-S}(r_{i}-R_{j})\hat{r_{j} }-\frac{\partial V_{K-S}(r_{i}-R_{j})}{\partial R_{j} } r_{j}\hat{r_{j}} -\frac{1}{2!}\frac{\partial^{2}  V_{K-S}(r_{i}-R_{j})}{\partial^{2} R_{j}} (r_{j})^{2} \hat{r_{j}} +...  ]
+$$
