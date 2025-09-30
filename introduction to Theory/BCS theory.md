@@ -79,3 +79,12 @@ $$
 $$
 從前面已知電子非直接相互作用H_{eff}在|\varepsilon _ {k} -\varepsilon _{k'}| <\omega _{q}時,也就是在Fermi-surface附近上下一點的範圍內,V_{kq}<0存在吸引相互作用,所以相互作用項可設為:
 $$
+
+$$
+V(\vec{k}' - \vec{k}) =
+\begin{cases}
+  -V_{kq}, & |\varepsilon_{k} - \varepsilon_{k'}| < \omega_q \\
+  0, & \text{otherwise}
+\end{cases}
+$$
+
