@@ -40,7 +40,13 @@ $$
 $$
 
 $$
-Anharmonicity-effect\left\{\begin{matrix}light-ions-exist \\system-close-melting \\ferroelectric-phase-transition \\charge-density wave (CDW)\end{matrix}\right.
+\text{Anharmonicity-effect: }
+\begin{cases}
+  \text{light ions exist} \\
+  \text{system close to melting} \\
+  \text{ferroelectric phase transition} \\
+  \text{charge density wave (CDW)}
+\end{cases}
 $$
 
 # Harmonic approximation : phonon-dynamics matrix
