@@ -26,15 +26,10 @@ $$
 \text{harmonic-defect}
 $$
 
-
-$$
-Anharmonicity-effect\left\{\begin{matrix} energy-phonon-coupling\\ phonon-phonon-coupling\end{matrix}\right.\Longrightarrow \left\{\begin{matrix} energy-temperature:dependent\\ have-finite-lifetime\end{matrix}\right.
-$$
-
 $$
 \text{Anharmonicity-effect: }
 \begin{cases}
-  \text{energy-phonon-coupling} \\
+  \text{electron-phonon-coupling} \\
   \text{phonon-phonon-coupling}
 \end{cases}
 \;\Longrightarrow\;
