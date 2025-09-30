@@ -39,9 +39,19 @@ $$
 $$
 
 $$
-兩個電子的總能為E=\frac{q^{2} }{4m} -2\frac{1}{2m} \frac{\partial^{2} }{\partial r^{2}}+V(r),接著對相對運動波函數和相互作用進行fouier trnsform:設兩個電子的動量分別為\vec{k}和\vec{k'},具有下列性質:
+兩個電子的總能為E=\frac{q^{2} }{4m} -2\frac{1}{2m} \frac{\partial^{2} }{\partial r^{2}}+V(r),接著對相對運動波函數和相互作用進行fouier{}trnsform:設兩個電子的動量分別為\vec{k}和\vec{k'},具有下列性質:
 $$
 
 $$
 |\vec{k}|= |\vec{k'}|,\Delta k=\vec{k'}-\vec{k}
+$$
+
+$$
+\psi (r)=\frac{1}{\sqrt{N_{p} } } \sum_{k}^{} e^{ikr} \psi (k);V(r)=\sum_{\Delta k}^{} e^{i\Delta kr} V (\Delta k)
+$$
+
+Hamilition作用在相對運動波函數後,eigenfuction為:
+
+$$
+2\frac{k^{2} }{2m}\sum_{k}^{}\frac{e^{ikr} }{\sqrt{N_{p}} }\psi (k)+\sum_{k,\Delta k}^{} \frac{e^{i(k+\Delta k)r} }{\sqrt{N_{p}} }\psi (k)V( \Delta k) =[E-\frac{q^{2} }{4m}]\frac{1}{\sqrt{N_{p} } } \sum_{k}^{} e^{ikr} \psi (k)
 $$
