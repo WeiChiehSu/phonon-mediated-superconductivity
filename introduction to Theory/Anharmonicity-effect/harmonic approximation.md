@@ -119,3 +119,7 @@ $$
 \begin{bmatrix} A_1 & A_2 \end{bmatrix} = 0
 \end{equation}
 $$
+
+$$
+可以定義該系統的[c_{q}],[m]和eigenvector:
+$$
