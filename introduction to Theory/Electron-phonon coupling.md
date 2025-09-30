@@ -117,3 +117,11 @@ $$
 $$
 \sum_{i,q}^{}\sum_{n,k;n^{'},k^{'}}^{}  < \psi _{n,k}|-iq\frac{1}{N_{p} }e^{i(k+q-k^{'} )r_{i} }\frac{1}{\sqrt{2M\omega _{q}} }(a_{q}+a_{-q}^{+})V_{K-S}(q)   |\psi _{n^{'} ,k^{'}}> C_{n,k}^{+}C_{n^{'} ,k^{'}}\hat{r_{q}}  
 $$
+
+$$
+定義G_{q}為:
+$$
+
+$$
+根據Phonon dispersion,可知acoustic mode 在q=0時,\omega _{q}=0,即晶格不在振動,同時el-ph項將變為0,Hamilton將退化回Born-Oppenheimer approximation近似的形式.
+$$
