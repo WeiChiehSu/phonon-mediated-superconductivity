@@ -14,4 +14,4 @@ $$
 V_{el_{r_{i}-R_{j}} } =\sum_{ij}^{}[-V_{K-S}(r_{i}-R_{j})\hat{r_{j} }]=\sum_{i=1 }^{n} \sum_{a=1 }^{k} \frac{Z_{a} }{r_{ia}} +\sum_{i=1 }^{n} \sum_{j>i }^{n} \frac{1 }{r_{ij}}
 $$
 
-
+因此電子的Hamilton的最終形式為:
