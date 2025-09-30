@@ -24,8 +24,21 @@ temperature:r=\alpha (T-T_{c})\left\{\begin{matrix}T>T_{c},r>0 \\T<T_{c},r<0\end
 $$
 
 $$
-T>T_{c}\Longrightarrow \left\{\begin{matrix} \Psi =0\\ \Psi =\pm \sqrt{\frac{r}{u}} \to im\end{matrix}\right.;T<T_{c}\Longrightarrow \left\{\begin{matrix} \Psi =0\\ \Psi =\pm \sqrt{\frac{-r}{u}}(\Psi>0,order)\end{matrix}\right.
+T > T_{c} \;\Longrightarrow\;
+\Psi =
+\begin{cases}
+  0, & \text{disordered phase} \\
+  \pm \sqrt{\tfrac{r}{u}}, & \text{imaginary (unstable)}
+\end{cases}
+\;;\quad
+T < T_{c} \;\Longrightarrow\;
+\Psi =
+\begin{cases}
+  0, & \text{disordered phase} \\
+  \pm \sqrt{\tfrac{-r}{u}}, & \Psi > 0 \;\; \text{(ordered phase)}
+\end{cases}
 $$
+
 
 $$
 \left\{\begin{matrix}F(\Psi=0)=0\\F(\Psi=\pm \sqrt{\frac{-r}{u} } )=-\frac{r^{2} }{4u} \end{matrix}\right.\Longrightarrow F(\Psi=0)>F(\Psi=+\sqrt{\frac{-r}{u} } )=F(\Psi=-\sqrt{\frac{-r}{u} } )
