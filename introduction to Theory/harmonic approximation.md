@@ -1,1 +1,227 @@
+# Harmonic approximation : Harmonic potential
+
+簡諧近似:原子振動可以近似成在平衡點周圍微小振動,感受到的勢能可以近似成諧和勢
+
+$$
+原子勢能振動曲線V(r_{i}-R_{0}):
+$$
+
+![公式](https://latex.codecogs.com/png.latex?V(r_{i}-R_{0})%3D-V(r_{i}-R_{0})|_{r_{i}%3DR_{0}}-\frac{\partial%20V(r_{i}-R_{0})}{\partial%20r_{i}}%20(r_{i}-R_{0})|_{r_{i}%3DR_{0}}-\frac{1}{2!}%20\frac{\partial^{2}%20V(r_{i}-R_{0})}{\partial^{2}%20r_{i}}%20(r_{i}-R_{0})^{2}-\frac{1}{n!}%20\frac{\partial^{n}%20V(r_{i}-R_{0})}{\partial^{n}%20r_{i}}%20(r_{i}-R_{0})^{n}+....)
+
+$$
+V(r_{i}-R_{0})= -V(r_{i}-R_{0})|_{r_{i}=R_{0}} -\frac{\partial V(r_{i}-R_{0})}{\partial r_{i}} (r_{i}-R_{0})|_{r_{i}=R_{0}}-\frac{1}{2!} \frac{\partial^{2}  V(r_{i}-R_{0})}{\partial^{2}  r_{i}} (r_{i}-R_{0})^{2}-\frac{1}{n!} \frac{\partial^{n}  V(r_{i}-R_{0})}{\partial^{n}  r_{i}} (r_{i}-R_{0})^{n}+....
+$$
+
+$$
+V(r_{i}-R_{0})可以近似成:
+$$
+
+![公式](https://latex.codecogs.com/png.latex?V(r_{i}-R_{0})\cong%20\frac{1}{2}%20C(r_{i}-R_{0})^2-\frac{1}{6}%20\gamma%20(r_{i}-R_{0})^3;%20C=\frac{\partial^{2}%20V(r_{i}-R_{0})}{\partial^{2}%20r_{i}})
+
+C 稱為諧和力常數
+
+# Harmonic approximation : phonon-dynamics matrix
+
+$$
+原子間存在諧和勢的一維原子鍊的示意圖,第j個cell內有兩個原子j,1和j,2,質量為m_1和m_2,偏移平衡點的位移為u_{j_{1} }和u_{j_{2} },其Kinetic energy和potential為:
+$$
+
+$$
+Kinetic-energy:\sum_{j}^{} (\frac{m_{1} }{2} \dot{u}_{j,1}^{2} + \frac{m_{2} }{2} \dot{u}_{j,2}^{2})
+$$
+
+$$
+potential:\sum_{j}^{} \frac{c}{2} [(u_{j,1}- u_{j-1,2})^{2}+(u_{j,2}- u_{j,1})^{2} +(u_{j+1,1}- u_{j,2})^{2}]   
+$$
+
+c代表force constant,計算該系統的Lagrangian(L),並解Lagrange equation:
+
+$$
+L=K-U;Lagrange-equation:\frac{d}{dt} \frac{\partial L}{\partial \dot{r} } =\frac{\partial L}{\partial r}
+$$
+
+得該系統的兩個原子j,1和j,2的運動方程:
+
+$$
+j,1: -m_{1}\ddot{u}_{j,1} = c[ {u}_{j-1,2}-2{u}_{j,1}+{u}_{j,2}]
+$$
+
+$$
+j,2: -m_{2}\ddot{u}_{j,2} = c[ {u}_{j,1}-2{u}_{j,2}+{u}_{j+1,1}]
+$$
+
+
+設運動方程的解為平面波:
+
+$$
+\begin{cases}
+u_{j,1}(t) = A_1 e^{i(q j a - \omega_q t)}, & \ddot{u}_{j,1}(t) = -\omega_q^2 A_1 e^{i(q j a - \omega_q t)} \\
+u_{j,2}(t) = A_2 e^{i(q j a - \omega_q t)}, & \ddot{u}_{j,2}(t) = -\omega_q^2 A_2 e^{i(q j a - \omega_q t)}
+\end{cases}
+$$
+
+$$
+第j\pm 1個晶格內第n個原子的平面波解為:
+$$
+
+$$
+u_{j\pm 1,n}=A_{n}e^{i[q(j\pm 1)a-\omega _{q}t] }=A_{n}e^{\pm iqa}   e^{i[qja-\omega _{q}t] }
+$$
+
+$$
+a為晶格的間距,將{u}_{j,n}和\ddot{u}_{j,1}代入運動方程中,並寫成矩陣形式:
+$$
+
+$$
+\begin{cases}
+(2c - \omega_q^2 m_1) A_1 - c(e^{-iqa} + 1) A_2 = 0 \\
+(2c - \omega_q^2 m_2) A_2 - c(e^{iqa} + 1) A_1 = 0
+\end{cases}
+\;\Longrightarrow\;
+\begin{bmatrix}
+2c - \omega_q^2 m_1 & -c(e^{-iqa}+1) \\
+-c(e^{iqa}+1) & 2c - \omega_q^2 m_2
+\end{bmatrix}
+\begin{bmatrix} A_1 \\ A_2 \end{bmatrix} = 0
+$$
+
+$$
+可以定義該系統的[c_{q}],[m]和eigenvector:
+$$
+
+$$
+[c_q] = 
+\begin{bmatrix}
+2c & -c(e^{-iqa}+1) \\
+-c(e^{iqa}+1) & 2c
+\end{bmatrix}, \\
+\text{eigenvector: } \vec{A} = 
+\begin{bmatrix} A_1 \\ A_2 \end{bmatrix}, \\
+[m] = 
+\begin{bmatrix}
+m_1 & 0 \\
+0 & m_2
+\end{bmatrix}
+$$
+
+矩陣可改寫為另一種形式:
+
+$$
+([c_{q}]-\omega _{q} ^{2}[m])\vec{A}=0\to  [c_{q}]\vec{A}=\omega _{q} ^{2}[m]\vec{A} 
+$$
+
+$$
+同乘[m]^{-\frac{1}{2} },將式子改寫:
+$$
+
+$$
+[m]^{-\frac{1}{2} } [c_{q}][m]^{-\frac{1}{2} }[m]^{\frac{1}{2} }\vec{A}=\omega _{q} ^{2}[m]^{-\frac{1}{2} }[m]\vec{A}\to[m]^{-\frac{1}{2} }[c_{q}][m]^{-\frac{1}{2} }[m]^{\frac{1}{2} }\vec{A}= \omega _{q} ^{2}[m]^{\frac{1}{2} }\vec{A}
+$$
+
+$$
+定義dynamics matrix([c_{q}])和\widehat{\varrho }_{q}:
+$$
+
+$$
+Dynamics-matrix:[D_{q}] =[m]^{-\frac{1}{2} }[c_{q}][m]^{-\frac{1}{2} };\widehat{\varrho }_{q}  =[m]^{\frac{1}{2} }\vec{A}
+$$
+
+式子可寫成eigenvalue equation形式:
+
+$$
+eigenvalue-equation:[D_{q}]\widehat{\varrho }_{q}  =\omega _{q}  ^{2} \widehat{\varrho }_{q}
+$$
+
+$$
+接下來解[D_{q}]\widehat{\varrho }_{q}的行列式:
+$$
+
+$$
+\begin{bmatrix}
+2c - \omega_q^2 m_1 & -c(e^{-iqa}+1) \\
+-c(e^{iqa}+1) & 2c - \omega_q^2 m_2
+\end{bmatrix}
+\begin{bmatrix} A_1 \\ A_2 \end{bmatrix}
+= 0
+\;\Longrightarrow\;
+4c^2 - 2c (m_1 + m_2) \omega_q^2 + \omega_q^4 m_1 m_2 - c^2 \left( 2 + e^{iqa} + e^{-iqa} \right) = 0
+$$
+
+$$
+將e^{iqa}+e^{-iqa}轉成三角函數形式:
+$$
+
+$$
+\cos qa=\frac{e^{iqa}+e^{-iqa} }{2} ;\sin ^{2} qa=\frac{1-\cos 2qa}{2} 
+$$
+
+則方程式可改為:
+
+$$
+m_{1}m_{2}\omega _{q} ^{4}-2c(m_{1}+ m_{2})\omega _{q} ^{2}+4c^{2} \sin ^{2} qa=0 
+$$
+
+$$
+行列式具有非平庸解的\omega值有兩個:
+$$
+
+$$
+\omega _{q} ^{+} =\frac{c}{m_{1}m_{2} }[(m_{1}+m_{2})+\sqrt{(m_{1}+m_{2})^{2}-4m_{1}m_{2}\sin ^{2} \frac{qa}{2}  }
+$$
+
+$$
+\omega _{q} ^{-} =\frac{c}{m_{1}m_{2} }[(m_{1}+m_{2})-\sqrt{(m_{1}+m_{2})^{2}-4m_{1}m_{2}\sin ^{2} \frac{qa}{2}  }
+$$
+
+$$
+\omega _{q} ^{+}和\omega _{q} ^{-}分別代表晶格內的兩個原子間的相對振動頻率(optical branch)和全體晶格的振動頻率(acoustic branch),若三維晶格內有j個原子,則其具有3個acoustic branch(x,y,z)和3j-3個optical branch.
+$$
+
+$$
+回到[D_{q}]\widehat{\varrho }_{q}的行列式,可發現:
+$$
+
+$$
+EOM:(2C-\omega ^{2}M_{1})A_{1}-C(1+e^{-ika})A_{2}=0
+$$
+
+移項後,可發現平面波的振幅具有下列關係:
+
+$$
+A_{1}^{+-} =\frac{(1+e^{-ika})A_{2}  }{(2C-M_{1}\omega _{2}^{+-})  }A_{2}^{+-}
+$$
+
+若 q-->0(長波長極限時),qa具有以下特性:
+
+$$
+qa<<1;\sin qa\approx qa;\cos qa\approx1-\frac{ qa }{2} ;tan qa\approx qa
+$$
+
+$$
+代入\omega,optical branch可變為:
+$$
+
+$$
+\omega_{+} =\sqrt{\frac{2C(M_{1}+M_{2})}{M_{1}M_{2}}-\frac{(ka)^{2}}{2C(M_{1}+M_{2})} }\Longrightarrow\omega_{+}^{2}  =\frac{2C(M_{1}+M_{2})}{M_{1}M_{2}}
+$$
+
+$$
+將\omega代入振幅公式中:
+$$
+
+$$
+A_{1}^{+} =\frac{2C}{(2C-2C-\frac{2CM_{1} }{M_{2}}) }A_{2}^{+}  =-\frac{M_{1} }{M_{2}} A_{2}^{+}
+$$
+
+同理,若 q-->0(長波長極限時),Acoustic branch可變為:
+
+$$
+\omega_{-}=\sqrt{\frac{C}{2(M_{1}+M_{2})}}ka=0
+$$
+
+振幅關係變為:
+
+$$
+A_{1}^{-}=\frac{C(1+e^{-ika})}{(2C-M_{1}\omega _{-}^{2})}A_{2}^{-}\Longrightarrow  A_{1}^{-}=A_{2}^{-}
+$$
 
