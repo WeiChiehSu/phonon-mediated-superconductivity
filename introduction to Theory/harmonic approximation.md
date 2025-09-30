@@ -1,4 +1,4 @@
-# Harmonic approximation : Harmonic potential
+# Harmonic approximation : phonon-dynamics matrix
 
 簡諧近似:原子振動可以近似成在平衡點周圍微小振動,感受到的勢能可以近似成諧和勢
 
@@ -19,8 +19,6 @@ $$
 ![公式](https://latex.codecogs.com/png.latex?V(r_{i}-R_{0})\cong%20\frac{1}{2}%20C(r_{i}-R_{0})^2-\frac{1}{6}%20\gamma%20(r_{i}-R_{0})^3;%20C=\frac{\partial^{2}%20V(r_{i}-R_{0})}{\partial^{2}%20r_{i}})
 
 C 稱為諧和力常數
-
-# Harmonic approximation : phonon-dynamics matrix
 
 $$
 原子間存在諧和勢的一維原子鍊的示意圖,第j個cell內有兩個原子j,1和j,2,質量為m_1和m_2,偏移平衡點的位移為u_{j_{1} }和u_{j_{2} },其Kinetic energy和potential為:
