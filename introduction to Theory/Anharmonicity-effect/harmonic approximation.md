@@ -93,16 +93,13 @@ u_{j,2}(t) = A_2 e^{i(q j a - \omega_q t)}, & \ddot{u}_{j,2}(t) = -\omega_q^2 A_
 \end{cases}
 $$
 
-
-![Equation](https://latex.codecogs.com/png.latex?u_{j,1}(t)%20=%20A_{1}%20e^{i(qja%20-%20\omega_q%20t)},%20\ddot{u}_{j,1}(t)%20=%20-\omega_q^2%20A_{1}%20e^{i(qja%20-%20\omega_q%20t)})
-
-![Equation](https://latex.codecogs.com/png.latex?u_{j,2}(t)%20=%20A_{2}%20e^{i(qja%20-%20\omega_q%20t)},%20\ddot{u}_{j,2}(t)%20=%20-\omega_q^2%20A_{1}%20e^{i(qja%20-%20\omega_q%20t)})
-
 $$
 第j\pm 1個晶格內第n個原子的平面波解為:
 $$
 
-![Equation](https://latex.codecogs.com/png.latex?u_{j\pm%201,n}=A_{n}e^{i[q(j\pm%201)a-\omega%20_{q}t]}%20=%20A_{n}e^{\pm%20iqa}%20e^{i[qja-\omega%20_{q}t]})
+$$
+u_{j\pm 1,n}=A_{n}e^{i[q(j\pm 1)a-\omega _{q}t] }=A_{n}e^{\pm iqa}   e^{i[qja-\omega _{q}t] }
+$$
 
 $$
 a為晶格的間距,將{u}_{j,n}和\ddot{u}_{j,1}代入運動方程中,並寫成矩陣形式:
