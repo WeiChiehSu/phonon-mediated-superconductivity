@@ -13,11 +13,11 @@ If you have any questions,welcome use discussion.
 
 2.Born-Oppenheimer approximation
 
-3.harmonic approximation
+3.Harmonic approximation
 
-4.ELECTRON-PHONON COUPLING
+4.Electron-phonon coupling
 
-5.canonical transformation
+5.Canonical transformation
 
 6.Eliash-berg spectral function
 
@@ -28,7 +28,7 @@ If you have any questions,welcome use discussion.
 
 2.Hellman-Feynman Theory
 
-3.Connected  electron-phonon coupling
+3.Connected electron-phonon coupling
 
 
 
