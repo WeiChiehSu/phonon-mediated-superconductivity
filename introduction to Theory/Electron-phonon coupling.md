@@ -15,3 +15,7 @@ V_{el_{r_{i}-R_{j}} } =\sum_{ij}^{}[-V_{K-S}(r_{i}-R_{j})\hat{r_{j} }]=\sum_{i=1
 $$
 
 因此電子的Hamilton的最終形式為:
+
+$$
+\widehat{H}_{electron}= -\sum_{i=1}^{n} \frac{\nabla^{2} _{r_{i}  }  } {2} +\sum_{i=1 }^{n} \sum_{j>i }^{n} \frac{1 }{r_{ij}}+ \sum_{i=1 }^{n} \sum_{a=1 }^{k} \frac{Z_{a} }{r_{ia}}
+$$
