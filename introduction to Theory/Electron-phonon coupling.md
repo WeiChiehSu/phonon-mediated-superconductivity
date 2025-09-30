@@ -123,7 +123,7 @@ $$
 $$
 
 $$
-G_{q}=-\frac{1}{N_{p} }\frac{1}{\sqrt{2M\omega _{q}} }iqe^{i(k+q-k^{'} )r_{i} }V_{K-S}(q)
+G_{q}=-\frac{1}{N_{p} }\frac{1}{\sqrt{2M\omega _{q}} }iqe^{i(k+q-k^{'} )r_{i} }V_{K-S}(q)\hat{r_{q}
 $$
 
 $$
