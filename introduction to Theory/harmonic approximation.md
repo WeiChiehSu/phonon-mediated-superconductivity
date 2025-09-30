@@ -32,8 +32,18 @@ Anharmonicity-effect\left\{\begin{matrix} energy-phonon-coupling\\ phonon-phonon
 $$
 
 $$
-Anharmonicity < harmonic \Longrightarrow Perturbation-theory;Anharmonicity > harmonic \Longrightarrow lose-efficacy
+\text{Anharmonicity-effect: }
+\begin{cases}
+  \text{energy-phonon-coupling} \\
+  \text{phonon-phonon-coupling}
+\end{cases}
+\;\Longrightarrow\;
+\begin{cases}
+  \text{energy-temperature: dependent} \\
+  \text{have finite lifetime}
+\end{cases}
 $$
+
 $$
 Anharmonicity-effect\left\{\begin{matrix}light-ions-exist \\system-close-melting \\ferroelectric-phase-transition \\charge-density wave (CDW)\end{matrix}\right.
 $$
