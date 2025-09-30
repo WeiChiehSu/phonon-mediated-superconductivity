@@ -105,5 +105,48 @@ $$
 $$
 
 $$
-這時需考慮電子的自旋波函數的部分,因為當兩電子的自旋波函數為單重態:\frac{1}{\sqrt{2} } (\left | \uparrow \downarrow   \right \rangle -\left | \uparrow \downarrow  \right \rangle )時,因為兩電子的波函數具反對稱性,自旋波函數為單重態時,空間部分對稱性要求\psi (r)=\psi(-r),因此fouier trnsform時可發現:
+這時需考慮電子的自旋波函數的部分,因為當兩電子的自旋波函數為單重態:\frac{1}{\sqrt{2} } (\left | \uparrow \downarrow   \right \rangle -\left | \uparrow \downarrow  \right \rangle )時,因為兩電子的波函數具反對稱性,自旋波函數為單重態時,空間部分對稱性要求\psi (r)=\psi(-r),因此fouier{}trnsform時可發現:
 $$
+
+$$
+\frac{1}{\sqrt{N_{p} } } \sum_{k}^{} e^{ikr} \psi (k)=\frac{1}{\sqrt{N_{p} } } \sum_{k}^{} e^{-ikr} \psi (k);\frac{1}{\sqrt{N_{p} } } \sum_{k}^{} e^{ikr} \psi (k)=\frac{1}{\sqrt{N_{p} } } \sum_{k}^{} e^{ik''r} \psi (-k'')=>\psi (k)=\psi (-k)
+$$
+
+$$
+同時因|\vec{k}|= |\vec{k'}|導致求和值不為零(無意義),且\sum_{k}^{}\psi (k)=\sum_{k'}^{}\psi (k'),所以式子可變為:
+$$
+
+$$
+1=V_{kq}\sum_{k}^{}\frac{1}{(2\varepsilon _{k}+2E_{F} -E+\frac{q^{2} }{4m})}
+$$
+
+$$
+求和化積,其積分至電子在費米面的能量薄層\omega _{c}:
+$$
+
+$$
+1=V_{kq}\int_{0}^{\omega _{c} } \frac{d\varepsilon _{k}}{(2\varepsilon _{k}+2E_{F} -E+\frac{q^{2} }{4m})}\Longrightarrow 1=\frac{V_{kq}}{2}[ln(2\omega _{q}+2E_{F} -E+\frac{q^{2} }{4m})-ln(2E_{F} -E+\frac{q^{2} }{4m})  ]
+$$
+
+可以得到:
+
+$$
+e^{\frac{2}{V_{kq} } } =\frac{2\omega _{c}+2E_{F} -E+\frac{q^{2} }{4m}}{2E_{F} -E+\frac{q^{2} }{4m}} \Longrightarrow E=2E_{F} +\frac{q^{2} }{4m}-(2\omega _{c} +2E_{F} -E+\frac{q^{2} }{4m})e^{-\frac{2}{V_{kq} } }
+$$
+
+$$
+在弱耦和極限下,V_{kq}<<1,此時E\simeq 2E_{F} +\frac{q^{2} }{4m},所以兩個電子的eigenvalue為:
+$$
+
+$$
+E\approx 2E_{F} +\frac{q^{2} }{4m}-2\omega _{c} e^{-\frac{2}{V_{kq} } }
+$$
+
+可以看到若兩個電子的質心動能=0時,兩個電子的eigenvalue便小於兩電子自由時的energy,因此會產生束縛態,而這個系統的最低能量為:
+
+$$
+E_{min}=  2E_{F}-2\omega _{c} e^{-\frac{2}{V_{kq} } }<2E_{F}
+$$
+
+這證明了,只要有吸引力存在,自旋相反的電子會形成總自旋為0的自旋單重態,動量相反的兩個電子會形成配對使系統能量降低,這就是cooper pair.
+
