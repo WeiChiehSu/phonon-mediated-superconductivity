@@ -226,3 +226,6 @@ $$
 
 若 q-->0(長波長極限時),qa具有以下特性:
 
+$$
+qa<<1;\sin qa\approx qa;\cos qa\approx1-\frac{ qa }{2} ;tan qa\approx qa
+$$
