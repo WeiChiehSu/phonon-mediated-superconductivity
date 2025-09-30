@@ -131,9 +131,9 @@ $$
 $$
 
 $$
-將H_{el-ph}轉為 electron-phonon{}Hamilton 的二次量子化形式:`<n,k|G_q|n',k'>`
+將H_{el-ph}轉為 electron-phonon{}Hamilton 的二次量子化形式:
 $$
 
 $$
-H_{ep}=\sum_{qknn^{'}}^{} <n,k|G_{q}|n^{'} ,k^{'}>C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
+H_{ep}=\sum_{qknn^{'}}^{} `<n,k|G_q|n',k'>`C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
 $$
