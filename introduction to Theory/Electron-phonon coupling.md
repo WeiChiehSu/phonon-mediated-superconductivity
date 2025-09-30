@@ -39,3 +39,11 @@ $$
 $$
 第一項為電子和固定晶格的相互作用,即週期性potential,第二項代表晶格偏移平衡位置引起的potential變化,其中R_{j}為平衡點的位置(lattice的晶格向量),r_{j}是晶格偏離平衡點位置的位移.
 $$
+
+$$
+V_{el_{r_{i}-R_{j}+r_{j}} }=-V_{K-S }(r_{i}-R_{j}+r_{j}) =\sum_{ij}^{}[-V_{K-S}(r_{i}-R_{j})\hat{r_{j} }-\frac{\partial V_{K-S}(r_{i}-R_{j})}{\partial R_{j} } r_{j}\hat{r_{j}} -\frac{1}{2!}\frac{\partial^{2}  V_{K-S}(r_{i}-R_{j})}{\partial^{2} R_{j}} (r_{j})^{2} \hat{r_{j}} +...  ]
+$$
+
+$$
+V_{el-ph }=-\frac{\partial V_{K-S}(r_{i}-R_{j})}{\partial R_{j} } r_{j}\hat{r_{j}} 
+$$
