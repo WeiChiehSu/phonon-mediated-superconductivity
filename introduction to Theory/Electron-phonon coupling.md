@@ -123,9 +123,17 @@ $$
 $$
 
 $$
-G_{q}=-\frac{1}{N_{p} }\frac{1}{\sqrt{2M\omega _{q}} }iqe^{i(k+q-k^{'} )r_{i} }V_{K-S}(q)\hat{r_{q}
+G_{q}=-\frac{1}{N_{p} }\frac{1}{\sqrt{2M\omega _{q}} }iqe^{i(k+q-k^{'} )r_{i} }V_{K-S}(q)\hat{r_{q}}
 $$
 
 $$
 根據Phonon{}dispersion,可知acoustic{}mode 在q=0時,\omega _{q}=0,即晶格不在振動,同時el-ph項將變為0,Hamilton將退化回Born-Oppenheimer{}approximation近似的形式.
+$$
+
+$$
+將H_{el-ph}轉為 electron-phonon{}Hamilton 的二次量子化形式:
+$$
+
+$$
+H_{ep}=\sum_{qknn^{'}}^{} <n,k|G_{q}|n^{'} ,k^{'}>C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
 $$
