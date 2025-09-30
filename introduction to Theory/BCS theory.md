@@ -77,7 +77,7 @@ $$
 $$
 
 $$
-從前面已知電子非直接相互作用H_{eff}在|\varepsilon _ {k} -\varepsilon _{k'}| <\omega _{q}時,也就是在Fermi-surface附近上下一點的範圍內,V_{kq}<0存在吸引相互作用,所以相互作用項可設為:
+假設在Fermi-surface附近上下一點的能量範圍(\omega_q)內,兩個電子間存在勢能:V_{kq}<0,表明其存在吸引相互作用:
 $$
 
 $$
