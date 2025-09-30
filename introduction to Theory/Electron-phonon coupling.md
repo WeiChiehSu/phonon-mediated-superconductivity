@@ -44,6 +44,8 @@ $$
 V_{el_{r_{i}-R_{j}+r_{j}} }=-V_{K-S }(r_{i}-R_{j}+r_{j}) =\sum_{ij}^{}[-V_{K-S}(r_{i}-R_{j})\hat{r_{j} }-\frac{\partial V_{K-S}(r_{i}-R_{j})}{\partial R_{j} } r_{j}\hat{r_{j}} -\frac{1}{2!}\frac{\partial^{2}  V_{K-S}(r_{i}-R_{j})}{\partial^{2} R_{j}} (r_{j})^{2} \hat{r_{j}} +...  ]
 $$
 
+第二項描述小位移對電子的線性影響，對應「電子-聲子耦合」（electron-phonon coupling）:
+
 $$
 V_{el-ph }=-\frac{\partial V_{K-S}(r_{i}-R_{j})}{\partial R_{j} } r_{j}\hat{r_{j}} 
 $$
