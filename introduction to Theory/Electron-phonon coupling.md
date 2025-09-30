@@ -29,5 +29,5 @@ V_{el_{r_{i}-R_{j}+r_{j}} } =\sum_{ij}^{}[-V_{K-S}(r_{i}-R_{j}+r_{j} )\hat{r_{j}
 $$
 
 $$
-對代表離子實和電子位置間距r_{i}-R_{j}展開晶格位移r_{j}對Born-Oppenheimer近似的一階對位置的修正項(泰勒展開式):
+對代表離子實和電子位置間距r_{i}-R_{j}展開晶格位移r_{j}對kohn-sham potential的修正項(泰勒展開式):
 $$
