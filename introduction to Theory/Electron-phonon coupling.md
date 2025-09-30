@@ -143,5 +143,5 @@ $$
 $$
 
 $$
-<n,k|G_{q}|n^{'} ,k^{'}>=g_{nn^{'}}(k,q)
+\langle n,k | G_q | n', k' \rangle=g_{nn^{'}}(k,q)
 $$
