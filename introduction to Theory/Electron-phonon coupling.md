@@ -97,7 +97,7 @@ $$
 $$
 
 $$
-接下來計算系統的總el-ph的能量密度,將V_{el_{-ph} }以kohn-sham orbital展開,得H_{el-ph}:
+接下來計算系統的總el-ph的能量密度,將V_{el_{-ph} }以kohn-sham{}orbital展開,得H_{el-ph}:
 $$
 
 $$
