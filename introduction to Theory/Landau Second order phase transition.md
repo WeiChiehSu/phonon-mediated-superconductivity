@@ -3,16 +3,16 @@ Order-parameter:\Psi \left\{\begin{matrix}order\ne 0 \\disorder=0\end{matrix}\ri
 $$
 
 $$
-\text{Order-parameter: } \Psi 
-\left\{
-  \begin{matrix}
-    \text{order} \neq 0 \\
-    \text{disorder} = 0
-  \end{matrix}
-\right.
+\text{Order-parameter: }\;
+\Psi =
+\begin{cases}
+  \text{order} \neq 0, & \text{(ordered phase)} \\
+  \text{disorder} = 0, & \text{(disordered phase)}
+\end{cases}
 \;\Longrightarrow\;
 \text{phase-transition: } \Psi \approx 0
 $$
+
 
 
 $$
