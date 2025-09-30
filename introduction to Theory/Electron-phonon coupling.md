@@ -104,3 +104,13 @@ $$
 H_{el-ph}=\sum_{n,k;n^{'},k^{'} }^{}\hat{\psi}_{n ,k}^{+} V_{el}\hat{\psi}_{n^{'} ,k^{'}}
 $$
 
+在週期性的系統中,波函數滿足Bloch定理,因此可以將kohn-sham state以布洛赫波的二次量子化形式展開:
+
+$$
+\hat{\psi}_{n^{'} ,k^{'}}  =\frac{e^{ik^{'}.r} }{\sqrt{N_{p}} }C_{n_{'},k_{'}}|\psi _{n^{'} ,k^{'}}>;\hat{\psi}_{n ,k}^{+}   =\frac{e^{-ik.r} }{\sqrt{N_{p}} }C_{n,k}^{+}|\psi _{n ,k}>
+$$
+
+$$
+將其代入H_{el-ph}中,得:
+$$
+
