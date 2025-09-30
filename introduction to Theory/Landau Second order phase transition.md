@@ -47,5 +47,13 @@ $$
 
 
 $$
-\left\{\begin{matrix}F(\Psi=0)=0\\F(\Psi=\pm \sqrt{\frac{-r}{u} } )=-\frac{r^{2} }{4u} \end{matrix}\right.\Longrightarrow F(\Psi=0)>F(\Psi=+\sqrt{\frac{-r}{u} } )=F(\Psi=-\sqrt{\frac{-r}{u} } )
+F(\Psi) =
+\begin{cases}
+  0, & \Psi = 0 \\
+  -\dfrac{r^{2}}{4u}, & \Psi = \pm \sqrt{\tfrac{-r}{u}}
+\end{cases}
+\;\Longrightarrow\;
+F(\Psi = 0) > F\!\left(\Psi = +\sqrt{\tfrac{-r}{u}}\right)
+= F\!\left(\Psi = -\sqrt{\tfrac{-r}{u}}\right)
 $$
+
