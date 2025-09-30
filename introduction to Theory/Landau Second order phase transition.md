@@ -3,6 +3,19 @@ Order-parameter:\Psi \left\{\begin{matrix}order\ne 0 \\disorder=0\end{matrix}\ri
 $$
 
 $$
+\text{Order-parameter: } \Psi 
+\left\{
+  \begin{matrix}
+    \text{order} \neq 0 \\
+    \text{disorder} = 0
+  \end{matrix}
+\right.
+\;\Longrightarrow\;
+\text{phase-transition: } \Psi \approx 0
+$$
+
+
+$$
 Z2-symmetry:F[\Psi ]=F[-\Psi]
 $$
 
