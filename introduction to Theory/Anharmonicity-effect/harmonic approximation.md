@@ -2,7 +2,9 @@
 
 簡諧近似:原子振動可以近似成在平衡點周圍微小振動,感受到的勢能可以近似成諧和勢
 
-原子勢能振動曲線$V(r_{i}-R_{0})$:
+$$
+原子勢能振動曲線V(r_{i}-R_{0}):
+$$
 
 ![公式](https://latex.codecogs.com/png.latex?V(r_{i}-R_{0})%3D-V(r_{i}-R_{0})|_{r_{i}%3DR_{0}}-\frac{\partial%20V(r_{i}-R_{0})}{\partial%20r_{i}}%20(r_{i}-R_{0})|_{r_{i}%3DR_{0}}-\frac{1}{2!}%20\frac{\partial^{2}%20V(r_{i}-R_{0})}{\partial^{2}%20r_{i}}%20(r_{i}-R_{0})^{2}-\frac{1}{n!}%20\frac{\partial^{n}%20V(r_{i}-R_{0})}{\partial^{n}%20r_{i}}%20(r_{i}-R_{0})^{n}+....)
 
@@ -10,7 +12,9 @@ $$
 V(r_{i}-R_{0})= -V(r_{i}-R_{0})|_{r_{i}=R_{0}} -\frac{\partial V(r_{i}-R_{0})}{\partial r_{i}} (r_{i}-R_{0})|_{r_{i}=R_{0}}-\frac{1}{2!} \frac{\partial^{2}  V(r_{i}-R_{0})}{\partial^{2}  r_{i}} (r_{i}-R_{0})^{2}-\frac{1}{n!} \frac{\partial^{n}  V(r_{i}-R_{0})}{\partial^{n}  r_{i}} (r_{i}-R_{0})^{n}+....
 $$
 
-$V(r_{i}-R_{0})$可以近似成:
+$$
+V(r_{i}-R_{0})可以近似成:
+$$
 
 ![公式](https://latex.codecogs.com/png.latex?V(r_{i}-R_{0})\cong%20\frac{1}{2}%20C(r_{i}-R_{0})^2-\frac{1}{6}%20\gamma%20(r_{i}-R_{0})^3;%20C=\frac{\partial^{2}%20V(r_{i}-R_{0})}{\partial^{2}%20r_{i}})
 
@@ -51,7 +55,9 @@ $$
 
 # Harmonic approximation : phonon-dynamics matrix
 
-原子間存在諧和勢的一維原子鍊的示意圖,第j個cell內有兩個原子j,1和j,2,質量為m$_1$和m$_2$,偏移平衡點的位移為$u_{j_{1} }$和$u_{j_{2} }$,其Kinetic energy和potential為:
+$$
+原子間存在諧和勢的一維原子鍊的示意圖,第j個cell內有兩個原子j,1和j,2,質量為m_1和m_2,偏移平衡點的位移為u_{j_{1} }和u_{j_{2} },其Kinetic energy和potential為:
+$$
 
 
 ![Kinetic Energy](https://latex.codecogs.com/svg.latex?Kinetic-energy:\sum_{j}^{}%20\left(\frac{m_{1}%20}{2}%20\dot{u}_{j,1}^{2}%20+%20\frac{m_{2}%20}{2}%20\dot{u}_{j,2}^{2}\right))
