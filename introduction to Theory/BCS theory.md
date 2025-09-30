@@ -61,3 +61,13 @@ $$
 $$  
 \sum_{k}^{}[2\frac{k^{2}}{2m}-E+\frac{q^{2} }{4m}]\frac{e^{ikr} }{\sqrt{N_{p}} }\psi (k)+\sum_{k,k'}^{} \frac{e^{ik'r} }{\sqrt{N_{p}} }\psi (k')V( \vec{k'}-\vec{k}) =0
 $$
+
+接下來:
+
+$$
+\sum_{k}^{}[(2\frac{k^{2}}{2m}-E+\frac{q^{2} }{4m})\psi (k)+\sum_{k'}^{}V( \vec{k'}-\vec{k})\psi (k')]\frac{e^{ikr} }{\sqrt{N_{p}} } =0
+$$
+
+$$
+設自由單電子的能量為\frac{k^{2} }{2m},Fermi{}surface的電子能量為E_{F},則相對於Fermi{}surface的單電子能量為\varepsilon _{k} = \frac{k^{2} }{2m} -E_{F} ,則式子變為:
+$$
