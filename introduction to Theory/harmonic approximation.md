@@ -21,6 +21,17 @@ harmonic-phonon\left\{\begin{matrix} energy-temperature:independent\\ infinite-l
 $$
 
 $$
+\text{harmonic-phonon: } 
+\begin{cases}
+  \text{energy-temperature: independent} \\
+  \text{infinite-lifetime}
+\end{cases}
+\;\Longrightarrow\;
+\text{harmonic-defect}
+$$
+
+
+$$
 Anharmonicity-effect\left\{\begin{matrix} energy-phonon-coupling\\ phonon-phonon-coupling\end{matrix}\right.\Longrightarrow \left\{\begin{matrix} energy-temperature:dependent\\ have-finite-lifetime\end{matrix}\right.
 $$
 
