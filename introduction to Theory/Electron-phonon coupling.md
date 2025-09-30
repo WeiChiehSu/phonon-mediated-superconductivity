@@ -115,7 +115,7 @@ $$
 $$
 
 $$
-\sum_{i,q}^{}\sum_{n,k;n^{'},k^{'}}^{}  < \psi _{n,k}|-iq\frac{1}{N_{p} }e^{i(k+q-k^{'} )r_{i} }\frac{1}{\sqrt{2M\omega _{q}} }(a_{q}+a_{-q}^{+})V_{K-S}(q)   |\psi _{n^{'} ,k^{'}}> C_{n,k}^{+}C_{n^{'} ,k^{'}}\hat{r_{q}}  
+H_{el-ph}=\sum_{i,q}^{}\sum_{n,k;n^{'},k^{'}}^{}  < \psi _{n,k}|-iq\frac{1}{N_{p} }e^{i(k+q-k^{'} )r_{i} }\frac{1}{\sqrt{2M\omega _{q}} }(a_{q}+a_{-q}^{+})V_{K-S}(q)   |\psi _{n^{'} ,k^{'}}> C_{n,k}^{+}C_{n^{'} ,k^{'}}\hat{r_{q}}  
 $$
 
 $$
