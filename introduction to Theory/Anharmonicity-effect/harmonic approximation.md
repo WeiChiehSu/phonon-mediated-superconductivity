@@ -170,6 +170,14 @@ $$
 $$
 
 $$
-\begin{bmatrix} 2c-\omega _{q} ^{2} m_{1} & -c(e^{-iqa}+1)\\ -c(e^{iqa}+1) & 2c-\omega _{q} ^{2} m_{2}\end{bmatrix}\begin{bmatrix}A_{1} \\ A_{2}\end{bmatrix}=0=>4c^{2}-2c(m_{1}+ m_{2})\omega _{q} ^{2}+\omega _{q} ^{4}m_{1}m_{2}-c^{2}(2+e^{iqa}+e^{-iqa})=0
+\begin{bmatrix}
+2c - \omega_q^2 m_1 & -c(e^{-iqa}+1) \\
+-c(e^{iqa}+1) & 2c - \omega_q^2 m_2
+\end{bmatrix}
+\begin{bmatrix} A_1 \\ A_2 \end{bmatrix}
+= 0
+\;\Longrightarrow\;
+4c^2 - 2c (m_1 + m_2) \omega_q^2 + \omega_q^4 m_1 m_2 - c^2 \left( 2 + e^{iqa} + e^{-iqa} \right) = 0
 $$
+
 
