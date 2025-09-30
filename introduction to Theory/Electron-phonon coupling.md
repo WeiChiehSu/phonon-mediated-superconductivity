@@ -131,7 +131,7 @@ $$
 $$
 
 $$
-將H_{el-ph}轉為 electron-phonon{}Hamilton 的二次量子化形式:
+將H_{el-ph}轉為 electron-phonon{}Hamilton 的二次量子化形式:<n,k|G_{q}|n^{'} ,k^{'}>
 $$
 
 $$
