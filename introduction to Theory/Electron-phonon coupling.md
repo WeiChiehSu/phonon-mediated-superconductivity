@@ -88,3 +88,14 @@ $$
 V_{el_{-ph} } = -ik\sum_{ij}^{}  \frac{1}{N_{p} } \sum_{q}^{} e^{i(qR_{j}+kr_{i} -kR_{j})  }\frac{1}{\sqrt{2M\omega _{q}} }(a_{q}+a_{-q}^{+})V_{K-S}(k)  \hat{r_{q}}
 $$
 
+$$
+可以看到,當k=q時,V_{el_{-ph} }可變為:
+$$
+
+$$
+-ik\frac{1}{N_{p} } \sum_{i,q}^{} e^{ikr_{i} }\frac{1}{\sqrt{2M\omega _{q}} }(a_{q}+a_{-q}^{+})V_{K-S}(k)  \hat{r_{q}}=-iq\sum_{i,q}^{}\frac{1}{N_{p} }e^{iqr_{i} }\frac{1}{\sqrt{2M\omega _{q}} }(a_{q}+a_{-q}^{+})V_{K-S}(q)  \hat{r_{q}} 
+$$
+
+$$
+接下來計算系統的
+$$
