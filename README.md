@@ -9,7 +9,7 @@ If you have any questions,welcome use discussion.
 
 #introduction to Theory
 
-1.BCS theory
+1.BCS theory:Cooper pair
 
 2.Born-Oppenheimer approximation
 
