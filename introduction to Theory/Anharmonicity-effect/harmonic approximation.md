@@ -86,6 +86,14 @@ $$
 
 設運動方程的解為平面波:
 
+$$
+\begin{cases}
+u_{j,1}(t) = A_1 e^{i(q j a - \omega_q t)}, & \ddot{u}_{j,1}(t) = -\omega_q^2 A_1 e^{i(q j a - \omega_q t)} \\
+u_{j,2}(t) = A_2 e^{i(q j a - \omega_q t)}, & \ddot{u}_{j,2}(t) = -\omega_q^2 A_2 e^{i(q j a - \omega_q t)}
+\end{cases}
+$$
+
+
 ![Equation](https://latex.codecogs.com/png.latex?u_{j,1}(t)%20=%20A_{1}%20e^{i(qja%20-%20\omega_q%20t)},%20\ddot{u}_{j,1}(t)%20=%20-\omega_q^2%20A_{1}%20e^{i(qja%20-%20\omega_q%20t)})
 
 ![Equation](https://latex.codecogs.com/png.latex?u_{j,2}(t)%20=%20A_{2}%20e^{i(qja%20-%20\omega_q%20t)},%20\ddot{u}_{j,2}(t)%20=%20-\omega_q^2%20A_{1}%20e^{i(qja%20-%20\omega_q%20t)})
