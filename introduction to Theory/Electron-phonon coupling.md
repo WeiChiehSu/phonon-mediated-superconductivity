@@ -149,5 +149,9 @@ $$
 電聲耦合的物理圖像可以想成:電子在晶格中移動,會吸引正電荷(離子實),造成晶格畸變,釋放一個phonon,形成一個局域正電荷密集區,而這個電子的state也會改變(散射);另一個電子經過局域正電荷密集區,會吸收這個phonon,受到吸引,變成另一個state(散射)
 
 $$
+若將系統的聲子和電子Hamilton和electron-phonon{}Hamilton加起來,可以這個系統的total簡化Hamilton(Frohlich{}Hamilton):
+$$
+
+$$
 H =H_{0}+H_{ep}=\sum_{q}^{}\hbar \omega _{q}a_{-q}^{+}a_{q}+\sum_{k}^{}\varepsilon _{k} C_{n,k}^{+}C_{n^{'} ,k^{'}}+\sum_{qknn^{'}}^{} g_{nn^{'}}(k,q)C_{n,k}^{+}C_{n^{'} ,k^{'}}  (a_{q}+a_{-q}^{+})
 $$
