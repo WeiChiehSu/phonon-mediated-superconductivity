@@ -180,4 +180,25 @@ $$
 4c^2 - 2c (m_1 + m_2) \omega_q^2 + \omega_q^4 m_1 m_2 - c^2 \left( 2 + e^{iqa} + e^{-iqa} \right) = 0
 $$
 
+$$
+將e^{iqa}+e^{-iqa}轉成三角函數形式:
+$$
+
+$$
+\cos qa=\frac{e^{iqa}+e^{-iqa} }{2} ;\sin ^{2} qa=\frac{1-\cos 2qa}{2} 
+$$
+
+則方程式可改為:
+
+$$
+m_{1}m_{2}\omega _{q} ^{4}-2c(m_{1}+ m_{2})\omega _{q} ^{2}+4c^{2} \sin ^{2} qa=0 
+$$
+
+$$
+行列式具有非平庸解的\omega值有兩個:
+$$
+
+$$
+\omega _{q} ^{+} =\frac{c}{m_{1}m_{2} }[(m_{1}+m_{2})+\sqrt{(m_{1}+m_{2})^{2}-4m_{1}m_{2}\sin ^{2} \frac{qa}{2}  }
+$$
 
