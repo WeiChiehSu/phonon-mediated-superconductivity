@@ -123,3 +123,22 @@ $$
 $$
 可以定義該系統的[c_{q}],[m]和eigenvector:
 $$
+
+$$
+\begin{equation}
+\begin{cases}
+[c_q] = 
+\begin{bmatrix}
+2c & -c(e^{-iqa}+1) \\
+-c(e^{iqa}+1) & 2c
+\end{bmatrix}, \\
+\text{eigenvector: } \vec{A} = 
+\begin{bmatrix} A_1 \\ A_2 \end{bmatrix}, \\
+[m] = 
+\begin{bmatrix}
+m_1 & 0 \\
+0 & m_2
+\end{bmatrix}
+\end{cases}
+\end{equation}
+$$
