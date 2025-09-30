@@ -88,3 +88,22 @@ V(\vec{k}' - \vec{k}) =
 \end{cases}
 $$
 
+在此假設下,可得到:
+
+$$
+(2\varepsilon _{k}+2E_{F} -E+\frac{q^{2} }{4m})\psi (k)-V_{kq}\sum_{k'}^{}\psi (k') =0
+$$
+
+$$
+\psi (k)=\frac{1}{(2\varepsilon _{k}+2E_{F} -E+\frac{q^{2} }{4m})} V_{kq}\sum_{k'}^{}\psi (k')
+$$
+
+對兩邊進行求和:
+
+$$
+\sum_{k}^{}\psi (k)=V_{kq}\sum_{k}^{}\frac{1}{(2\varepsilon _{k}+2E_{F} -E+\frac{q^{2} }{4m})} \sum_{k'}^{}\psi (k')
+$$
+
+$$
+這時需考慮電子的自旋波函數的部分,因為當兩電子的自旋波函數為單重態:\frac{1}{\sqrt{2} } (\left | \uparrow \downarrow   \right \rangle -\left | \uparrow \downarrow  \right \rangle )時,因為兩電子的波函數具反對稱性,自旋波函數為單重態時,空間部分對稱性要求\psi (r)=\psi(-r),因此fouier trnsform時可發現:
+$$
