@@ -79,3 +79,12 @@ $$
 $$
 \frac{\partial V_{K-S}(r_{i}-R_{j})}{\partial R_{j} }=-\frac{1}{\sqrt{N_{p} } } ike^{ik(r_{i}-R_{j})}V_{K-S}(k)
 $$
+
+$$
+將r_{j}\hat{r_{j}}和V_{K-S}(k)代回V_{el_{-ph} }中,可以得到V_{el_{-ph} }新的形式:
+$$
+
+$$
+V_{el_{-ph} } = -ik\sum_{ij}^{}  \frac{1}{N_{p} } \sum_{q}^{} e^{i(qR_{j}+kr_{i} -kR_{j})  }\frac{1}{\sqrt{2M\omega _{q}} }(a_{q}+a_{-q}^{+})V_{K-S}(k)  \hat{r_{q}}
+$$
+
