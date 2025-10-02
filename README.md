@@ -19,7 +19,7 @@ If you have any questions,welcome use discussion.
 
 5.Canonical transformation
 
-6.Eliash-berg spectral function
+6.McMillan-Allen Dynes function
 
 
 #introduction to The theory of First principle
