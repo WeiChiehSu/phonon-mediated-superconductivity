@@ -84,6 +84,9 @@ $$
 
 # Density Functional Perturbation Theory
 
+$$
+當對離子勢引入一個具有q向量效應的擾動\Delta V_{per}^{q}時,系統的勢能項V_{SCF}將產生一個響應擾動勢;同時系統電荷密度n(r)也會產生一個對應的響應電荷密度\Deltan(r):
+$$
 
 $$
 \begin{aligned}
