@@ -36,7 +36,7 @@ If you have any questions,welcome use discussion.
 
 1.How to install quantum-espresso
 
-2.calculation
+2.QE-PH:calculation
 
 3.Discussion on Convergence Properties
 
