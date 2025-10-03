@@ -32,6 +32,14 @@ $$
 
 考慮絕熱近似和單電子近似後,材料的哈密頓量可改寫為下列的形式:
 
+$$
+-\sum_{a=1 }^{k} \frac{\nabla^{2} _{R_{a}  }  } {2m_{a}} +\sum_{a=1 }^{k} \sum_{b>a }^{k} \frac{Z_{a}Z_{b} }{R_{ab}}-\sum_{i=1}^{n} \frac{\nabla^{2} _{r_{i}  }  } {2} +\sum_{i=1 }^{n} \sum_{j>i }^{n} \frac{1 }{r_{ij}}+ \sum_{i=1 }^{n} \sum_{a=1 }^{k} \frac{Z_{a} }{r_{ia}}\Longrightarrow -\frac{\nabla^{2}r }{2}+V_{SCF}(r)+V_{Hatree}(r)
+$$
+
+第一項為電子動能,第二項為電子和原子核間的勢能項,第三項為Hatree項:代表單個電子和由全部電子組成的電荷密度間產生的庫倫排斥
+
+
+
 
 $$
 \begin{aligned}
