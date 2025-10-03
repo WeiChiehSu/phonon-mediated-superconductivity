@@ -1,4 +1,4 @@
-# Density Functional Theory
+# Density Functional Theory (密度泛函理論)
 $$
 \begin{aligned}
 \text{Guess-charge-density:} \, n(r) \\
