@@ -1,4 +1,10 @@
 # Density Functional Theory (密度泛函理論)
+
+想要得到材料的電子性質,需要計算材料中的薛丁格方程式:
+
+$$
+
+
 $$
 \begin{aligned}
 \text{Guess-charge-density:} \, n(r) \\
