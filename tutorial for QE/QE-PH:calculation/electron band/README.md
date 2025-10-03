@@ -55,3 +55,5 @@ ATOMIC_POSITIONS (crystal)
 K_POINTS {automatic}
 
    6 6 6 0 0 0
+
+ 這個輸入檔案便是DFT中的
