@@ -8,4 +8,4 @@
 
 3.如何使用QE去計算聲子譜,聲子態密度和Eliashberg譜函數
 
-4.如何使用Mcmillan Allen Dynesfunction去計算材料的超導轉溫度
+4.如何使用Mcmillan Allen Dynes function去計算材料的超導轉溫度
