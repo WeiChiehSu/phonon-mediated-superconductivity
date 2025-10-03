@@ -37,7 +37,7 @@ $$
 $$
 \begin{cases}
 C_{k\gamma, k'\gamma'}^{\text{ion}}(r_\gamma - r_{\gamma'}) 
-= n_0(r) \frac{\partial V_{\text{SCF}}(r)}{\partial R_{k\gamma}(r)}, \\[4pt]
+= n_0(r) \frac{\partial V_{\text{SCF}}(r)}{\partial R_{k\gamma}(r)}, \\
 C_{k\gamma, k'\gamma'}^{\text{electron}}(r_\gamma - r_{\gamma'}) 
 = \frac{\partial n(r)}{\partial R_{k'\gamma}(r)} \frac{\partial V_{\text{SCF}}}{\partial R_{k\gamma}(r)}
 + n_0(r) \frac{\partial^2 V_{\text{SCF}}}{\partial R_{k\gamma}(r) \, \partial R_{k'\gamma}(r)}
