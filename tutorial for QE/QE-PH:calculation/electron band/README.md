@@ -14,20 +14,31 @@ sbatch qe_twnia3_pbspropwtk.sh
 
 第一個輸入檔案為pw.$name.scf.in:
 
-{} &CONTROL
+ &CONTROL
+ 
     prefix='$name',
+    
     pseudo_dir  = './',	
+    
  /
-{} &SYSTEM    
+ &SYSTEM    
+ 
     ibrav= -3,
+    
     celldm(1)=5.671987,
+    
     nat= 1,
+    
     ntyp = 1,
+    
     ecutwfc = 50.0,
+    
     ecutrho = 700.0, 
 
     occupations='smearing',
+    
     smearing='mp',
+    
     degauss=0.02,
  /
 {} &ELECTRONS
