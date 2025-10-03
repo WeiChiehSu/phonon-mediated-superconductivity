@@ -20,7 +20,7 @@ $$
 
 這個方程式非常複雜,計算的成本非常高,近乎無法計算.
 
-但在1964年,Hohenberg和Kohn發現了材料的基態電荷密度決定了材料基態的能量和波函數的性質,這表示我們可以用一個具有3個維度的電荷密度波函數來解薛丁格方程式,而不需要解有3N個變量的電子波函數,這讓計算複雜材料的電子能帶成為了可行.
+但在1964年,Hohenberg和Kohn發現了材料的基態電荷密度決定了材料基態的能量和波函數的性質,這表示我們可以用一個具有3個維度的電荷密度波函數來解薛丁格方程式,而不需要解有3N個變量的電子波函數,這讓計算複雜材料的電子能帶成為了可行,這便是密度泛函理論.
 
 $$
 \begin{aligned}
@@ -36,11 +36,15 @@ $$
 -\sum_{a=1 }^{k} \frac{\nabla^{2} _{R_{a}  }  } {2m_{a}} +\sum_{a=1 }^{k} \sum_{b>a }^{k} \frac{Z_{a}Z_{b} }{R_{ab}}-\sum_{i=1}^{n} \frac{\nabla^{2} _{r_{i}  }  } {2} +\sum_{i=1 }^{n} \sum_{j>i }^{n} \frac{1 }{r_{ij}}+ \sum_{i=1 }^{n} \sum_{a=1 }^{k} \frac{Z_{a} }{r_{ia}}\Longrightarrow -\frac{\nabla^{2}r }{2}+V_{SCF}(r)+V_{Hatree}(r)
 $$
 
-第一項為電子動能,第二項為電子和原子核間的勢能項,第三項為Hatree項:代表單個電子和由全部電子組成的電荷密度間產生的庫倫排斥
+第一項為電子動能,第二項為電子和原子核間的勢能項,第三項為Hatree項:
 
+$$
+V_{Hatree}(r)=e^{2} \int \frac{n(r_{i}) }{\left | r-r_{i} \right | } d^{3} r_{i}
+$$
 
+Hatree項代表單個電子和由全部電子組成的電荷密度間產生的庫倫排斥.
 
-# Density Functional Perturbation Theory
+DFT的數值計算方式如下:
 
 $$
 \begin{aligned}
@@ -55,6 +59,8 @@ n_{\text{new}}(r) = \sum \left| \Psi(r) \right|^2 \\
 n(r) = n_{\text{new}}(r) \vee n(r) \neq n_{\text{new}}(r)
 \end{aligned}
 $$
+
+# Density Functional Perturbation Theory
 
 
 $$
