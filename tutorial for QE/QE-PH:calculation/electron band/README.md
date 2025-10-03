@@ -14,11 +14,11 @@ sbatch qe_twnia3_pbspropwtk.sh
 
 第一個輸入檔案為pw.$name.scf.in:
 
- &CONTROL
+{} &CONTROL
     prefix='$name',
     pseudo_dir  = './',	
  /
- &SYSTEM    
+{} &SYSTEM    
     ibrav= -3,
     celldm(1)=5.671987,
     nat= 1,
@@ -30,7 +30,7 @@ sbatch qe_twnia3_pbspropwtk.sh
     smearing='mp',
     degauss=0.02,
  /
- &ELECTRONS
+{} &ELECTRONS
  /
 ATOMIC_SPECIES
   V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
