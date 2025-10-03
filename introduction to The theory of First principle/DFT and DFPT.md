@@ -36,7 +36,7 @@ $$
 -\sum_{a=1 }^{k} \frac{\nabla^{2} _{R_{a}  }  } {2m_{a}} +\sum_{a=1 }^{k} \sum_{b>a }^{k} \frac{Z_{a}Z_{b} }{R_{ab}}-\sum_{i=1}^{n} \frac{\nabla^{2} _{r_{i}  }  } {2} +\sum_{i=1 }^{n} \sum_{j>i }^{n} \frac{1 }{r_{ij}}+ \sum_{i=1 }^{n} \sum_{a=1 }^{k} \frac{Z_{a} }{r_{ia}}\Longrightarrow -\frac{\nabla^{2}r }{2}+V_{SCF}(r)+V_{Hatree}(r)
 $$
 
-第一項為電子動能,第二項為電子和原子核間的勢能項,第三項為Hatree項:
+這個公式被稱為Kohn–Sham equation,描述在「有效單電子勢」下，電子如何運動,其第一項為電子動能,第二項為電子和原子核間的勢能項,第三項為Hatree項:
 
 $$
 V_{Hatree}(r)=e^{2} \int \frac{n(r_{i}) }{\left | r-r_{i} \right | } d^{3} r_{i}
@@ -60,7 +60,27 @@ $$
 \end{aligned}
 $$
 
-第一步為:猜一個初始電子密度
+$$
+第1步為猜一個初始電子密度:解電子系統的Kohn–Sham{}equation,需要知道電子密度n(r)才能算出有效勢,問題是：一開始根本不知道真實的n(r)，所以只好先猜一個初始電子密度.
+$$
+
+$$
+第2步為解Poisson{}equation:電子密度會產生庫倫靜電場,這步便是從目前的電子密度n(r)去計算Hartree勢,得到電子-電子之間的平均排斥作用.
+$$
+
+$$
+第3步為解Kohn–Sham{}equation:得到Hartree勢後,便知道了系統的Hamiltonian,使用數值方法（例如:plane-wave 展開、基組展開、數值對角化,找到Hamiltonian的eigenvalue和eigenstate.
+$$
+
+$$
+第4步為更新電子密度:電子密度就是所有電子波函數的平方和,用解出來的eigenstate重新計算,得到新的電子密度.
+$$
+
+$$
+第5步為檢查收斂:如果新算出的電子密度 n_{\text{new}}(r) 和之前猜的n(r) 一致 -> 就找到一個「自洽」解;如果不一致,就把 n_{\text{new}}(r) 當作新的密度,再回到第2步重複計算，直到收斂
+$$
+
+使用密度泛函理論(DFT),我們可以得到材料的基態電荷密度,以此解出材料的基態能量和基態波函數,我們也可以對DFT理論延伸,考慮對材料引入微擾時,材料的性質將產生甚麼樣的變化,這理論被稱為密度泛函微擾理論(DFPT).
 
 # Density Functional Perturbation Theory
 
