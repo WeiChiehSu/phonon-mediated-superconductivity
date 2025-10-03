@@ -11,3 +11,11 @@ $$
 $$
 \varepsilon _{R} =\varepsilon _{0}+\sum_{k\gamma }^{}  R_{k\gamma} (r)\int n_{0} (r)\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}dr+\frac{1}{2}\sum_{R_{k,k'\gamma} }^{} R_{k\gamma} (r)R_{k'\gamma} (r) \int [\frac{\partial n(r)}{\partial R_{k'\gamma} (r)}\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}+n_{0}(r) \frac{\partial^2 V_{SCF}(r) }{\partial R_{k\gamma} (r)\partial R_{k'\gamma} (r)}]dr
 $$
+
+$$
+其中的勢能對參數的導數和電荷密度對參數的導數為DFPT計算出來的響應擾動勢\Delta V_{SCF}(r)和響應電荷密度\Delta n(r):
+$$
+
+$$
+\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}=\Delta V_{SCF}(r);\frac{\partial n(r)}{\partial R_{k'\gamma} (r)}=\Delta n(r)\
+$$
