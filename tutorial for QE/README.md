@@ -1,6 +1,8 @@
 QE計算材料超導轉變溫度的方法有兩種:QE自帶的PH模塊和EPW
 
-其中QE自帶的PH模塊使用double delta approximation(只考慮電子散射後,電子仍留在費米能級的散射幅,不考慮電子散射後,電子散射到費米能級的超導態仍允許存在的薄層的散射幅,會略為低估電聲耦合係數)去計算電聲耦合係數並使用Mcmillan Allen Dynesfunction去計算超導轉變溫度.Mcmillan Allen Dynesfunction只適合使用非強耦合且具超導各同向性(穿越費米能的電子均由同種原子同種軌域貢獻)的材料.
+其中QE自帶的PH模塊使用double delta approximation(只考慮電子散射後,電子仍留在費米能級的散射幅,不考慮電子散射後,電子散射到費米能級的超導態仍允許存在的薄層的散射幅,會略為低估電聲耦合係數)去計算電聲耦合係數並使用Mcmillan Allen Dynesfunction去計算超導轉變溫度.
+
+Mcmillan Allen Dynesfunction只適合使用非強耦合且具超導各同向性(穿越費米能的電子均由同種原子同種軌域貢獻)的材料.
 
 EPW可以使double delta approximation和非double delta approximation方法去計算電聲耦合係數並使用Migdal-Eliashberg理論去計算超導配對,解出超導轉變溫度.Migdal-Eliashberg理論支持強耦合且具超導各異向性(穿越費米能的電子由不同種原子不同種軌域貢獻)的材料.
 
