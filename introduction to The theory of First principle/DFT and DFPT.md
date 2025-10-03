@@ -82,11 +82,43 @@ $$
 
 使用密度泛函理論(DFT),我們可以得到材料的基態電荷密度,以此解出材料的基態能量和基態波函數,我們也可以對DFT理論延伸,考慮對材料引入微擾時,材料的性質將產生甚麼樣的變化,這理論被稱為密度泛函微擾理論(DFPT).
 
-# Density Functional Perturbation Theory
+# Density Functional Perturbation Theory(密度泛函微擾理論)
 
 $$
 當對離子勢引入一個具有q向量效應的擾動\Delta V_{per}^{q}時,系統的勢能項V_{SCF}將產生一個響應擾動勢;同時系統電荷密度n(r)也會產生一個對應的響應電荷密度\Delta n(r):
 $$
+
+$$
+\Delta V_{per}^{q} \Longrightarrow V_{SCF} \to V_{SCF}+\Delta V_{SCF}
+$$
+
+$$
+我們可以透過這個擾動\Delta V_{per}^{q}和響應電荷密度\Delta n(r)來解出響應擾動勢:
+$$
+
+$$
+\Delta V_{SCF}(r)=\Delta V_{_{per}}^{q} (r)+e^{2} \int \frac{\Delta n(r')}{|r-r'|} dr'
+$$
+
+$$
+將解出響應擾動勢\Delta V_{SCF}(r)進行傅立葉變換,從實空間轉換成動量空間:
+$$
+
+$$
+\Delta V_{K-S}(r)=-\frac{1}{\sqrt{N_{p} } } \sum_{k}^{} e^{-i(q+G).r} \Delta V_{K-S}(q+G)
+$$
+
+$$
+得到以動量為變數的響應擾動勢\Delta V_{K-S}(q+G)後,引入微擾理論,用DFT解出的波函數和能量進行對角化,解出響應電荷密度\Delta n(q+G):
+$$
+
+$$
+\Delta n(q+G) = \frac{4}{N\Omega } \sum_{k}^{} \sum_{c,v}^{} \frac{\left \langle \psi_{v,k}  \right |e^{-i(q+G).r } \left | \psi_{c,k+q}   \right \rangle \left \langle \psi_{c,k+q} \right |\Delta V_{SCF}(q+G)\left | \psi_{v,k}   \right \rangle    }{\varepsilon_{v,k}-\varepsilon _{c,k+q}   } 
+$$
+
+再對解出響應電荷密度進行傅立葉變換,得到以實空間為變數的響應電荷密度後,和初始的響應電荷密度進行比較:如果和初始的響應電荷密度相差過大,將初始的響應電荷密度和最後得到的響應電荷密度進行混合,得到新的響應電荷密度後再次進行運算;若得到的響應電荷密度和初始的響應電荷密度誤差很小,表示得到的響應電荷密度和響應擾動勢是正確的.
+
+整個計算流程可以寫成和DFT類似的迭代步驟:
 
 $$
 \begin{aligned}
@@ -106,3 +138,4 @@ $$
 \end{aligned}
 $$
 
+得到響應電荷密度和響應擾動勢後,可以透過Hellman-Feynman Theory解出材料的振動性質,並解出材料的電子-聲子耦合散射矩陣元.
