@@ -71,3 +71,5 @@ K_POINTS {automatic}
 5.n(r) = n_{\text{new}}(r) \vee n(r) \neq n_{\text{new}}(r)
 \end{aligned}
 $$
+
+透過自洽運算得到V(unit-cell)的電荷密度和波函數
