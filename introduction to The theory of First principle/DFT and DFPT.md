@@ -3,6 +3,23 @@
 想要得到材料的電子性質,需要計算材料中的薛丁格方程式:
 
 $$
+H\Psi (r)=\varepsilon \Psi (r)
+$$
+
+$$
+H =-\sum_{a=1 }^{k} \frac{\nabla^{2} _{R_{a}  }  } {2m_{a}} +\sum_{a=1 }^{k} \sum_{b>a }^{k} \frac{Z_{a}Z_{b} }{R_{ab}}-\sum_{i=1}^{n} \frac{\nabla^{2} _{r_{i}  }  } {2} +\sum_{i=1 }^{n} \sum_{j>i }^{n} \frac{1 }{r_{ij}}+ \sum_{i=1 }^{n} \sum_{a=1 }^{k} \frac{Z_{a} }{r_{ia}}
+$$
+
+$$
+其中 \Psi (r)為N個電子波函數的乘積:
+$$
+
+$$
+\Psi (r)=\psi _{1}(r) \psi _{2}(r)\psi _{3}(r).....
+$$
+
+這個方程式非常複雜,計算的成本非常高,近乎無法計算.
+
 
 
 $$
