@@ -53,4 +53,5 @@ ATOMIC_POSITIONS (crystal)
    V  0.0000000000  0.0000000000  0.0000000000
    
 K_POINTS {automatic}
+
    6 6 6 0 0 0
