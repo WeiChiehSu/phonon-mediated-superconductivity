@@ -48,17 +48,19 @@ DFT的數值計算方式如下:
 
 $$
 \begin{aligned}
-\text{Guess-charge-density:} \, n(r) \\
+\text{1.Guess-charge-density:} \, n(r) \\
 \Downarrow \\
-\text{Poisson-eq:} \, \nabla^2 V_{\text{Hatree}}(r) = -4 \pi n(r) \\
+\text{2.Poisson-eq:} \, \nabla^2 V_{\text{Hatree}}(r) = -4 \pi n(r) \\
 \Downarrow \\
-\text{KS-eq:} \left[ -\frac{\nabla^2 r}{2} + V_{\text{SCF}}(r) + V_{\text{Hatree}}(r) \right] \Psi(r) = \varepsilon \Psi(r) \\
+\text{3.KS-eq:} \left[ -\frac{\nabla^2 r}{2} + V_{\text{SCF}}(r) + V_{\text{Hatree}}(r) \right] \Psi(r) = \varepsilon \Psi(r) \\
 \Downarrow \\
-n_{\text{new}}(r) = \sum \left| \Psi(r) \right|^2 \\
+4.n_{\text{new}}(r) = \sum \left| \Psi(r) \right|^2 \\
 \Downarrow \\
-n(r) = n_{\text{new}}(r) \vee n(r) \neq n_{\text{new}}(r)
+5.n(r) = n_{\text{new}}(r) \vee n(r) \neq n_{\text{new}}(r)
 \end{aligned}
 $$
+
+第一步為:猜一個初始電子密度
 
 # Density Functional Perturbation Theory
 
