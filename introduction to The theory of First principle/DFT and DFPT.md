@@ -40,7 +40,7 @@ $$
 
 
 
-#Density Functional Perturbation Theory
+# Density Functional Perturbation Theory
 
 $$
 \begin{aligned}
