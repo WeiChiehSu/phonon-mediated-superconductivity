@@ -1,4 +1,4 @@
-
+# Density Functional Theory
 $$
 \begin{aligned}
 \text{Guess-charge-density:} \, n(r) \\
