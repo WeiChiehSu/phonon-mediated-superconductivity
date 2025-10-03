@@ -46,7 +46,7 @@ sbatch qe_twnia3_pbspropwtk.sh
  /
 ATOMIC_SPECIES
 
-  V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
+   V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
   
 ATOMIC_POSITIONS (crystal)
 
