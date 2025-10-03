@@ -56,4 +56,18 @@ K_POINTS {automatic}
 
    6 6 6 0 0 0
 
- 這個輸入檔案便是DFT中的
+ 這個輸入檔案便是DFT中的自洽運算:
+
+ $$
+\begin{aligned}
+\text{1.Guess-charge-density:} \, n(r) \\
+\Downarrow \\
+\text{2.Poisson-eq:} \, \nabla^2 V_{\text{Hatree}}(r) = -4 \pi n(r) \\
+\Downarrow \\
+\text{3.KS-eq:} \left[ -\frac{\nabla^2 r}{2} + V_{\text{SCF}}(r) + V_{\text{Hatree}}(r) \right] \Psi(r) = \varepsilon \Psi(r) \\
+\Downarrow \\
+4.n_{\text{new}}(r) = \sum \left| \Psi(r) \right|^2 \\
+\Downarrow \\
+5.n(r) = n_{\text{new}}(r) \vee n(r) \neq n_{\text{new}}(r)
+\end{aligned}
+$$
