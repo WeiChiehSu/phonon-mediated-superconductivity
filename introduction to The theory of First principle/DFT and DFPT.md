@@ -24,6 +24,17 @@ $$
 
 $$
 \begin{aligned}
+H \Psi(r) &= \varepsilon(\psi_{1}, \psi_{2}, \psi_{3}, \ldots) \, \Psi(r) \\
+\Downarrow \\
+H \Psi(r) &= \varepsilon[n(r)] \, \Psi(r)
+\end{aligned}
+$$
+
+考慮絕熱近似和單電子近似後,材料的哈密頓量可改寫為下列的形式:
+
+
+$$
+\begin{aligned}
 \text{Guess-charge-density:} \, n(r) \\
 \Downarrow \\
 \text{Poisson-eq:} \, \nabla^2 V_{\text{Hatree}}(r) = -4 \pi n(r) \\
