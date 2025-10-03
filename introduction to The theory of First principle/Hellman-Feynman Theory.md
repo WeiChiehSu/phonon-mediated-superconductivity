@@ -4,4 +4,4 @@ $$
 \frac{\partial \varepsilon_{electron} }{\partial R_{k:direction,\gamma:atom }(r) }=\int n_{0}\frac{\partial V_{SCF} }{\partial R_{k:direction,\gamma:atom }(r)}dr\Longrightarrow \Delta \varepsilon_{electron}(r)=\int n_{0}\Delta V_{SCF}(r)dr  
 $$
 
-以簡單的功能定理W=F.r來解釋,便是F外加了一個小力,導致作功位移r產生了小位移,那這個小力和小位移對系統總作功的影響;小力和小位移可以簡單當成響應擾動勢和響應電荷密度.
+以簡單的功能定理W=F.r來解釋,便是F外加了一個小力,導致作功位移r產生了小位移,那計算出這個小力和小位移對系統總作功的產生的變化,便是Hellman-Feynman Theory的目的;小力和小位移可以簡單當成響應擾動勢和響應電荷密度.
