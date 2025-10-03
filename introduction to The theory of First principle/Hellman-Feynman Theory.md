@@ -19,3 +19,25 @@ $$
 $$
 \frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}=\Delta V_{SCF}(r);\frac{\partial n(r)}{\partial R_{k'\gamma} (r)}=\Delta n(r)\
 $$
+
+$$
+定義系統的力常數為 C_{k\gamma ,k'\gamma '} (r_{\gamma}-r_{\gamma'})為能量的二階導數,其中分為離子貢獻項和電子貢獻項:
+$$
+
+$$
+Define:C_{k\gamma ,k'\gamma '} (r_{\gamma}-r_{\gamma'})= \frac{\partial^2 \varepsilon }{\partial R_{k\gamma }(r_{\gamma })  \partial R_{k'\gamma' }(r_{\gamma' })} = C_{k\gamma ,k'\gamma '}^{ion}(r_{\gamma}-r_{\gamma'})+C_{k\gamma ,k'\gamma '}^{electron}(r_{\gamma}-r_{\gamma'})
+$$
+
+則公式可以變換為下面的形式:
+
+$$
+\varepsilon _{R} =\varepsilon _{0}+\sum_{k\gamma }^{}  R_{k\gamma} (r)C_{k\gamma ,k'\gamma '}^{ion}(r_{\gamma}-r_{\gamma'})+\frac{1}{2}\sum_{R_{k,k'\gamma} }^{} R_{k\gamma} (r)R_{k'\gamma} (r) C_{k\gamma ,k'\gamma '}^{electron}(r_{\gamma}-r_{\gamma'})
+$$
+
+$$
+\left\{\begin{matrix}C_{k\gamma ,k'\gamma '}^{ion}(r_{\gamma }- r_{\gamma' } )=n_{0}(r)\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma }(r) }   \\C_{k\gamma ,k'\gamma '}^{electron}(r_{\gamma }- r_{\gamma' } )=\frac{\partial n(r)}{\partial R_{k'\gamma }(r)} \frac{\partial V_{SCF} }{\partial R_{k\gamma }(r)}+n_{0}(r) \frac{\partial^{2}  V_{SCF} }{\partial R_{k\gamma }(r)\partial R_{k'\gamma }(r)}\end{matrix}\right.
+$$
+
+$$
+\Longrightarrow C_{k\gamma ,k'\gamma '}(r_{\gamma }- r_{\gamma' } )\propto n_{0}(r),\Delta V_{SCF}(r)and\Delta n(r)
+$$
