@@ -12,7 +12,7 @@ sbatch qe_twnia3_pbspropwtk.sh
 
 腳本內總共創遭了三種輸入檔:pw.$name.scf.in pw.$name.bands.in bands.$name.in 並進行了三次運算:
 
-第一個輸入檔案為pw.$name.scf.in:
+第1個輸入檔案為pw.$name.scf.in:
 
  &CONTROL
  
@@ -56,7 +56,7 @@ K_POINTS {automatic}
 
    6 6 6 0 0 0
 
- 這個輸入檔案便是DFT中的自洽運算:
+ 這個輸入檔案便是DFT中的自洽運算(scf):
 
  $$
 \begin{aligned}
@@ -92,4 +92,68 @@ $$
 
 8. 6 6 6 0 0 0 BZ內K空間三個維度的切點數(用來積化求和),切點數越大,計算越精準,耗時也會加大
 
-運行計算的指令為:mpiexec pw.x -in pw.$name.scf.in > pw.$name.scf.out
+運行scf計算的指令為:mpiexec pw.x -in pw.$name.scf.in > pw.$name.scf.out
+
+
+第2個輸入檔案為pw.$name.bands.in:
+
+ &CONTROL
+ 
+    calculation = 'bands'
+    
+    prefix='$name',
+    
+    pseudo_dir  = './',	
+    
+ /
+ &SYSTEM    
+ 
+    ibrav= -3,
+    
+    celldm(1)=5.671987,
+    
+    nat= 1,
+    
+    ntyp = 1,
+    
+    ecutwfc = 50.0,
+    
+    ecutrho = 700.0, 
+
+    occupations='smearing',
+    
+    smearing='mp',
+    
+    degauss=0.02,
+    
+    nbnd = 30,
+ /
+ &ELECTRONS
+ 
+ /
+ATOMIC_SPECIES
+
+  V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
+  
+ATOMIC_POSITIONS (crystal)
+
+   V  0.0000000000  0.0000000000  0.0000000000
+   
+K_POINTS {crystal_b}
+
+8
+     0.0000    0.0000    0.0000 90 !G
+     
+     0.5000   -0.5000    0.5000 90 !H
+     
+     0.0000    0.0000    0.5000 90 !N
+     
+     0.0000    0.0000    0.0000 90 !G
+     
+     0.2500    0.2500    0.2500 90 !P
+     
+     0.5000   -0.5000    0.5000 90 !H
+     
+     0.2500    0.2500    0.2500 90 !P
+     
+     0.0000    0.0000    0.5000  1 !N
