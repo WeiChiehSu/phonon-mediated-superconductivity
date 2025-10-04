@@ -6,4 +6,4 @@ qsub qe_pbspro_dos.sh
 
 稍等一段時間後,計算便完成了.
 
-接下來將V.bands.dat和pw.V.scf.out放到具有qe_dos.m的資料夾中 運行qe_dos.m 便可得到Nb(unit-cell)的態密度:band.png
+接下來將V.bands.dat和pw.10Nb.nscf.out放到具有qe_dos.m的資料夾中 運行qe_dos.m 便可得到Nb(unit-cell)的態密度:band.png
