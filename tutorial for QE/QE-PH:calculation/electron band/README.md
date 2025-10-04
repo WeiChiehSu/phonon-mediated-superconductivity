@@ -194,4 +194,8 @@ K_POINTS {crystal_b}
 
 運行bands計算的指令為:mpiexec bands.x < bands.$name.in > bands.$name.out
 
+便能得到材料的能帶數值檔案$name.bands.dat
+
 # qe_band.m分析
+
+V.bands.dat和pw.V.scf.out放到具有qe_band.m的資料夾中 運行qe_band.m 便可得到V(unit-cell)的電子能帶:band.png
