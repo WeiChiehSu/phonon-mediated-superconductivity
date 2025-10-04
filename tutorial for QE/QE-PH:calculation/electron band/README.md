@@ -6,7 +6,7 @@ sbatch qe_twnia3_pbspropwtk.sh
 
 稍等一段時間後,計算便完成了.
 
-接下來將V.bands.dat放到具有qe_band.m的資料夾中 運行qe_band.m 便可得到V(unit-cell)的電子能帶:band.png
+接下來將V.bands.dat和pw.V.scf.out放到具有qe_band.m的資料夾中 運行qe_band.m 便可得到V(unit-cell)的電子能帶:band.png
 
 # QE腳本分析
 
@@ -193,3 +193,5 @@ K_POINTS {crystal_b}
 2. lsym = .true.:數值輸出遵循bands計算設置的高對稱點座標和切點數
 
 運行bands計算的指令為:mpiexec bands.x < bands.$name.in > bands.$name.out
+
+# qe_band.m分析
