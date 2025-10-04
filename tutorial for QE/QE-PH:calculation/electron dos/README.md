@@ -203,7 +203,7 @@ $name.dos和pw.10Nb.nscf.out放到具有qe_dos.m的資料夾中 運行qe_dos.m �
 
 qe_band.m需要注意幾個必須要設置的參數:
 
-name = 'Nb';
+name = '10Nb'; -> 要讀取的bands.dat的前贅詞
 
 material_name = 'Nb atomic layers(bulk)';
 
@@ -212,7 +212,9 @@ natom = 1;
 xmin = -1;    % energy range 
 
 xmax = 1;
+
 ymin =  0;    % DOS range
+
 ymax = 0.55;
 
 name = 'V'; -> 要讀取的bands.dat的前贅詞
