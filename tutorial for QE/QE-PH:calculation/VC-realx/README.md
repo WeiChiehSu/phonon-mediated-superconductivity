@@ -106,4 +106,4 @@ K_POINTS {automatic}
 
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.vc-relax.in > pw.$name.vc-relax.out
 
-計算完後,會得到pw.$name.vc-relax.out檔案,使用(https://www.densityflow.com/en/pwout.php)的功能,便能得到能量最低的結構
+計算完後,會得到pw.$name.vc-relax.out檔案,使用 (https://www.densityflow.com/en/pwout.php) 的功能,便能得到能量最低的結構
