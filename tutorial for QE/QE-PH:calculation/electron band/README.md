@@ -171,7 +171,7 @@ K_POINTS {crystal_b}
 
 4. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*7+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大
 
-運行scf計算的指令為:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
+運行bands計算的指令為:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
 
 # 第3個輸入檔案為bands.$name.in:
 
@@ -183,3 +183,13 @@ K_POINTS {crystal_b}
     
     lsym = .true.,
  /
+
+這個輸入檔案的目的是讀取前面bands計算的eigenvalue,並輸出成可以讀取數值的檔案.
+
+需要注意幾個必須要設置的參數:
+
+1. filband = '$name.bands.dat':最終輸出可以讀取數值的檔案名:$name.bands.dat
+
+2. lsym = .true.:數值輸出遵循bands計算設置的高對稱點座標和切點數
+
+運行bands計算的指令為:mpiexec bands.x < bands.$name.in > bands.$name.out
