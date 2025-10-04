@@ -2,7 +2,7 @@
 
 因此本教程分為幾個部分:
 
-1.如何使用QE去計算材料的電子能帶 (electron band)
+1.如何使用QE去計算材料的電子能帶 (tutorial for QE/QE-PH:calculation/electron band)
 
 2.如何使用QE去計算材料的電子態密度
 
