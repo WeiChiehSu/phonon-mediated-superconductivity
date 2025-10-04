@@ -77,13 +77,13 @@ K_POINTS (automatic)
 \end{aligned}
 $$
 
-透過自洽運算得到V(unit-cell)的電荷密度和波函數
+透過自洽運算得到Nb(unit-cell)的電荷密度和波函數
 
 需要注意幾個必須要設置的參數:
 
 1. prefix='$name':運行計算工作的名字
 
-2. pseudo_dir  = './':pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄
+2. pseudo_dir  = './':pseudopotential:Nb.pbe-spn-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄
 
 3. ibrav= -3 celldm(1)=5.671987:定義晶格參數,詳情請看https://www.quantum-espresso.org/Doc/INPUT_PW.html
 
@@ -93,9 +93,11 @@ $$
 
 6. ecutwfc = 50.0: 用來展開平面波基底的截斷能,截斷能越大,計算越精準,耗時也會加大
 
-7. V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF:原子種類 原子質量 原子pseudopotential
+7. Nb 92.90638 Nb.pbe-spn-kjpaw_psl.1.0.0.UPF:原子種類 原子質量 原子pseudopotential
 
-8. 6 6 6 0 0 0 BZ內K空間三個維度的切點數(用來積化求和),切點數越大,計算越精準,耗時也會加大
+8. Nb  0.0000000000  0.0000000000  0.0000000000:原子名稱 該原子在晶格內的相對位置
+
+9. 12 12 12 0 0 0 BZ內K空間三個維度的切點數(用來積化求和),切點數越大,計算越精準,耗時也會加大
 
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.scf.in > pw.$name.scf.out
 
