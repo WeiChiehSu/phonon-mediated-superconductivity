@@ -204,13 +204,16 @@ V.bands.dat和pw.V.scf.out放到具有qe_band.m的資料夾中 運行qe_band.m �
 
 qe_band.m需要注意幾個必須要設置的參數:
 
-%%%%%%%%%%%%%%INPUT PARAMETER%%%%%%%%%%%%%%%%%%%
-%Ef = 7.4344;  % Fermi elvel
 name = 'V';
+
 material_name = 'V w/o soc';
+
 high_symmetry_point_name = {'\Gamma','H','N','\Gamma','P','H','P','N','interpreter','LaTex'};
+
 hs = 8;
+
 ymin = -8;    % energy range [eV]
+
 ymax = 10;
-word_Ef_1 = "highest occupied level (ev):"; 
-word_Ef_2 = "the Fermi energy is"; 
+
+
