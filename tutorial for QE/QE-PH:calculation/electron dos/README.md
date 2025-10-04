@@ -153,29 +153,30 @@ K_POINTS automatic
 
     72 72 72 0 0 0
 
-這個輸入檔案的目的是讀取前面scf計算的電荷密度和波函數 用來計算材料的電子能帶,也就是系統的eigenvalue.
+這個輸入檔案的目的是讀取前面scf計算收斂的電荷密度和波函數,在新的且更密的K點網格上,計算系統的eigenvalue.
 
 需要注意幾個必須要設置的參數:
 
-1. calculation = 'bands':運行計算電子能帶
+1. calculation = 'nscf':運行計算非自洽計算
 
-2. nbnd = 30:總共要計算幾條能帶 (可以在pw.V.scf.out找number of Kohn-Sham states=           11 進行參考)
+4. 72 72 72 0 0 0:設置更密的K點網格,其切點數越多,最終畫出來的電子態密度越準確,耗時也會加大
 
-3. K_POINTS {crystal_b}中的8:總共要計算幾個BZ內的高對稱點
-
-4. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*7+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大
-
-運行bands計算的指令為:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
+運行nscf計算的指令為:mpiexec pw.x -in pw.$name.nscf.in > pw.$name.nscf.out
 
 # 第3個輸入檔案為dos.$name.in:
 
- &BANDS
+ &DOS
  
-    prefix='$name',
+    prefix = '$name'
     
-    filband = '$name.bands.dat'
+    outdir = './',
     
-    lsym = .true.,
+    fildos = '$name.dos'
+    
+    degauss = 0.012,
+    
+    DeltaE = 0.001
+    
  /
 
 這個輸入檔案的目的是讀取前面bands計算的eigenvalue,並輸出成可以讀取數值的檔案.
