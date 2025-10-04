@@ -187,17 +187,19 @@ K_POINTS automatic
 
 2. outdir = './',:前面nscf計算後的數據讀取位置,目前設置為當前目錄
 
-3. degauss = 0.012:數值輸出遵循bands計算設置的高對稱點座標和切點數(https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/introduction%20to%20The%20theory%20of%20First%20principle/4.Delta%20function%20Approxima.mdte%20method.md)
+3. degauss = 0.012:控制積分平滑程度的參數,具體可以看(https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/introduction%20to%20The%20theory%20of%20First%20principle/4.Delta%20function%20Approxima.mdte%20method.md)
 
-運行bands計算的指令為:mpiexec bands.x < bands.$name.in > bands.$name.out
+4. DeltaE = 0.001: 控制繪圖取樣間距的參數,能量軸上每隔0.001Ry取一個能量點，繪製電子態密度
 
-便能得到材料的能帶數值檔案$name.bands.dat
+運行bands計算的指令為:mpiexec dos.x < dos.$name.in > dos.$name.out
+
+便能得到材料的能帶數值檔案$name.dos
 
 # qe_band.m分析
 
-V.bands.dat和pw.V.scf.out放到具有qe_band.m的資料夾中 運行qe_band.m 便可得到V(unit-cell)的電子能帶:band.png
+$name.dos和pw.10Nb.nscf.out放到具有qe_dos.m的資料夾中 運行qe_dos.m 便可得到Nb(unit-cell)的電子能帶:dos1.png
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20band/band.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20dos/dos1.png)
 
 qe_band.m需要注意幾個必須要設置的參數:
 
