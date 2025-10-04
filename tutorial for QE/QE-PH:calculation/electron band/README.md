@@ -76,9 +76,9 @@ $$
 
 需要注意幾個必須要設置的參數:
 
-1.prefix='$name':運行計算工作的名字
+1. prefix='$name':運行計算工作的名字
 
-2.pseudo_dir  = './':pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄
+2. pseudo_dir  = './':pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄
 
 3. ibrav= -3 celldm(1)=5.671987:定義晶格參數,詳情請看https://www.quantum-espresso.org/Doc/INPUT_PW.html
 
