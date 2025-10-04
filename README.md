@@ -1,4 +1,4 @@
-# phonon-mediated-superconductivity
+# Phonon-mediated-superconductivity
 This is a tutorial on QE calculations for phonon-mediated superconductivity 
 
 (to help personal understanding and knowledge transfer). 
