@@ -56,7 +56,7 @@ K_POINTS {automatic}
 
    6 6 6 0 0 0
 
- 這個輸入檔案便是DFT中的自洽運算(scf):
+ 這個輸入檔案的目的便是DFT中的自洽運算(scf):
 
  $$
 \begin{aligned}
@@ -158,3 +158,17 @@ K_POINTS {crystal_b}
      0.2500    0.2500    0.2500 90 !P
      
      0.0000    0.0000    0.5000  1 !N
+
+這個輸入檔案的目的是讀取前面scf計算的電荷密度和波函數 用來計算材料的電子能帶,也就是系統的eigenvalue.
+
+需要注意幾個必須要設置的參數:
+
+1. calculation = 'bands':運行計算電子能帶
+
+2. nbnd = 30:總共要計算幾條能帶 (可以在pw.V.scf.out找number of Kohn-Sham states=           11 進行參考)
+
+3. K_POINTS {crystal_b}中的8:總共要計算幾個BZ內的高對稱點
+
+4. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*7+1)
+
+運行scf計算的指令為:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
