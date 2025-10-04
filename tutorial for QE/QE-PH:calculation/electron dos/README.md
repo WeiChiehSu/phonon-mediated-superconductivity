@@ -187,7 +187,7 @@ K_POINTS automatic
 
 2. outdir = './',:前面nscf計算後的數據讀取位置,目前設置為當前目錄
 
-3. degauss = 0.012:數值輸出遵循bands計算設置的高對稱點座標和切點數
+3. degauss = 0.012:數值輸出遵循bands計算設置的高對稱點座標和切點數(https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/introduction%20to%20The%20theory%20of%20First%20principle/4.Delta%20function%20Approxima.mdte%20method.md)
 
 運行bands計算的指令為:mpiexec bands.x < bands.$name.in > bands.$name.out
 
