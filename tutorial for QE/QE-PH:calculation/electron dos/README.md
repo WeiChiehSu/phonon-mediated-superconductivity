@@ -151,7 +151,7 @@ ATOMIC_POSITIONS (crystal)
   
 K_POINTS automatic
 
-   72 72 72 0 0 0
+    72 72 72 0 0 0
 
 這個輸入檔案的目的是讀取前面scf計算的電荷密度和波函數 用來計算材料的電子能帶,也就是系統的eigenvalue.
 
