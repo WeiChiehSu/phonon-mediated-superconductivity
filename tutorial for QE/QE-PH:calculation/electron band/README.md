@@ -204,16 +204,15 @@ V.bands.dat和pw.V.scf.out放到具有qe_band.m的資料夾中 運行qe_band.m �
 
 qe_band.m需要注意幾個必須要設置的參數:
 
-name = 'V';
+name = 'V'; -> 要讀取的bands.dat的前贅詞
 
-material_name = 'V w/o soc';
+material_name = 'V w/o soc'; -> 圖片band.png的title
 
-high_symmetry_point_name = {'\Gamma','H','N','\Gamma','P','H','P','N','interpreter','LaTex'};
+high_symmetry_point_name = {'\Gamma','H','N','\Gamma','P','H','P','N','interpreter','LaTex'}; -> bands計算設置的高對稱點座標名稱
 
-hs = 8;
+hs = 8; -> bands計算設置的高對稱點座標數量
 
-ymin = -8;    % energy range [eV]
+ymin = -8; -> 繪圖的能量區間下限
 
-ymax = 10;
-
+ymax = 10; -> 繪圖的能量區間上限
 
