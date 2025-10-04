@@ -50,3 +50,7 @@ SSCHA:
 1.SSCHA-Theory
 
 2.How to install SSCHA
+
+# Reference
+
+https://thesis.lib.ncku.edu.tw/thesis/detail/55982d7b9fd66505eadfc9673f2c098d/
