@@ -45,7 +45,7 @@ source ~/intel/oneapi/setvars.sh
 export PATH=/home/880212l26111201/qe-6.8/qe-6.8/bin:$PATH
 echo -e "using MPI: mpiexec is \n$(type -p mpiexec)"
 #np=$(cat $PBS_NODEFILE |wc -l)
-name=Nb
+name=10Nb
 
 cat > pw.$name.scf.in << EOF
  &CONTROL
