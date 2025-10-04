@@ -83,7 +83,7 @@ $$
 
 1. prefix='$name':運行計算工作的名字
 
-2. pseudo_dir  = './':pseudopotential:Nb.pbe-spn-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄
+2. pseudo_dir  = './':pseudopotential:Nb.pbe-spn-kjpaw_psl.1.0.0.UPF讀取位置,目前設置為當前目錄
 
 3. ibrav= -3 celldm(1)=5.671987:定義晶格參數,詳情請看https://www.quantum-espresso.org/Doc/INPUT_PW.html
 
@@ -179,13 +179,15 @@ K_POINTS automatic
     
  /
 
-這個輸入檔案的目的是讀取前面bands計算的eigenvalue,並輸出成可以讀取數值的檔案.
+這個輸入檔案的目的是讀取前面nscf計算的eigenvalue,統計出能量分佈並輸出成可以讀取數值的檔案.
 
 需要注意幾個必須要設置的參數:
 
-1. filband = '$name.bands.dat':最終輸出可以讀取數值的檔案名:$name.bands.dat
+1. fildos = '$name.dos':最終輸出可以讀取數值的檔案名:$name.dos
 
-2. lsym = .true.:數值輸出遵循bands計算設置的高對稱點座標和切點數
+2. outdir = './',:前面nscf計算後的數據讀取位置,目前設置為當前目錄
+
+3. degauss = 0.012:數值輸出遵循bands計算設置的高對稱點座標和切點數
 
 運行bands計算的指令為:mpiexec bands.x < bands.$name.in > bands.$name.out
 
