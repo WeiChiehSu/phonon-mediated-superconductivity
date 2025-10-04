@@ -1,0 +1,35 @@
+10 0.1 1
+   16
+   0.000000000   0.000000000   0.000000000  1
+   0.166666667   0.166666667   0.000000000 12
+   0.333333333   0.333333333   0.000000000 12
+  -0.500000000  -0.500000000   0.000000000  6
+   0.333333333   0.166666667   0.166666667 24
+   0.500000000   0.333333333   0.166666667 48
+   0.666666667   0.333333333   0.333333333  8
+   0.333333333   0.333333333   0.333333333  8
+   0.500000000   0.500000000   0.333333333 12
+   0.000000000   0.000000000   0.333333333  6
+  -0.000000000  -0.166666667   0.500000000 24
+  -1.000000000  -0.333333333  -0.333333333 12
+  -0.833333333  -0.166666667  -0.333333333 24
+  -0.000000000  -0.000000000   0.666666667  6
+  -1.000000000  -0.166666667  -0.166666667 12
+  -1.000000000  -1.000000000  -1.000000000  1
+elph_dir/elph.inp_lambda.1
+elph_dir/elph.inp_lambda.2
+elph_dir/elph.inp_lambda.3
+elph_dir/elph.inp_lambda.4
+elph_dir/elph.inp_lambda.5
+elph_dir/elph.inp_lambda.6
+elph_dir/elph.inp_lambda.7
+elph_dir/elph.inp_lambda.8
+elph_dir/elph.inp_lambda.9
+elph_dir/elph.inp_lambda.10
+elph_dir/elph.inp_lambda.11
+elph_dir/elph.inp_lambda.12
+elph_dir/elph.inp_lambda.13
+elph_dir/elph.inp_lambda.14
+elph_dir/elph.inp_lambda.15
+elph_dir/elph.inp_lambda.16
+ 0.3

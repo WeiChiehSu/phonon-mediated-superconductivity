@@ -1,0 +1,66 @@
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
+
+     Total force =     0.000000     Total SCF correction =     0.000000
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=       -0.43
+  -0.00000293  -0.00000000  -0.00000000           -0.43       -0.00       -0.00
+  -0.00000000  -0.00000293  -0.00000000           -0.00       -0.43       -0.00
+  -0.00000000  -0.00000000  -0.00000293           -0.00       -0.00       -0.43
+
+
+     Writing output data file ./V.save/
+ 
+     init_run     :      0.19s CPU      0.23s WALL (       1 calls)
+     electrons    :      3.52s CPU      3.73s WALL (       1 calls)
+     forces       :      0.04s CPU      0.04s WALL (       1 calls)
+     stress       :      0.13s CPU      0.13s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.12s CPU      0.14s WALL (       1 calls)
+     potinit      :      0.00s CPU      0.01s WALL (       1 calls)
+     hinit0       :      0.04s CPU      0.06s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :      3.02s CPU      3.20s WALL (       6 calls)
+     sum_band     :      0.45s CPU      0.47s WALL (       6 calls)
+     v_of_rho     :      0.02s CPU      0.02s WALL (       6 calls)
+     newd         :      0.03s CPU      0.03s WALL (       6 calls)
+     mix_rho      :      0.00s CPU      0.00s WALL (       6 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.07s CPU      0.07s WALL (    2925 calls)
+     cegterg      :      2.80s CPU      2.97s WALL (    1170 calls)
+
+     Called by *egterg:
+     cdiaghg      :      0.60s CPU      0.63s WALL (    5708 calls)
+     h_psi        :      1.90s CPU      2.03s WALL (    6098 calls)
+     s_psi        :      0.03s CPU      0.03s WALL (    6098 calls)
+     g_psi        :      0.01s CPU      0.01s WALL (    4733 calls)
+
+     Called by h_psi:
+     h_psi:calbec :      0.11s CPU      0.12s WALL (    6098 calls)
+     vloc_psi     :      1.73s CPU      1.84s WALL (    6098 calls)
+     add_vuspsi   :      0.04s CPU      0.04s WALL (    6098 calls)
+
+     General routines
+     calbec       :      0.15s CPU      0.16s WALL (    8243 calls)
+     fft          :      0.02s CPU      0.04s WALL (     102 calls)
+     ffts         :      0.00s CPU      0.00s WALL (      12 calls)
+     fftw         :      1.77s CPU      1.89s WALL (   94160 calls)
+     interpolate  :      0.00s CPU      0.00s WALL (       6 calls)
+ 
+     Parallel routines
+ 
+     PWSCF        :      4.13s CPU      4.47s WALL
+
+ 
+   This run was terminated on:  19:26:49   8May2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
