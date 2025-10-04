@@ -30,6 +30,8 @@ If you have any questions,welcome use discussion.
 
 3.Connected electron-phonon coupling
 
+4.Delta function Approxima.mdte method
+
 
 
 #tutorial for QE
