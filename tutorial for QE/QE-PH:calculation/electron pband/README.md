@@ -1,8 +1,8 @@
 # 電子軌域投影能帶
 
-本次計算的材料為V(unit-cell)的電子能帶,運行計算只需把pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF和腳本:qe_twnia3_pbspropwtk.sh放進已經安裝好QE的slurm系統機器,運行:
+本次計算的材料為V(unit-cell)的電子能帶,運行計算只需把pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF和腳本:qe_twnia3_pbspropwtk.sh放進已經安裝好QE的pbs系統機器,運行:
 
-sbatch qe_twnia3_pbspropwtk.sh
+qsub qe_twnia3_pbspropwtk.sh
 
 稍等一段時間後,計算便完成了.
 
@@ -10,7 +10,7 @@ sbatch qe_twnia3_pbspropwtk.sh
 
 # QE腳本分析
 
-腳本內總共創遭了三種輸入檔:pw.$name.scf.in pw.$name.bands.in bands.$name.in 並進行了三次運算:
+腳本內總共創遭了四種輸入檔:pw.$name.scf.in pw.$name.bands.in projwfc.$name.in bands.$name.in 並進行了四次運算:
 
 # 第1個輸入檔案為pw.$name.scf.in:
 
@@ -173,7 +173,28 @@ K_POINTS {crystal_b}
 
 運行bands計算的指令為:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
 
-# 第3個輸入檔案為bands.$name.in:
+# 第3個輸入檔案為projwfc.$name.in:
+
+ &projwfc
+ 
+    outdir='./'
+    
+    prefix='$name'
+    
+    ngauss=1, 
+    
+    degauss=0.02, ! Ry
+    
+    DeltaE=0.01,
+    
+    kresolveddos=.true.,
+    
+    filpdos='$name.prijected.band',
+ /
+
+運行projwfc計算的指令為:mpiexec projwfc.x < projwfc.$name.in > projwfc.$name.out
+
+# 第4個輸入檔案為bands.$name.in:
 
  &BANDS
  
