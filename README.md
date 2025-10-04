@@ -7,7 +7,7 @@ If you have any questions,welcome use discussion.
 
 
 
-#introduction to Theory
+# introduction to Theory
 
 1.BCS theory:Cooper pair
 
@@ -22,7 +22,7 @@ If you have any questions,welcome use discussion.
 6.McMillan-Allen Dynes function
 
 
-#introduction to The theory of First principle
+# introduction to The theory of First principle
 
 1.Density functional theory and Density-functional-perturbation theory
 
@@ -34,7 +34,7 @@ If you have any questions,welcome use discussion.
 
 
 
-#tutorial for QE
+# tutorial for QE
 
 1.How to install quantum-espresso
 
@@ -43,7 +43,7 @@ If you have any questions,welcome use discussion.
 3.Discussion on Convergence Properties
 
 
-#Special Cases:
+# Special Cases:
 
 SSCHA:
 
