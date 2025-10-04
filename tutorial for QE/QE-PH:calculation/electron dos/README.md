@@ -51,17 +51,17 @@ qsub qe_pbspro_dos.sh
  /
 ATOMIC_SPECIES
 
-   Nb 92.90638 Nb.pbe-spn-kjpaw_psl.1.0.0.UPF
+    Nb 92.90638 Nb.pbe-spn-kjpaw_psl.1.0.0.UPF
   
 ATOMIC_POSITIONS (crystal)
 
-   Nb  0.0000000000  0.0000000000  0.0000000000
+    Nb  0.0000000000  0.0000000000  0.0000000000
   
 K_POINTS (automatic)
 
-   12 12 12 0 0 0
+    12 12 12 0 0 0
 
- 這個輸入檔案的目的便是DFT中的自洽運算(scf):
+這個輸入檔案的目的便是DFT中的自洽運算(scf):
 
  $$
 \begin{aligned}
