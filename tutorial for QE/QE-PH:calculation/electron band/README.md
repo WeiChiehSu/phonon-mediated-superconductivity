@@ -46,15 +46,15 @@ sbatch qe_twnia3_pbspropwtk.sh
  /
 ATOMIC_SPECIES
 
-   V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
+     V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
   
 ATOMIC_POSITIONS (crystal)
 
-   V  0.0000000000  0.0000000000  0.0000000000
+     V  0.0000000000  0.0000000000  0.0000000000
    
 K_POINTS {automatic}
 
-   6 6 6 0 0 0
+     6 6 6 0 0 0
 
  這個輸入檔案的目的便是DFT中的自洽運算(scf):
 
@@ -133,11 +133,11 @@ $$
  /
 ATOMIC_SPECIES
 
-  V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
+     V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
   
 ATOMIC_POSITIONS (crystal)
 
-   V  0.0000000000  0.0000000000  0.0000000000
+    V  0.0000000000  0.0000000000  0.0000000000
    
 K_POINTS {crystal_b}
 
