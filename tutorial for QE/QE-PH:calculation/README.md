@@ -8,8 +8,6 @@
 
 3.如何使用QE去計算材料的電子投影軌域能帶
 
-2.如何使用QE去對晶格結構進行放鬆
+4.如何使用QE去對晶格結構進行放鬆
 
-3.如何使用QE去計算聲子譜,聲子態密度和Eliashberg譜函數
-
-4.如何使用Mcmillan Allen Dynes function去計算材料的超導轉溫度
+5.如何使用QE去計算聲子譜,聲子態密度和Eliashberg譜函數且使用Mcmillan Allen Dynes function去計算材料的超導轉溫度
