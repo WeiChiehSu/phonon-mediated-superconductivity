@@ -203,28 +203,16 @@ $name.dos和pw.10Nb.nscf.out放到具有qe_dos.m的資料夾中 運行qe_dos.m �
 
 qe_band.m需要注意幾個必須要設置的參數:
 
-name = '10Nb'; -> 要讀取的bands.dat的前贅詞
+name = '10Nb'; -> 要讀取的$name.dos的前贅詞
 
-material_name = 'Nb atomic layers(bulk)';
+material_name = 'Nb atomic layers(bulk)'; -> 圖片band.png的title
 
-natom = 1;
+natom = 1; -> 晶格內的原子數量
 
-xmin = -1;    % energy range 
+xmin = -1;    % energy range  -> 繪圖的x軸(能量區間)下限
 
-xmax = 1;
+xmax = 1;                     -> 繪圖的x軸(能量區間)上限
 
-ymin =  0;    % DOS range
+ymin =  0;    % DOS range     -> 繪圖的y軸(電子密度強度)下限
 
-ymax = 0.55;
-
-name = 'V'; -> 要讀取的bands.dat的前贅詞
-
-material_name = 'V w/o soc'; -> 圖片band.png的title
-
-high_symmetry_point_name = {'\Gamma','H','N','\Gamma','P','H','P','N','interpreter','LaTex'}; -> bands計算設置的高對稱點座標名稱
-
-hs = 8; -> bands計算設置的高對稱點座標數量
-
-ymin = -8; -> 繪圖的能量區間下限
-
-ymax = 10; -> 繪圖的能量區間上限
+ymax = 0.55;                  -> 繪圖的y軸(電子密度強度)上限
