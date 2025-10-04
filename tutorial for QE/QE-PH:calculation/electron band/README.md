@@ -81,3 +81,15 @@ $$
 2.pseudo_dir  = './':pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄
 
 3. ibrav= -3 celldm(1)=5.671987:定義晶格參數,詳情請看https://www.quantum-espresso.org/Doc/INPUT_PW.html
+
+4. nat= 1:晶格內的原子數為1個
+
+5. ntyp = 1:晶格內的原子種類為1種
+
+6. ecutwfc = 50.0: 用來展開平面波基底的截斷能,截斷能越大,計算越精準,耗時也會加大
+
+7. V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF:原子種類 原子質量 原子pseudopotential
+
+8. 6 6 6 0 0 0 BZ內K空間三個維度的切點數(用來積化求和),切點數越大,計算越精準,耗時也會加大
+
+運行計算的指令為:mpiexec pw.x -in pw.$name.scf.in > pw.$name.scf.out
