@@ -12,7 +12,7 @@ sbatch qe_twnia3_pbspropwtk.sh
 
 腳本內總共創遭了三種輸入檔:pw.$name.scf.in pw.$name.bands.in bands.$name.in 並進行了三次運算:
 
-第1個輸入檔案為pw.$name.scf.in:
+# 第1個輸入檔案為pw.$name.scf.in:
 
  &CONTROL
  
@@ -95,7 +95,7 @@ $$
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.scf.in > pw.$name.scf.out
 
 
-第2個輸入檔案為pw.$name.bands.in:
+# 第2個輸入檔案為pw.$name.bands.in:
 
  &CONTROL
  
