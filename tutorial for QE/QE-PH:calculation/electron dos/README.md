@@ -102,22 +102,26 @@ $$
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.scf.in > pw.$name.scf.out
 
 
-# 第2個輸入檔案為pw.$name.bands.in:
+# 第2個輸入檔案為pw.$name.nscf.in:
 
  &CONTROL
  
-    calculation = 'bands'
+    calculation = 'nscf'
     
-    prefix='$name',
+    prefix = '$name'
     
-    pseudo_dir  = './',	
+    outdir = './',
+    
+    pseudo_dir  = './',		
+    
+    verbosity = 'high',	
     
  /
  &SYSTEM    
  
     ibrav= -3,
     
-    celldm(1)=5.671987,
+    celldm(1)=6.243473,
     
     nat= 1,
     
@@ -125,7 +129,7 @@ $$
     
     ecutwfc = 50.0,
     
-    ecutrho = 700.0, 
+    ecutrho = 300.0, 
 
     occupations='smearing',
     
@@ -133,38 +137,21 @@ $$
     
     degauss=0.02,
     
-    nbnd = 30,
  /
  &ELECTRONS
  
  /
 ATOMIC_SPECIES
 
-  V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
+     Nb 92.90638 Nb.pbe-spn-kjpaw_psl.1.0.0.UPF
   
 ATOMIC_POSITIONS (crystal)
 
-   V  0.0000000000  0.0000000000  0.0000000000
-   
-K_POINTS {crystal_b}
+    Nb  0.0000000000  0.0000000000  0.0000000000
+  
+K_POINTS automatic
 
-8
-
-     0.0000    0.0000    0.0000 90 !G
-     
-     0.5000   -0.5000    0.5000 90 !H
-     
-     0.0000    0.0000    0.5000 90 !N
-     
-     0.0000    0.0000    0.0000 90 !G
-     
-     0.2500    0.2500    0.2500 90 !P
-     
-     0.5000   -0.5000    0.5000 90 !H
-     
-     0.2500    0.2500    0.2500 90 !P
-     
-     0.0000    0.0000    0.5000  1 !N
+   72 72 72 0 0 0
 
 這個輸入檔案的目的是讀取前面scf計算的電荷密度和波函數 用來計算材料的電子能帶,也就是系統的eigenvalue.
 
@@ -180,7 +167,7 @@ K_POINTS {crystal_b}
 
 運行bands計算的指令為:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
 
-# 第3個輸入檔案為bands.$name.in:
+# 第3個輸入檔案為dos.$name.in:
 
  &BANDS
  
