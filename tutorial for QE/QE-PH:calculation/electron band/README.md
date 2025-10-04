@@ -80,14 +80,4 @@ $$
 
 2.pseudo_dir  = './':pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄
 
-3.    ibrav= -3,
-    
-    celldm(1)=5.671987,
-    
-    nat= 1,
-    
-    ntyp = 1,
-    
-    ecutwfc = 50.0,
-    
-    ecutrho = 700.0, 
+3. ibrav= -3 celldm(1)=5.671987:定義晶格參數,詳情請看https://www.quantum-espresso.org/Doc/INPUT_PW.html
