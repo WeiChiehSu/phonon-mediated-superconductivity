@@ -46,15 +46,15 @@ qsub qe_twnia3_pbspropwtk.sh
  /
 ATOMIC_SPECIES
 
-   V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
+     V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
   
 ATOMIC_POSITIONS (crystal)
 
-   V  0.0000000000  0.0000000000  0.0000000000
+     V  0.0000000000  0.0000000000  0.0000000000
    
 K_POINTS {automatic}
 
-   6 6 6 0 0 0
+    6 6 6 0 0 0
 
  這個輸入檔案的目的便是DFT中的自洽運算(scf):
 
@@ -133,11 +133,11 @@ $$
  /
 ATOMIC_SPECIES
 
-  V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
+     V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
   
 ATOMIC_POSITIONS (crystal)
 
-   V  0.0000000000  0.0000000000  0.0000000000
+    V  0.0000000000  0.0000000000  0.0000000000
    
 K_POINTS {crystal_b}
 
@@ -219,11 +219,28 @@ K_POINTS {crystal_b}
 
 # qe_band.m分析
 
-V.bands.dat和pw.V.scf.out放到具有qe_band.m的資料夾中 運行qe_band.m 便可得到V(unit-cell)的電子能帶:band.png
+V.bands.dat和pw.V.scf.out放到具有qe_projected_band的資料夾中 運行qe_projected_band便可得到V(unit-cell)的電子能帶:band.png
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20band/band.png)
 
-qe_band.m需要注意幾個必須要設置的參數:
+qe_projected_band.m需要注意幾個必須要設置的參數:
+
+name = '4layers-graphene';
+material_name = 'ABCA-4layers-graphene without soc';
+high_symmetry_point_name = {'\Gamma','M','K','\Gamma','interpreter','LaTex'};
+hs = 4;
+% atom = {'W';'Se'};
+% n_atom = 1;
+name_compare = { 'C' };
+%name_compare = { 'C' ; 'S' };
+which_atom = [ 1:4]; % which atom to plot. when use name_compare, select 2 atom
+% which_orbital = [ 1 2 ]; % 1 atom : s, 2 atom : p
+scale = 100;  % size of dot
+ymin = -20;    % energy range [eV]
+ymax = 13;
+word_Ef_1 = "highest occupied level (ev):"; 
+word_Ef_2 = "the Fermi energy is"; 
+isSO = 0;    % 0 : w/o soc, 1 : spin polarized, 2 : w/ soc
 
 name = 'V'; -> 要讀取的bands.dat的前贅詞
 
