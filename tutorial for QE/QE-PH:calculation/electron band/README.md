@@ -202,5 +202,5 @@ V.bands.dat和pw.V.scf.out放到具有qe_band.m的資料夾中 運行qe_band.m �
 
 ![圖片描述](https://github.com/WeiChiehSu/tutorial_phonon/blob/main/VASP/Post-processing/phonon_band/phonon-band.png)
 
-![圖片描述]([https://github.com/WeiChiehSu/tutorial_phonon/blob/main/VASP/Post-processing/phonon_band/phonon-band.png](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20band/band.png))
+![圖片描述]([https://github.com/WeiChiehSu/tutorial_phonon/blob/main/VASP/Post-processing/phonon_band/phonon-band.png](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20band/band.png)
 https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20band/band.png
