@@ -935,3 +935,11 @@ $$
 
 
 注:由於lambda.x不會計算所有q點的電聲耦合係數,因此準確度會比matdyn.x計算出來的電聲耦合係數和電聲耦合權重低,且qe-6.8的lambda.x較不完善,不會對設置錯誤進行報錯,因此這裡較為推薦用matdyn.x計算出來的電聲耦合係數和電聲耦合權重!
+
+# matlab code 繪圖順序
+
+在全部計算完成後,將banddos下載下來,banddos內有:
+
+    a2F.dos *  $name.dos $name.freq lambda pw.$name.$calcul-1.out pw.$name.$calcul-2.out force.txt lambda.$name.in lambda.$name.out
+
+並將qephonon.m,qephonondos.m,qea2fdos.m和Tclambda.m放
