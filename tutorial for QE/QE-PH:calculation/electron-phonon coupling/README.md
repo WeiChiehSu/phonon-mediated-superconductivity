@@ -1071,4 +1071,12 @@ lambda_matdyn資料夾內有讀取lambda得到的全部degauss的電聲耦合強
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/lambda_matdyn/omega_log.png)
 
+並透過matlab code 內設置的屏蔽庫侖pseudo-potential參數(mustar),解McMillan-Allen Dynes function:
+
+$$
+T_{c}=\frac{\omega _{log} }{1.2}e^{[\frac{-1.04(1+\lambda ) }{\lambda-\mu ^{*}(1+0.62\lambda)   }] }
+$$
+
+得到超導轉變溫度:T_c.png
+
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/lambda_matdyn/T_c.png)
