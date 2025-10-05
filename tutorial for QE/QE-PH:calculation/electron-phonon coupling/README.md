@@ -332,7 +332,7 @@ $$
 計算出30個不同\sigma(degauss)值的電聲耦合係數:
 $$
 
- Gaussian Broadening:   0.096 Ry, ngauss=   0
+     Gaussian Broadening:   0.096 Ry, ngauss=   0
      DOS =  3.000182 states/spin/Ry/Unit Cell at Ef=  0.766207 eV
      lambda(    1)=  0.0002   gamma=    0.04 GHz
      lambda(    2)=  0.0002   gamma=    0.04 GHz
