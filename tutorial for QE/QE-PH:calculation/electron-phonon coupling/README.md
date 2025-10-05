@@ -405,13 +405,13 @@ $$
 
  &input
  
-   zasr='simple',  
+     zasr='simple',  
   
-   fildyn='$name.dyn', 
+     fildyn='$name.dyn', 
   
-   flfrc='$name.fc', 
+     flfrc='$name.fc', 
   
-   la2F=.true.
+     la2F=.true.
   
  /
 
