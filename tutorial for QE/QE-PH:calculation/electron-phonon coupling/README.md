@@ -328,18 +328,20 @@ $$
 I\simeq \frac{\Omega _{BZ}^{2} }{N_{K} N_{q}} \sum_{k}^{} \sum_{q}^{}  \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k}-\epsilon _{F})^{2}   }{\sigma ^{2} } } \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k^{'}}-\epsilon _{F})^{2}   }{\sigma ^{2} } }   
 $$
 
-並結合前面
+$$
+並結合前面得到的頻率和第二步得到的波函數,解出電聲耦合矩陣元G_{q}:
+$$
 
 $$
 G_{q}=-\frac{1}{N_{p} }\frac{1}{\sqrt{2M\omega _{q}} }iqe^{i(k+q-k^{'} )r_{i} }V_{K-S}(q)
 $$
 
 $$
-\lambda _{q}=\sum_{nn^{'}}^{}  \left | g_{nn^{'}}(k,q) ^{2} \right | g_{electron} (\epsilon _{F})
+最終計算出30個不同\sigma(degauss)值的電聲耦合係數\lambda _{q}:
 $$
 
 $$
-計算出30個不同\sigma(degauss)值的電聲耦合係數:
+\lambda _{q}=\frac{\sum_{nn^{'}}^{} \int_{BZ}^{} \left | g_{nn^{'}}(k,q) ^{2} \right | \delta (\epsilon _{n,K}-\epsilon _{F})\delta (\epsilon _{n^{'} ,k^{'}}-\epsilon _{F})d\epsilon}{g_{electron} (\epsilon _{n^{'} ,k^{'}}-\epsilon _{F})\omega _{q}\Omega _{BZ}} 
 $$
 
      Gaussian Broadening:   0.096 Ry, ngauss=   0
