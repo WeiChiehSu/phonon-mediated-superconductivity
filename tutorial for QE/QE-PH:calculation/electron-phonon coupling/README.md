@@ -944,4 +944,6 @@ $$
 
 將qephonon.m,qephonondos.m,qea2fdos.m和Tclambda.m放入banddos內,依次運行qephonon.m,qephonondos.m,qea2fdos.m和Tclambda.m,便可得到材料的聲子性質和超導性質!
 
-# qephonon.m
+# qephonon.m 分析
+
+運行qephonon.m 便可得到V(unit-cell)的聲子譜:phonon_band1.png
