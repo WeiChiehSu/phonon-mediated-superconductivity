@@ -705,7 +705,7 @@ $$
 
    5. nk1=120,nk2=120,nk3=120:xyz軸設置更密的q點切點網格,xyz軸分別切割120個q點
 
-   6. ndos=200
+   6. ndos=200:控制繪圖取樣間距的參數,頻率軸上切200個點，繪製聲子態密度
 
 運行matdyn計算指令為:mpiexec matdyn.x -in matdyn.$name.in.dos > matdyn.$name.out.dos(注:這個計算第二耗時!)
 
@@ -994,19 +994,19 @@ xticklabels({'\Gamma','H','P','\Gamma','N','interpreter','LaTex'});   -> matdyn�
 
 qephonondos.m需要注意幾個必須要設置的參數:
 
-name = 'V';                  -> 要讀取的$name.freq的前贅詞 
+name = 'V';                             -> 要讀取的$name.freq的前贅詞 
 
 
-material_name = 'V 61872';   -> 圖片dos_total.png,dos_all.png和dos_1.png的title
+material_name = 'V 61872';              -> 圖片dos_total.png,dos_all.png和dos_1.png的title
 
-natom = 1;                   -> 原子的數量
+natom = 1;                              -> 原子的數量
 
-ndos = 200;                  
+ndos = 200;                             -> 遵循matdyn.$name.in.dos上設置的ndos = 200
 
-xmin = 0;    % energy range [meV]
+xmin = 0;                               -> 繪圖的頻率區間下限
 
-xmax = 8;   
+xmax = 8;                               -> 繪圖的頻率區間上限
 
-ymin = 0;    % DOS range    [modes/meV]
+ymin = 0;    % DOS range                
 
 ymax = 0.5;
