@@ -391,5 +391,9 @@ $$
 
    6. fildyn='$name.dyn':動力學矩陣的檔案名稱為$name.dyn
 
-   7. alpha_mix(5)=0.1 控制scf響應勢能混合迭代的參數,
+   7. alpha_mix(5)=0.1:控制scf響應勢混合迭代的參數(非常重要,若alpha_mix過大,將導致計算無法收斂!),默認值是alpha_mix(1)=0.7,alpha_mix(5)=0.1表示在第五步迭代時,混合參數從0.7更換到0.1,alpha_mix=0.1混合的定義是:
+
+$$
+\Delta n_{\text{in}}(r)*0.1+\Delta n_{\text{in}}(r)*(1-0.1)=\Delta n_{\text{new}}(r)
+$$
 
