@@ -45,7 +45,7 @@ when we finish installing quantum espresso 6.8, we need to add source ~/intel/on
 
 export PATH=/home/l26111201/qe_code/qe-6.8/bin:$PATH
 
-change the qe-6.8/bin path where you install qe-6.8!
+change the qe-6.8/bin path where you install qe-6.8 in script you want to run !
 
 my qe-6.8 install in /home/l26111201/qe_code.
 
