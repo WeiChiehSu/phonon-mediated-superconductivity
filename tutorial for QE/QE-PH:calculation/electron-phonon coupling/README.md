@@ -57,6 +57,7 @@ sbatch qe_twnia3_lambda.sh
     degauss     =  0.02,
 
  /
+ 
  &electrons
  
     conv_thr =  1.0d-8
@@ -76,3 +77,5 @@ ATOMIC_POSITIONS (crystal)
 K_POINTS {automatic}
 
       72 72 72  0  0  0
+
+這個輸入檔案的目的是透過自洽運算(scf得到材料的費米能級和準備:
