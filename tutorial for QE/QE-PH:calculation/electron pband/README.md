@@ -189,11 +189,11 @@ K_POINTS {crystal_b}
 
 1. calculation = 'bands':運行計算電子能帶
 
-2. nbnd = 30:總共要計算幾條能帶 (可以在pw.V.scf.out找number of Kohn-Sham states=           11 進行參考)
+2. nbnd = 30:總共要計算幾條能帶
 
 3. K_POINTS {crystal_b}中的8:總共要計算幾個BZ內的高對稱點
 
-4. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*7+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大
+4. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*3+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大
 
 運行bands計算的指令為:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
 
@@ -216,7 +216,15 @@ K_POINTS {crystal_b}
     filpdos='$name.prijected.band',
  /
 
+這個輸入檔案的目的是把原子軌域投影至能帶上,得到每個原子每個軌域的強度分布
+
 運行projwfc計算的指令為:mpiexec projwfc.x < projwfc.$name.in > projwfc.$name.out
+
+需要注意幾個必須要設置的參數:
+
+1. outdir='./':輸出檔案projwfc.$name.out放置在當前目錄中
+
+2. kresolveddos=.true.
 
 # 第4個輸入檔案為bands.$name.in:
 
@@ -243,7 +251,9 @@ K_POINTS {crystal_b}
 
 # qe_band.m分析
 
-V.bands.dat和pw.V.scf.out放到具有qe_projected_band的資料夾中 運行qe_projected_band便可得到V(unit-cell)的電子能帶:band.png
+band_data,pw.4layers-graphene.scf.out和projwfc.4layers-graphene.out放到具有qe_projected_band.m的資料夾中 運行qe_projected_band.m,便可在projected_band_all資料夾內得到4層 Rhombohedral Multilayer Graphene (ABCA堆疊)的電子軌域投影能帶:X atom_ X.png
+
+下圖為projected_band_all資料夾內的第1個原子P軌域的投影:1 atom_ p.png
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20band/band.png)
 
