@@ -693,6 +693,18 @@ $$
  
 第1行為Broadening,第2行為Broadening的值(由el_ph_sigma和el_ph_nsigma決定),第3行為lambda,第4行為lambda值,第5行為費米能級的電子態密度,第6行為費米能級的電子態密度值(單位Ry),第7行為電子-聲子耦合權重,第8行為電子-聲子耦合權重值
 
+進行matdyn.$name.in有幾個要點:
+
+   1. zasr='simple':聲學求和條件,simple表只施加3個平移聲學條件,並透過修正力常數矩陣（force-constants matrix）的對角元素來實現
+
+   2. flfrc='$name.fc':要讀取的第四步Fourier-Transformationc後的力學常數檔案名稱
+
+   3. fldos='$name.dos':繪製的聲子態密度檔案名稱:$name.dos
+
+   4. dos=.ture.:繪製聲子態密度
+
+   5. nk1=120,nk2=120,nk3=120
+
 運行matdyn計算指令為:mpiexec matdyn.x -in matdyn.$name.in.dos > matdyn.$name.out.dos(注:這個計算第二耗時!)
 
 # 第7個輸入檔案為lambda.$name.in:
@@ -975,3 +987,24 @@ xticklabels({'\Gamma','H','P','\Gamma','N','interpreter','LaTex'});   -> matdyn�
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/dos/dos_all.png)
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/dos/dos_1.png)
+
+注:聲子頻率的單位是THz(可換成meV)!
+
+qephonondos.m需要注意幾個必須要設置的參數:
+
+name = 'V';                  -> 要讀取的$name.freq的前贅詞 
+
+
+material_name = 'V 61872';   -> 圖片dos_total.png,dos_all.png和dos_1.png的title
+
+natom = 1;                   -> 原子的數量
+
+ndos = 200;                  
+
+xmin = 0;    % energy range [meV]
+
+xmax = 8;   
+
+ymin = 0;    % DOS range    [modes/meV]
+
+ymax = 0.5;
