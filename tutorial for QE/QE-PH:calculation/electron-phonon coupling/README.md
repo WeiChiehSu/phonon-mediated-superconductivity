@@ -186,35 +186,35 @@ $name
 
  &inputph
  
-  tr2_ph=1.0d-16,
+    tr2_ph=1.0d-16,
   
-  prefix='$name',
+    prefix='$name',
   
-  outdir='./'
+    outdir='./'
   
-  fildyn='$name.dyn',
+    fildyn='$name.dyn',
   
-  ldisp = .true.
+    ldisp = .true.
   
-  trans = .true.
+    trans = .true.
   
-  fildvscf = 'dvscf'
+    fildvscf = 'dvscf'
   
-  electron_phonon = 'interpolated'  
+    electron_phonon = 'interpolated'  
   
-  amass(1) = 50.9415
+    amass(1) = 50.9415
   
-  nq1      = 6
+    nq1      = 6
   
-  nq2      = 6
+    nq2      = 6
   
-  nq3      = 6
+    nq3      = 6
   
-  el_ph_sigma =  0.002
+    el_ph_sigma =  0.002
   
-  el_ph_nsigma=30,
+    el_ph_nsigma=30,
   
-  alpha_mix(5)=0.1
+    alpha_mix(5)=0.1
 
 /
 
