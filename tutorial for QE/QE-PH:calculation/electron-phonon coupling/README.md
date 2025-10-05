@@ -287,7 +287,7 @@ QE會從ph.$name.in內讀取q點網格密度(nq1 nq2 nq3 ) 使用晶格對稱操
 \varepsilon _{R} =\varepsilon _{0}+\sum_{k\gamma }^{}  R_{k\gamma} (r)\int n_{0} (r)\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}dr+\frac{1}{2}\sum_{R_{k,k'\gamma} }^{} R_{k\gamma} (r)R_{k'\gamma} (r) \int [\frac{\partial n(r)}{\partial R_{k'\gamma} (r)}\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}+n_{0}(r) \frac{\partial^2 V_{SCF}(r) }{\partial R_{k\gamma} (r)\partial R_{k'\gamma} (r)}]dr
 $$
  
-得到每個q點內聲子頻率和聲子振動模態(聲子頻率和聲子振動模態資訊存放在$name.dyn中):
+得到每個q點內聲子頻率,聲子振動模態和動力學矩陣(聲子頻率,聲子振動模態和動力學矩陣資訊存放在$name.dyn中):
 
      Diagonalizing the dynamical matrix
 
@@ -378,12 +378,16 @@ $$
   進行ph.$name.in有幾個要點:
 
 $$
-1.tr2_{}ph=1.0d-16,當DFPT的scf計算的|\Delta n_{\text{new}}(r)|^2和上一次scf計算的|\Delta n(r)|^2能量差低於1.0d-16時,電子密度對聲子擾動的響應已經完全收斂,停止計算
+1.tr2_{}ph=1.0d-16,當DFPT的scf計算的|\Delta n_{\text{new}}(r)|^2和上一次scf計算的|\Delta n(r)|^2能量差低於1.0d-16時,電子密度對聲子擾動的響應已經完全收斂,停止計算(非常重要!若精度不夠高,會在\Gamma點有虛頻,影響計算精確度)
 $$
 
    2. amass(1) = 50.9415:晶格內第一種原子(遵循pw.$name.scf-2.in設置)的質量
 
    3. nq1 = 6,nq2 = 6,nq3 = 6:q點網格的xyz軸切點數(6*6*6)須可整除第一步K_POINTS設置(72*72*72)和第二步K_POINTS設置(18*18*18),否則計算電聲耦合係數時,將無法進行插值!
 
-   4. el_ph_sigma = 0.002:計算電聲耦合係數的broadening法
+   4. el_ph_sigma = 0.002:計算電聲耦合係數broadening法的sigma值,其控制函數平緩或陡峭的參數:sigma值越小,費米-函數越陡峭;,sigma值越大,函數越平緩
+
+   5. el_ph_nsigma=30:0.002,0.004,0.006....總共設置30個值
+
+   6. alpha_mix(5)=0.1
 
