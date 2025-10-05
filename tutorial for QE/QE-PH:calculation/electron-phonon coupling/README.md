@@ -554,7 +554,7 @@ $$
 
 運行matdyn計算指令為:mpiexec matdyn.x -in matdyn.$name.in > matdyn.$name.out
 
-# 第5個輸入檔案為matdyn.$name.in.dos:
+# 第6個輸入檔案為matdyn.$name.in.dos:
 
    &input
  
@@ -581,5 +581,8 @@ $$
  /
 
 $$
-這個輸入檔案的目的是將第四步計算得到的力學常數又進行Fourier-Transformation,從實空間變換到q空間,求得每個q點的動力學矩陣:
+這個輸入檔案的目的是讀取第四步計算得到的力學常數,在新的且更密的q點網格上,計算系統的eigenvalue(聲子頻率),統計出能量(聲子)分佈,得到聲子態密度:
 $$
+
+$$
+
