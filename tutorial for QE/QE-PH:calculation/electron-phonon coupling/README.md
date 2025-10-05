@@ -258,7 +258,7 @@ QE會從ph.$name.in內讀取q點網格密度(nq1 nq2 nq3 ) 使用晶格對稱操
 
 不可約的q點可以在ph.$name.out內查找:
 
-Dynamical matrices for ( 6, 6, 1)  uniform grid of q-points
+     Dynamical matrices for ( 6, 6, 1)  uniform grid of q-points
 
 
      (   7 q-points):
