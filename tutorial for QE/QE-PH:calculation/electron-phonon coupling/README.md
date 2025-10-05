@@ -374,3 +374,7 @@ $$
      lambda(   24)=  0.0005   gamma=    3.31 GHz
 
   (這邊範例是8原子晶格的電聲耦合係數計算[Gaussian Broadening:0.096 Ry][可在ph.$name.out查找])
+
+  進行ph.$name.in有幾個要點:
+
+   1. 不設置:la2F = .true.!
