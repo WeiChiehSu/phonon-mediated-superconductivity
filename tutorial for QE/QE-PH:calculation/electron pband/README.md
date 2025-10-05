@@ -1,12 +1,12 @@
 # 電子軌域投影能帶
 
-本次計算的材料為V(unit-cell)的電子能帶,運行計算只需把pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF和腳本:qe_twnia3_pbspropwtk.sh放進已經安裝好QE的pbs系統機器,運行:
+本次計算的材料為4層 Rhombohedral Multilayer Graphene (ABCA堆疊)的電子軌域投影能帶,運行計算只需把pseudopotential:C.pbe-n-kjpaw_psl.1.0.0.UPF和腳本:qe_pband.sh放進已經安裝好QE的pbs系統機器,運行:
 
-qsub qe_twnia3_pbspropwtk.sh
+qsub qe_pband.sh
 
 稍等一段時間後,計算便完成了.
 
-接下來將V.bands.dat和pw.V.scf.out放到具有qe_band.m的資料夾中 運行qe_band.m 便可得到V(unit-cell)的電子能帶:band.png
+接下來將$name.bands.dat,pw.$name.scf.out和projwfc.$name.out放到具有qe_band.m和qe_projected_band.m的資料夾中,先運行qe_band.m 得到4層 Rhombohedral Multilayer Graphene (ABCA堆疊)的能帶:band.png和band_data ,再運行qe_projected_band.m,會創建一個projected_band_all資料夾,裡面會有晶格內每顆原子每個軌域的投影強度圖
 
 # QE腳本分析
 
