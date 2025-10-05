@@ -378,6 +378,6 @@ $$
   進行ph.$name.in有幾個要點:
 
 $$
-1. tr2_ph=1.0d-16,當scf計算的\Delta n(r)和上一次scf計算的\Delta n_{\text{new}}(r)能量差低於1.0d-8時,默認找到了能量最低結構,達成收斂,停止計算
+tr2_ph=1.0d-16,當scf計算的\Delta n(r)和上一次scf計算的\Delta n_{\text{new}}(r)能量差低於1.0d-8時,默認找到了能量最低結構,達成收斂,停止計算
 $$
 
