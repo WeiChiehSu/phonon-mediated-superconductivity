@@ -324,7 +324,37 @@ $$
  並透過ph.$name.in設置的 el_ph_sigma =  0.002 [\sigma(degauss)便是雙重\delta積分近似中控制費米-狄拉克分布參數平緩或陡峭的參數] 和 el_ph_nsigma=30[0.002{}0.004{}0.006....總共設置30個值]和第一步保存在V.a2Fsave中計算電聲耦合係數(broadening法)中雙重\delta積分近似的能量採樣區間的資訊結合:
  $$
 
+$$
+I\simeq \frac{\Omega _{BZ}^{2} }{N_{K} N_{q}} \sum_{k}^{} \sum_{q}^{}  \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k}-\epsilon _{F})^{2}   }{\sigma ^{2} } } \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k^{'}}-\epsilon _{F})^{2}   }{\sigma ^{2} } }   
+$$
 
 $$
 計算出30個不同\sigma(degauss)值的電聲耦合係數:
 $$
+
+     Gaussian Broadening:   0.002 Ry, ngauss=   0
+     DOS =  0.618622 states/spin/Ry/Unit Cell at Ef=  0.824227 eV
+     lambda(    1)=  0.0000   gamma=    0.00 GHz
+     lambda(    2)=  0.0000   gamma=    0.00 GHz
+     lambda(    3)=  0.0000   gamma=    0.00 GHz
+     lambda(    4)=  0.0000   gamma=    0.00 GHz
+     lambda(    5)=  0.0000   gamma=    0.00 GHz
+     lambda(    6)=  0.0000   gamma=    0.00 GHz
+     lambda(    7)=  0.0000   gamma=    0.00 GHz
+     lambda(    8)=  0.0000   gamma=    0.00 GHz
+     lambda(    9)=  0.0000   gamma=    0.00 GHz
+     lambda(   10)=  0.0000   gamma=    0.00 GHz
+     lambda(   11)=  0.0000   gamma=    0.00 GHz
+     lambda(   12)=  0.0000   gamma=    0.00 GHz
+     lambda(   13)=  0.0000   gamma=    0.00 GHz
+     lambda(   14)=  0.0000   gamma=    0.00 GHz
+     lambda(   15)=  0.0000   gamma=    0.00 GHz
+     lambda(   16)=  0.0000   gamma=    0.00 GHz
+     lambda(   17)=  0.0000   gamma=    0.00 GHz
+     lambda(   18)=  0.0000   gamma=    0.00 GHz
+     lambda(   19)=  0.0000   gamma=    0.00 GHz
+     lambda(   20)=  0.0000   gamma=    0.00 GHz
+     lambda(   21)=  0.0000   gamma=    0.00 GHz
+     lambda(   22)=  0.0000   gamma=    0.00 GHz
+     lambda(   23)=  0.0000   gamma=    0.00 GHz
+     lambda(   24)=  0.0000   gamma=    0.00 GHz
