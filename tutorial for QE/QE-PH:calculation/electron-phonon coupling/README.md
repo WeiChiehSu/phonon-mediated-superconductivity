@@ -102,4 +102,4 @@ k點網格平均切割成的區間,可以當成k(0.8-1.2)的範圍:k點網格切
 
    2. K_POINTS設置的切點密度(72*72*72)須為第二步K_POINTS設置和第三步q點設置的整數倍,否則計算電聲耦合係數時,將無法進行插值!
 
-0
+運行scf計算的指令為:mpiexec pw.x -in pw.$name.$calcul-1.in > pw.$name.$calcul-1.out
