@@ -655,5 +655,40 @@ $$
 
 第1行為聲子的頻率(單位是Ry),第2行為材料的總a2F,第3,4,5行為材料的每條聲子譜貢獻的a2F
 
+$$
+得到全部頻率的Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )後,將全部頻率Eliashberg{}spectral{}function加起來,得到系統的電子-聲子耦合強度\lambda:
+$$
 
+$$
+\lambda=2\int \frac{\alpha ^{2}F(\omega _{q} )}{\omega}d\omega= \sum_{q}^{} \lambda _{q}
+$$
+
+$$
+得到\lambda後,便能計算電子-聲子耦合權重\omega _{log}:
+$$
+
+$$
+\omega _{log}=e^{[\frac{2}{\lambda } \int_{}^{ }d\omega \alpha ^{2}F(\omega )\frac{log\omega }{\omega }   ]}
+$$
+
+$$
+30個不同\sigma(degauss)值的\lambda和\omega _{log},被保存在lambda檔案中,lambda檔案的內容為:
+$$
+
+         Electron-phonon coupling constant, lambda 
+ 
+     Broadening   0.0020 lambda       1.4908 dos(Ef) 12.0273 omega_ln [K]    200.4114
+ 
+     Broadening   0.0040 lambda       1.4816 dos(Ef) 12.2432 omega_ln [K]    200.6053
+ 
+     Broadening   0.0060 lambda       1.4771 dos(Ef) 12.2834 omega_ln [K]    201.1737
+     
+     Broadening   0.0080 lambda       1.4738 dos(Ef) 12.2808 omega_ln [K]    201.1172
+ 
+     Broadening   0.0100 lambda       1.4715 dos(Ef) 12.2670 omega_ln [K]    200.7874
+ 
+     Broadening   0.0120 lambda       1.4685 dos(Ef) 12.2412 omega_ln [K]    200.3566
+ 
+     Broadening   0.0140 lambda       1.4628 dos(Ef) 12.1932 omega_ln [K]    199.8876
+ 
 
