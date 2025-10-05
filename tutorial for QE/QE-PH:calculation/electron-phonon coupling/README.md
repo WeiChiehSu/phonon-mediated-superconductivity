@@ -400,3 +400,64 @@ $$
 其代表第一次迭代輸入的響應勢X0.9+第一次迭代輸出的響應勢X0.1=第二次迭代輸入的響應勢
 
 運行DFPT的scf計算指令為:mpiexec ph.x -in ph.$name.in > ph.$name.out(注:這個計算最耗時!)
+
+# 第4個輸入檔案為q2r.$name.in:
+
+ &input
+ 
+  zasr='simple',  
+  
+  fildyn='$name.dyn', 
+  
+  flfrc='$name.fc', 
+  
+  la2F=.true.
+  
+ /
+
+這個輸入檔案的目的是將第三步計算得到的每個q點的動力學矩陣進行Fourier-Transformation,從q空間變換到實空間的原子間相互作用常數 (force constants)!
+
+進行q2r.$name.in有幾個要點:
+
+   1. zasr='simple':聲學求和條件,simple表只施加3個平移聲學條件,並透過修正力常數矩陣（force-constants matrix）的對角元素來實現
+
+   2. fildyn='$name.dyn':第三部計算得到的動力學矩陣檔案名稱
+
+   3. flfrc='$name.fc':Fourier-Transformationc後的力學常數矩陣檔案名稱
+
+   4. la2F=.true.:表示計算電聲耦合
+
+運行q2r計算指令為:mpiexec q2r.x -in q2r.$name.in > q2r.$name.out
+
+# 第5個輸入檔案為matdyn.$name.in:
+
+ &input
+ 
+    asr='simple', 
+    
+    flfrc='$name.fc', 
+    
+    flfrq='$name.freq', 
+    
+    amass(1) = 50.9415,
+    
+    q_in_band_form=.true.,
+    
+    q_in_cryst_coord=.true.	
+    
+    la2F=.true.,
+    
+    dos=.false.
+    
+ /
+ 
+5
+     0.0000    0.0000    0.0000 90 !G
+     
+     0.5000   -0.5000    0.5000 90 !H
+     
+     0.2500    0.2500    0.2500 90 !P
+     
+     0.0000    0.0000    0.0000 90 !G
+     
+     0.0000    0.0000    0.5000  1 !N
