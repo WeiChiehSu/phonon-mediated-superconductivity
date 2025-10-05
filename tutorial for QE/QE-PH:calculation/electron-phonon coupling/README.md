@@ -1080,3 +1080,14 @@ $$
 得到超導轉變溫度:T_c.png
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/lambda_matdyn/T_c.png)
+
+Tclambda.m需要注意幾個必須要設置的參數:
+
+nsig = 30;            -> 遵循ph.$name.in上設置的el_ph_nsigma=30
+
+degauss_number = 30;  -> 遵循ph.$name.in上設置的el_ph_nsigma=30
+
+name = 'V';           -> 要讀取的lambda.$name.out的前贅詞
+
+mustar = 0.368;       > McMillan-Allen Dynes function需要設置的屏蔽庫侖pseudo-potential參數
+
