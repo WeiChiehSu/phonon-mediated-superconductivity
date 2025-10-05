@@ -261,35 +261,21 @@ band_data,pw.4layers-graphene.scf.out和projwfc.4layers-graphene.out放到具有
 
 qe_projected_band.m需要注意幾個必須要設置的參數:
 
-name = '4layers-graphene';
+name = '4layers-graphene'; -> 要讀取的projwfc.$name.out的前贅詞
 
-material_name = 'ABCA-4layers-graphene without soc';
+material_name = 'ABCA-4layers-graphene without soc'; -> 圖片X atom_ X.png的title
 
-high_symmetry_point_name = {'\Gamma','M','K','\Gamma','interpreter','LaTex'};
+high_symmetry_point_name = {'\Gamma','M','K','\Gamma','interpreter','LaTex'}; -> bands計算設置的高對稱點座標名稱
 
-hs = 4;
+hs = 4; -> bands計算設置的高對稱點座標數量
 
-name_compare = { 'C' };
+name_compare = { 'C' }; ->要投影的原子的名稱
 
-%name_compare = { 'C' ; 'S' };
+which_atom = [ 1:4]; % which atom to plot. when use name_compare, select 2 atom; ->總共要投影幾顆原子
 
-which_atom = [ 1:4]; % which atom to plot. when use name_compare, select 2 atom
+ymin = -20;    % energy range [eV] -> 繪圖的能量區間下限
 
-ymin = -20;    % energy range [eV]
+ymax = 13;                         -> 繪圖的能量區間上限
 
-ymax = 13;
-
-isSO = 0;    % 0 : w/o soc, 1 : spin polarized, 2 : w/ soc
-
-name = 'V'; -> 要讀取的bands.dat的前贅詞
-
-material_name = 'V w/o soc'; -> 圖片band.png的title
-
-high_symmetry_point_name = {'\Gamma','H','N','\Gamma','P','H','P','N','interpreter','LaTex'}; -> bands計算設置的高對稱點座標名稱
-
-hs = 8; -> bands計算設置的高對稱點座標數量
-
-ymin = -8; -> 繪圖的能量區間下限
-
-ymax = 10; -> 繪圖的能量區間上限
+isSO = 0;    % 0 : w/o soc, 1 : spin polarized, 2 : w/ soc; -> 0 (沒有考慮soc效應) 1(考慮自旋極化[磁性],沒有考慮soc效應) 2(考慮soc效應)
 
