@@ -331,7 +331,7 @@ $$
 並結合
 
 $$
-\sum_{nn^{'}}^{}\frac{  \omega _{q}\left | G_{nn^{'}}(k,q) ^{2} \right | g_{electron} (\epsilon _{F})g_{electron^{'}} (\epsilon _{F})}{g_{electron^{'}} (\epsilon _{F})\omega _{q}\Omega _{BZ}}
+\lambda _{q}=\sum_{nn^{'}}^{}  \left | g_{nn^{'}}(k,q) ^{2} \right | g_{electron} (\epsilon _{F})
 $$
 
 $$
