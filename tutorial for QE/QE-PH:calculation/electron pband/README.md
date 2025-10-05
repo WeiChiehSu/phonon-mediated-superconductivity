@@ -174,6 +174,7 @@ ATOMIC_POSITIONS (crystal)
 K_POINTS {crystal_b}
 
 4
+
        0.0000    0.0000    0.0000 90 !G
      
        0.5000    0.0000    0.0000 90 !M
