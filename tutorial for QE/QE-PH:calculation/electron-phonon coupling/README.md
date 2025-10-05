@@ -947,3 +947,7 @@ $$
 # qephonon.m 分析
 
 運行qephonon.m 便可得到V(unit-cell)的聲子譜:phonon_band1.png
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20band/band.png)
+
+qe_band.m需要注意幾個必須要設置的參數:
