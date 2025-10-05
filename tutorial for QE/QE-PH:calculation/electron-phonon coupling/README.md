@@ -585,4 +585,16 @@ $$
 $$
 
 $$
+g_{phonon}(\omega _{q})=\frac{1}{2\Omega _{BZ} } \int_{BZ}^{} \omega _{q}\lambda _{q}\delta (\omega -\omega _{q})d\omega _{q}
+$$
+
+$$
+g_{phonon}(\omega _{q})為頻率為\omega _{q}的聲子態密度,也就是\omega _{q}的聲子數量
+$$
+
+同理,聲子態密度也能轉換成狄拉克函數的形式:
+
+$$
+\alpha ^{2}F(\omega _{q} ) =\frac{1}{2\Omega _{BZ} } \int_{BZ}^{} \omega _{q}\lambda _{q}\delta (\omega -\omega _{q})d\omega _{q}
+$$
 
