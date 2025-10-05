@@ -8,4 +8,6 @@ sbatch qe_twnia3_elph_all.sh
 
 sbatch qe_twnia3_lambda.sh
 
-稍等
+稍等一段時間後,整個計算便完成了.
+
+接下來將V.bands.dat和pw.V.scf.out放到具有qe_band.m的資料夾中 運行qe_band.m 便可得到V(unit-cell)的電子能帶:band.png
