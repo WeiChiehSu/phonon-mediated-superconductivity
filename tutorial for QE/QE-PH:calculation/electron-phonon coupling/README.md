@@ -502,11 +502,11 @@ g_{nn^{'}}(k,q)=< \psi _{n,k}|-iq\frac{1}{N_{p} }e^{i(k+q-k^{'} )r_{i} }\frac{1}
 $$
 
 $$
-最終計算出30個不同\sigma(degauss)值的每個q點的電聲耦合係數\lambda _{q}:
+最終計算出30個不同\sigma(degauss)值的每個q點的電聲耦合係數\lambda _{q}(也可稱聲子線寬):
 $$
 
 $$
 \lambda _{q}=\frac{\sum_{nn^{'}}^{} \int_{BZ}^{} \left | g_{nn^{'}}(k,q) ^{2} \right | \delta (\epsilon _{n,K}-\epsilon _{F})\delta (\epsilon _{n^{'} ,k^{'}}-\epsilon _{F})d\epsilon}{g_{electron} (\epsilon _{n^{'} ,k^{'}}-\epsilon _{F})\omega _{q}\Omega _{BZ}} 
 $$
 
-每個q點的電聲耦合係數保存在elph.gamma.()
+每個q點的電聲耦合係數保存在elph.gamma.1,elph.gamma.2.......elph.gamma.30中(和第三步設置的el_ph_nsigma值有關)
