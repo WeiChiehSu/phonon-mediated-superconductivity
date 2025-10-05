@@ -96,7 +96,7 @@ $$
 
 k點網格平均切割成的區間,可以當成k(0.8-1.2)的範圍:k點網格切點值越疏,範圍越大;k點網格切點值越密,範圍越小
 
-進行pw.$name.scf.in有幾個要點:
+進行pw.$name.scf-1.in有幾個要點:
 
    1. 必須設置:la2F = .true.,表示計算電聲耦合!
 
@@ -168,4 +168,54 @@ K_POINTS {automatic}
 
        18  18  18  0  0  0
 
-這個輸入檔案的目的便是DFT中的自洽運算(scf):
+這個輸入檔案的目的是透過一次較疏k點密度進行自洽運算(scf),得到下一步用來算DFPT的電荷密度和波函數
+
+進行pw.$name.scf-2.in有幾個要點:
+
+   1. 不設置:la2F = .true.!
+
+   2. K_POINTS設置的切點密度(18*18*18)須可整除第-步K_POINTS設置(72*72*72)和第三步q點設置的整數倍,否則計算電聲耦合係數時,將無法進行插值!
+
+   3. 設置 tstress = .true.和 tprnfor = .true. 去計算材料內原子受力,應力和壓力,輸出內容可在force.txt中檢查
+
+運行scf計算的指令為:mpiexec pw.x -in pw.$name.$calcul-2.in > pw.$name.$calcul-2.out
+
+# 第3個輸入檔案為ph.$name.in:
+
+$name
+
+ &inputph
+ 
+  tr2_ph=1.0d-16,
+  
+  prefix='$name',
+  
+  outdir='./'
+  
+  fildyn='$name.dyn',
+  
+  ldisp = .true.
+  
+  trans = .true.
+  
+  fildvscf = 'dvscf'
+  
+  electron_phonon = 'interpolated'  
+  
+  amass(1) = 50.9415
+  
+  nq1      = 6
+  
+  nq2      = 6
+  
+  nq3      = 6
+  
+  el_ph_sigma =  0.002
+  
+  el_ph_nsigma=30,
+  
+  alpha_mix(5)=0.1
+
+/
+
+
