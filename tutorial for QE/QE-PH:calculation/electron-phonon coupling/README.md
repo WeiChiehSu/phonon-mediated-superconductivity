@@ -287,7 +287,7 @@ Dynamical matrices for ( 6, 6, 1)  uniform grid of q-points
 \varepsilon _{R} =\varepsilon _{0}+\sum_{k\gamma }^{}  R_{k\gamma} (r)\int n_{0} (r)\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}dr+\frac{1}{2}\sum_{R_{k,k'\gamma} }^{} R_{k\gamma} (r)R_{k'\gamma} (r) \int [\frac{\partial n(r)}{\partial R_{k'\gamma} (r)}\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}+n_{0}(r) \frac{\partial^2 V_{SCF}(r) }{\partial R_{k\gamma} (r)\partial R_{k'\gamma} (r)}]dr
 $$
  
-得到每個q點內聲子頻率和聲子振動模態:
+得到每個q點內聲子頻率和聲子振動模態(聲子頻率和聲子振動模態資訊存放在$name.dyn中):
 
      Diagonalizing the dynamical matrix
 
@@ -320,6 +320,8 @@ $$
      freq (   24) =      48.485580 [THz] =    1617.304872 [cm-1]
  **************************************************************************
 
+ (這邊範例是8原子晶格的聲子頻率[可在ph.$name.out查找])
+
  $$
  並透過ph.$name.in設置的 el_ph_sigma =  0.002(Ry) [\sigma(degauss)便是雙重\delta積分近似中控制費米-狄拉克分布參數平緩或陡峭的參數] 和 el_ph_nsigma=30[0.002{}0.004{}0.006....總共設置30個值]和第一步保存在V.a2Fsave中計算電聲耦合係數(broadening法)中雙重\delta積分近似的能量採樣區間的資訊結合:
  $$
@@ -329,7 +331,7 @@ I\simeq \frac{\Omega _{BZ}^{2} }{N_{K} N_{q}} \sum_{k}^{} \sum_{q}^{}  \frac{1}{
 $$
 
 $$
-並結合前面得到的頻率和第二步得到的波函數,解出電聲耦合矩陣元G_{q}:
+並結合前面得到的頻率和第二步得到的波函數,對角化出電聲耦合矩陣元G_{q}:
 $$
 
 $$
@@ -371,4 +373,4 @@ $$
      lambda(   23)=  0.0006   gamma=    3.42 GHz
      lambda(   24)=  0.0005   gamma=    3.31 GHz
 
-  (這邊範例是8原子晶格的電聲耦合係數計算[Gaussian Broadening:0.096 Ry])
+  (這邊範例是8原子晶格的電聲耦合係數計算[Gaussian Broadening:0.096 Ry][可在ph.$name.out查找])
