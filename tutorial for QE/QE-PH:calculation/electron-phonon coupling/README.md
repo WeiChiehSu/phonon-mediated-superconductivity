@@ -942,4 +942,6 @@ $$
 
     a2F.dos *  $name.dos $name.freq lambda pw.$name.$calcul-1.out pw.$name.$calcul-2.out force.txt lambda.$name.in lambda.$name.out
 
-並將qephonon.m,qephonondos.m,qea2fdos.m和Tclambda.m放
+將qephonon.m,qephonondos.m,qea2fdos.m和Tclambda.m放入banddos內,依次運行qephonon.m,qephonondos.m,qea2fdos.m和Tclambda.m,便可得到材料的聲子性質和超導性質!
+
+# qephonon.m
