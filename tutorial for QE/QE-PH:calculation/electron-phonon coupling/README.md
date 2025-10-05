@@ -328,7 +328,11 @@ $$
 I\simeq \frac{\Omega _{BZ}^{2} }{N_{K} N_{q}} \sum_{k}^{} \sum_{q}^{}  \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k}-\epsilon _{F})^{2}   }{\sigma ^{2} } } \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k^{'}}-\epsilon _{F})^{2}   }{\sigma ^{2} } }   
 $$
 
-並結合
+並結合前面
+
+$$
+G_{q}=-\frac{1}{N_{p} }\frac{1}{\sqrt{2M\omega _{q}} }iqe^{i(k+q-k^{'} )r_{i} }V_{K-S}(q)
+$$
 
 $$
 \lambda _{q}=\sum_{nn^{'}}^{}  \left | g_{nn^{'}}(k,q) ^{2} \right | g_{electron} (\epsilon _{F})
