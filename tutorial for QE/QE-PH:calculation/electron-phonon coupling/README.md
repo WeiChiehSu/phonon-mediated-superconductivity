@@ -692,3 +692,77 @@ $$
      Broadening   0.0140 lambda       1.4628 dos(Ef) 12.1932 omega_ln [K]    199.8876
  
 第1行為Broadening,第2行為Broadening的值(由el_ph_sigma和el_ph_nsigma決定),第3行為lambda,第4行為lambda值,第5行為費米能級的電子態密度,第6行為費米能級的電子態密度值(單位Ry),第7行為電子-聲子耦合權重,第8行為電子-聲子耦合權重值
+
+運行matdyn.dos計算指令為mpiexec matdyn.x -in matdyn.$name.in.dos > matdyn.$name.out.dos(注:這個計算第二耗時!)
+
+# 第7個輸入檔案為lambda.$name.in:
+
+     10 0.1 1
+     
+        16
+        
+        0.000000000   0.000000000   0.000000000  1
+        
+        0.166666667   0.166666667   0.000000000 12
+        
+        0.333333333   0.333333333   0.000000000 12
+        
+       -0.500000000  -0.500000000   0.000000000  6
+       
+        0.333333333   0.166666667   0.166666667 24
+        
+        0.500000000   0.333333333   0.166666667 48
+        
+        0.666666667   0.333333333   0.333333333  8
+        
+        0.333333333   0.333333333   0.333333333  8
+        
+        0.500000000   0.500000000   0.333333333 12
+        
+        0.000000000   0.000000000   0.333333333  6
+        
+       -0.000000000  -0.166666667   0.500000000 24
+       
+       -1.000000000  -0.333333333  -0.333333333 12
+       
+       -0.833333333  -0.166666667  -0.333333333 24
+       
+       -0.000000000  -0.000000000   0.666666667  6
+       
+       -1.000000000  -0.166666667  -0.166666667 12
+       
+       -1.000000000  -1.000000000  -1.000000000  1
+       
+     elph_dir/elph.inp_lambda.1
+     
+     elph_dir/elph.inp_lambda.2
+     
+     elph_dir/elph.inp_lambda.3
+     
+     elph_dir/elph.inp_lambda.4
+     
+     elph_dir/elph.inp_lambda.5
+     
+     elph_dir/elph.inp_lambda.6
+     
+     elph_dir/elph.inp_lambda.7
+     
+     elph_dir/elph.inp_lambda.8
+     
+     elph_dir/elph.inp_lambda.9
+     
+     elph_dir/elph.inp_lambda.10
+     
+     elph_dir/elph.inp_lambda.11
+     
+     elph_dir/elph.inp_lambda.12
+     
+     elph_dir/elph.inp_lambda.13
+     
+     elph_dir/elph.inp_lambda.14
+     
+     elph_dir/elph.inp_lambda.15
+     
+     elph_dir/elph.inp_lambda.16
+     
+      0.3
