@@ -622,7 +622,7 @@ $$
 $$
 
 $$
-得到30個不同\sigma(degauss)值的Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )後,繪製Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )保存在a2F.dos1,a2F.dos2.......a2F.dos30中(和第三步設置的el{}ph{}nsigma值有關),a2F.dos1的內容為:
+得到30個不同\sigma(degauss)值的Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )後,將全部頻率的Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )保存在a2F.dos1,a2F.dos2.......a2F.dos30中(和第三步設置的el{}ph{}nsigma值有關),a2F.dos1的內容為:
 $$
 
              Eliashberg function a2F (per both spin)
@@ -691,4 +691,4 @@ $$
  
      Broadening   0.0140 lambda       1.4628 dos(Ef) 12.1932 omega_ln [K]    199.8876
  
-
+第1行為Broadening,第2行為Broadening的值(由el_ph_sigma和el_ph_nsigma決定),第3行為lambda,第4行為lambda值,第5行為費米能級的電子態密度,第6行為費米能級的電子態密度值(單位Ry),第7行為電子-聲子耦合權重,第8行為電子-聲子耦合權重值
