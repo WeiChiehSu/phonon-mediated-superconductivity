@@ -279,7 +279,41 @@ Dynamical matrices for ( 6, 6, 1)  uniform grid of q-points
 
  (這邊範例是六角晶格用q:6, 6, 1網格)
 
- 每個不可約的q點內根據晶格內原子數量(n),計算3*n次DFPT自洽運算,並解:
+ 每個不可約的q點內根據晶格內原子數量(n),計算3*n次DFPT自洽運算,並解Hellman-Feynman Theory:
+
+ $$
+\varepsilon _{R} =\varepsilon _{0}+\sum_{k\gamma }^{}  R_{k\gamma} (r)\int n_{0} (r)\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}dr+\frac{1}{2}\sum_{R_{k,k'\gamma} }^{} R_{k\gamma} (r)R_{k'\gamma} (r) \int [\frac{\partial n(r)}{\partial R_{k'\gamma} (r)}\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}+n_{0}(r) \frac{\partial^2 V_{SCF}(r) }{\partial R_{k\gamma} (r)\partial R_{k'\gamma} (r)}]dr
+$$
  
- 
- 得到每個q點內聲子頻率和聲子振動模態
+得到每個q點內聲子頻率和聲子振動模態:
+
+     Diagonalizing the dynamical matrix
+
+     q = (    0.000000000   0.192450090   0.000000000 ) 
+
+ **************************************************************************
+     freq (    1) =       2.172434 [THz] =      72.464606 [cm-1]
+     freq (    2) =       2.642275 [THz] =      88.136817 [cm-1]
+     freq (    3) =       3.642637 [THz] =     121.505275 [cm-1]
+     freq (    4) =       4.396171 [THz] =     146.640492 [cm-1]
+     freq (    5) =      10.070692 [THz] =     335.922131 [cm-1]
+     freq (    6) =      10.079520 [THz] =     336.216602 [cm-1]
+     freq (    7) =      10.092794 [THz] =     336.659363 [cm-1]
+     freq (    8) =      10.107983 [THz] =     337.166012 [cm-1]
+     freq (    9) =      16.458589 [THz] =     548.999450 [cm-1]
+     freq (   10) =      16.481533 [THz] =     549.764749 [cm-1]
+     freq (   11) =      16.509299 [THz] =     550.690930 [cm-1]
+     freq (   12) =      16.530485 [THz] =     551.397619 [cm-1]
+     freq (   13) =      25.352131 [THz] =     845.656048 [cm-1]
+     freq (   14) =      25.405751 [THz] =     847.444636 [cm-1]
+     freq (   15) =      25.459875 [THz] =     849.250029 [cm-1]
+     freq (   16) =      25.482942 [THz] =     850.019457 [cm-1]
+     freq (   17) =      45.730147 [THz] =    1525.393527 [cm-1]
+     freq (   18) =      45.747224 [THz] =    1525.963136 [cm-1]
+     freq (   19) =      45.776907 [THz] =    1526.953273 [cm-1]
+     freq (   20) =      45.806344 [THz] =    1527.935175 [cm-1]
+     freq (   21) =      48.350397 [THz] =    1612.795628 [cm-1]
+     freq (   22) =      48.398957 [THz] =    1614.415418 [cm-1]
+     freq (   23) =      48.450081 [THz] =    1616.120759 [cm-1]
+     freq (   24) =      48.485580 [THz] =    1617.304872 [cm-1]
+ **************************************************************************
