@@ -581,15 +581,11 @@ $$
  /
 
 $$
-這個輸入檔案的目的是讀取第四步計算得到的力學常數,在新的且更密的q點網格上,計算系統的eigenvalue(聲子頻率),統計出能量(聲子)分佈,得到聲子態密度:
+這個輸入檔案的目的是讀取第四步計算得到的力學常數,在新的且更密的q點網格上,計算系統的eigenvalue(聲子頻率),統計出能量(聲子)分佈,得到每個頻率的聲子態密度g_{phonon}(\omega _{q}):
 $$
 
 $$
-g_{phonon}(\omega _{q})=\frac{1}{2\Omega _{BZ} } \int_{BZ}^{} \omega _{q}\lambda _{q}\delta (\omega -\omega _{q})d\omega _{q}
-$$
-
-$$
-g_{phonon}(\omega _{q})為頻率為\omega _{q}的聲子態密度,也就是\omega _{q}的聲子數量
+g_{phonon}(\omega _{q})= \int_{BZ}^{} \delta (\omega -\omega _{q})d\omega _{q}
 $$
 
 同理,聲子態密度也能轉換成狄拉克函數的形式:
