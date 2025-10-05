@@ -703,7 +703,9 @@ $$
 
    4. dos=.ture.:繪製聲子態密度
 
-   5. nk1=120,nk2=120,nk3=120
+   5. nk1=120,nk2=120,nk3=120:xyz軸設置更密的q點切點網格,xyz軸分別切割120個q點
+
+   6. ndos=200
 
 運行matdyn計算指令為:mpiexec matdyn.x -in matdyn.$name.in.dos > matdyn.$name.out.dos(注:這個計算第二耗時!)
 
