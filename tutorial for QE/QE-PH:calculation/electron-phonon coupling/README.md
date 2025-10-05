@@ -588,6 +588,9 @@ $$
 g_{phonon}(\omega _{q})= \int_{BZ}^{} \delta (\omega -\omega _{q})d\omega _{q}
 $$
 
+$$
+統計第五步每個q點的電聲耦合係數,結合每個頻率的聲子態密度g_{phonon}(\omega _{q}),得到\alpha ^{2}F(\omega _{q} ) 
+$$
 同理,聲子態密度也能轉換成狄拉克函數的形式:
 
 $$
