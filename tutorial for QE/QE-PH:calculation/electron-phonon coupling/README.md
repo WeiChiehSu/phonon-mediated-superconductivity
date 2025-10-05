@@ -765,6 +765,6 @@ $$
      
      elph_dir/elph.inp_lambda.16
      
-      0.3                                           <-
+      0.3                                           <- McMillan-Allen Dynes function中的屏蔽庫侖pseudo-potential參數值
 
 這個輸入檔案的目的是用第二步自洽運算得到的電荷密度和波函數,進行DFPT自洽運算:
