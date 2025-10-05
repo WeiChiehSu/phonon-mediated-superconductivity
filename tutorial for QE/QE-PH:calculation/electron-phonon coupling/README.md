@@ -968,4 +968,6 @@ xticklabels({'\Gamma','H','P','\Gamma','N','interpreter','LaTex'});   -> matdyn�
 
 # qephonondos.m 分析
 
-運行qephonondos.m 便可得到V(unit-cell)的聲子譜:phonon_band1.png
+運行qephonondos.m 會在banddos內創建dos資料夾,在dos可得到V(unit-cell)的總聲子態密度:dos_total.png,總聲子態密度和每個原子的投影聲子態密度對比:dos_all.png和每個原子的投影聲子態密度:dos_1.png
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/phonon_band1.png)
