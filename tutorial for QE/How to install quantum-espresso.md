@@ -49,7 +49,7 @@ change the qe-6.8/bin path where you install qe-6.8!
 
 my qe-6.8 install in /home/l26111201/qe_code.
 
-####################################
+########################################################################
 
 That is example for PBS system and SLURM system:
 
