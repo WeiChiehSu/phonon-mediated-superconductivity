@@ -182,8 +182,6 @@ K_POINTS {automatic}
 
 # 第3個輸入檔案為ph.$name.in:
 
-$name
-
  &inputph
  
     tr2_ph=1.0d-16,
