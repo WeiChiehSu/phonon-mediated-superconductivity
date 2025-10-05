@@ -610,7 +610,7 @@ $$
   
       9.1426033875E+00  4.8856382114E-05  4.8856E-05
 
-第1行為聲子的頻率,第2行為材料的總聲子態密度,第3行為材料的每個原子的投影態密度
+第1行為聲子的頻率(單位是cm^-1),第2行為材料的總聲子態密度,第3行為材料的每個原子的投影態密度
 
 
 $$
@@ -622,7 +622,7 @@ $$
 $$
 
 $$
-得到30個不同\sigma(degauss)值的Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )後,繪製Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )保存在a2F.dos1,a2F.dos2.......a2F.dos30中(和第三步設置的el_ph_nsigma值有關),a2F.dos1的內容為:
+得到30個不同\sigma(degauss)值的Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )後,繪製Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )保存在a2F.dos1,a2F.dos2.......a2F.dos30中(和第三步設置的el{}ph{}nsigma值有關),a2F.dos1的內容為:
 $$
 
              Eliashberg function a2F (per both spin)
@@ -652,4 +652,8 @@ $$
        0.113068E-03    0.720216E-03    0.512733E-03    0.203307E-03    0.417591E-05
        
        0.124970E-03    0.995221E-03    0.710205E-03    0.279327E-03    0.568917E-05
+
+第1行為聲子的頻率(單位是Ry),第2行為材料的總a2F,第3,4,5行為材料的每條聲子譜貢獻的a2F
+
+
 
