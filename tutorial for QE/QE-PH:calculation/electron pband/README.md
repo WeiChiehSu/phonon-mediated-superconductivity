@@ -23,38 +23,53 @@ qsub qe_twnia3_pbspropwtk.sh
  /
  &SYSTEM    
  
-    ibrav= -3,
+    ibrav= 4,
     
-    celldm(1)=5.671987,
+    celldm(1) = 4.64769327,
     
-    nat= 1,
+    celldm(3) = 12.18080231,
     
-    ntyp = 1,
+    nat= 8,
     
-    ecutwfc = 50.0,
+    ntyp= 1,
     
-    ecutrho = 700.0, 
+    ecutwfc = 80.0,
+    
+    ecutrho = 800.0,
 
     occupations='smearing',
     
     smearing='mp',
     
     degauss=0.02,
+    
  /
  &ELECTRONS
  
  /
 ATOMIC_SPECIES
 
-     V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
+    C 12.0107 C.pbe-n-kjpaw_psl.1.0.0.UPF
   
 ATOMIC_POSITIONS (crystal)
 
-     V  0.0000000000  0.0000000000  0.0000000000
-   
-K_POINTS {automatic}
-
-    6 6 6 0 0 0
+   C   0.00000000   0.00000000   0.32395289 
+ 
+   C   0.66666669   0.33333334   0.32398609 
+ 
+   C   0.66666669   0.33333334   0.43452922 
+ 
+   C   0.33333331   0.66666663   0.43459648 
+ 
+   C   0.33333334   0.66666669   0.54501938 
+ 
+   C  -0.00000000  -0.00000000   0.54508728 
+ 
+   C   0.00000000   0.00000000   0.65529043 
+ 
+   C   0.66666669   0.33333334   0.65532433 
+K_POINTS (automatic)
+    12 12 1 0 0 0
 
  這個輸入檔案的目的便是DFT中的自洽運算(scf):
 
