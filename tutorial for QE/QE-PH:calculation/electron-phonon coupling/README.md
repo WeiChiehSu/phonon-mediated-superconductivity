@@ -328,6 +328,12 @@ $$
 I\simeq \frac{\Omega _{BZ}^{2} }{N_{K} N_{q}} \sum_{k}^{} \sum_{q}^{}  \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k}-\epsilon _{F})^{2}   }{\sigma ^{2} } } \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k^{'}}-\epsilon _{F})^{2}   }{\sigma ^{2} } }   
 $$
 
+並結合
+
+$$
+\sum_{nn^{'}}^{}\frac{  \omega _{q}\left | G_{nn^{'}}(k,q) ^{2} \right | g_{electron} (\epsilon _{F})g_{electron^{'}} (\epsilon _{F})}{g_{electron^{'}} (\epsilon _{F})\omega _{q}\Omega _{BZ}}
+$$
+
 $$
 計算出30個不同\sigma(degauss)值的電聲耦合係數:
 $$
