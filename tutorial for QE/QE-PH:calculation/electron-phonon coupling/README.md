@@ -332,29 +332,31 @@ $$
 計算出30個不同\sigma(degauss)值的電聲耦合係數:
 $$
 
-     Gaussian Broadening:   0.002 Ry, ngauss=   0
-     DOS =  0.618622 states/spin/Ry/Unit Cell at Ef=  0.824227 eV
-     lambda(    1)=  0.0000   gamma=    0.00 GHz
-     lambda(    2)=  0.0000   gamma=    0.00 GHz
-     lambda(    3)=  0.0000   gamma=    0.00 GHz
-     lambda(    4)=  0.0000   gamma=    0.00 GHz
-     lambda(    5)=  0.0000   gamma=    0.00 GHz
-     lambda(    6)=  0.0000   gamma=    0.00 GHz
-     lambda(    7)=  0.0000   gamma=    0.00 GHz
-     lambda(    8)=  0.0000   gamma=    0.00 GHz
-     lambda(    9)=  0.0000   gamma=    0.00 GHz
-     lambda(   10)=  0.0000   gamma=    0.00 GHz
-     lambda(   11)=  0.0000   gamma=    0.00 GHz
-     lambda(   12)=  0.0000   gamma=    0.00 GHz
-     lambda(   13)=  0.0000   gamma=    0.00 GHz
-     lambda(   14)=  0.0000   gamma=    0.00 GHz
-     lambda(   15)=  0.0000   gamma=    0.00 GHz
-     lambda(   16)=  0.0000   gamma=    0.00 GHz
-     lambda(   17)=  0.0000   gamma=    0.00 GHz
-     lambda(   18)=  0.0000   gamma=    0.00 GHz
-     lambda(   19)=  0.0000   gamma=    0.00 GHz
-     lambda(   20)=  0.0000   gamma=    0.00 GHz
-     lambda(   21)=  0.0000   gamma=    0.00 GHz
-     lambda(   22)=  0.0000   gamma=    0.00 GHz
-     lambda(   23)=  0.0000   gamma=    0.00 GHz
-     lambda(   24)=  0.0000   gamma=    0.00 GHz
+ Gaussian Broadening:   0.096 Ry, ngauss=   0
+     DOS =  3.000182 states/spin/Ry/Unit Cell at Ef=  0.766207 eV
+     lambda(    1)=  0.0002   gamma=    0.04 GHz
+     lambda(    2)=  0.0002   gamma=    0.04 GHz
+     lambda(    3)=  0.0004   gamma=    0.09 GHz
+     lambda(    4)=  0.0006   gamma=    0.13 GHz
+     lambda(    5)=  0.0004   gamma=    0.33 GHz
+     lambda(    6)=  0.0003   gamma=    0.25 GHz
+     lambda(    7)=  0.0002   gamma=    0.19 GHz
+     lambda(    8)=  0.0002   gamma=    0.18 GHz
+     lambda(    9)=  0.0001   gamma=    0.12 GHz
+     lambda(   10)=  0.0001   gamma=    0.08 GHz
+     lambda(   11)=  0.0000   gamma=    0.06 GHz
+     lambda(   12)=  0.0000   gamma=    0.06 GHz
+     lambda(   13)=  0.0007   gamma=    1.74 GHz
+     lambda(   14)=  0.0006   gamma=    1.58 GHz
+     lambda(   15)=  0.0006   gamma=    1.49 GHz
+     lambda(   16)=  0.0006   gamma=    1.54 GHz
+     lambda(   17)=  0.0022   gamma=   11.58 GHz
+     lambda(   18)=  0.0018   gamma=    9.84 GHz
+     lambda(   19)=  0.0017   gamma=    8.88 GHz
+     lambda(   20)=  0.0016   gamma=    8.84 GHz
+     lambda(   21)=  0.0007   gamma=    4.51 GHz
+     lambda(   22)=  0.0006   gamma=    3.95 GHz
+     lambda(   23)=  0.0006   gamma=    3.42 GHz
+     lambda(   24)=  0.0005   gamma=    3.31 GHz
+
+  (這邊範例是8原子晶格的電聲耦合係數計算)
