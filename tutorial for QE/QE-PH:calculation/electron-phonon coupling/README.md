@@ -779,4 +779,28 @@ $$
 
 並透過設置的屏蔽庫侖pseudo-potential參數,解McMillan-Allen Dynes function:
 
+$$
+T_{c}=\frac{\omega _{log} }{1.2}e^{[\frac{-1.04(1+\lambda ) }{\lambda-\mu ^{*}(1+0.62\lambda)   }] }
+$$
 
+得到超導轉變溫度!
+
+每個q點的權重可以在ph.$name.out中,每個q點結束全部自洽運算後得到:
+
+     End of self-consistent calculation
+
+     Convergence has been achieved 
+ 
+     Number of q in the star =    3
+     
+     List of q in the star:
+     
+          1   0.000000000  -0.577350269   0.000000000
+          
+          2   0.500000000   0.288675135   0.000000000
+          
+          3  -0.500000000   0.288675135   0.000000000
+
+     Diagonalizing the dynamical matrix
+
+     q = (    0.000000000  -0.577350269   0.000000000 ) 
