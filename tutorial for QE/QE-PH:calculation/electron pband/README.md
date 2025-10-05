@@ -93,19 +93,19 @@ $$
 
 1. prefix='$name':運行計算工作的名字
 
-2. pseudo_dir  = './':pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄
+2. pseudo_dir  = './':pseudopotentialC.pbe-n-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄
 
-3. ibrav= -3 celldm(1)=5.671987:定義晶格參數,詳情請看https://www.quantum-espresso.org/Doc/INPUT_PW.html
+3. ibrav= 4, celldm(1) = 4.64769327,celldm(3) = 12.18080231:定義晶格參數,詳情請看https://www.quantum-espresso.org/Doc/INPUT_PW.html
 
 4. nat= 1:晶格內的原子數為1個
 
 5. ntyp = 1:晶格內的原子種類為1種
 
-6. ecutwfc = 50.0: 用來展開平面波基底的截斷能,截斷能越大,計算越精準,耗時也會加大
+6. ecutwfc = 80.0: 用來展開平面波基底的截斷能,截斷能越大,計算越精準,耗時也會加大
 
-7. V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF:原子種類 原子質量 原子pseudopotential
+7. C 12.0107 C.pbe-n-kjpaw_psl.1.0.0.UPF:原子種類 原子質量 原子pseudopotential
 
-8. 6 6 6 0 0 0 BZ內K空間三個維度的切點數(用來積化求和),切點數越大,計算越精準,耗時也會加大
+8. 12 12 1 0 0 0 BZ內K空間三個維度的切點數(用來積化求和),切點數越大,計算越精準,耗時也會加大(4層 Rhombohedral Multilayer Graphene為二維材料,z方向只需設1)
 
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.scf.in > pw.$name.scf.out
 
@@ -123,17 +123,19 @@ $$
  /
  &SYSTEM    
  
-    ibrav= -3,
+    ibrav= 4,
     
-    celldm(1)=5.671987,
+    celldm(1) = 4.64769327,
     
-    nat= 1,
+    celldm(3) = 12.18080231,
     
-    ntyp = 1,
+    nat= 8,
     
-    ecutwfc = 50.0,
+    ntyp= 1,
     
-    ecutrho = 700.0, 
+    ecutwfc = 80.0,
+    
+    ecutrho = 800.0,
 
     occupations='smearing',
     
@@ -142,37 +144,43 @@ $$
     degauss=0.02,
     
     nbnd = 30,
+    
  /
  &ELECTRONS
  
  /
 ATOMIC_SPECIES
 
-     V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF
+     C 12.0107 C.pbe-n-kjpaw_psl.1.0.0.UPF
   
 ATOMIC_POSITIONS (crystal)
 
-    V  0.0000000000  0.0000000000  0.0000000000
-   
+    C   0.00000000   0.00000000   0.32395289 
+ 
+    C   0.66666669   0.33333334   0.32398609 
+ 
+    C   0.66666669   0.33333334   0.43452922 
+ 
+    C   0.33333331   0.66666663   0.43459648 
+ 
+    C   0.33333334   0.66666669   0.54501938 
+ 
+    C  -0.00000000  -0.00000000   0.54508728 
+ 
+    C   0.00000000   0.00000000   0.65529043 
+ 
+    C   0.66666669   0.33333334   0.65532433   
+
 K_POINTS {crystal_b}
 
-8
-
-     0.0000    0.0000    0.0000 90 !G
+4
+       0.0000    0.0000    0.0000 90 !G
      
-     0.5000   -0.5000    0.5000 90 !H
+       0.5000    0.0000    0.0000 90 !M
      
-     0.0000    0.0000    0.5000 90 !N
-     
-     0.0000    0.0000    0.0000 90 !G
-     
-     0.2500    0.2500    0.2500 90 !P
-     
-     0.5000   -0.5000    0.5000 90 !H
-     
-     0.2500    0.2500    0.2500 90 !P
-     
-     0.0000    0.0000    0.5000  1 !N
+       0.3333    0.3333    0.0000 90 !K
+       
+       0.0000    0.0000    0.0000  0 !G
 
 這個輸入檔案的目的是讀取前面scf計算的電荷密度和波函數 用來計算材料的電子能帶,也就是系統的eigenvalue.
 
