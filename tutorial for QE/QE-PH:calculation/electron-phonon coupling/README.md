@@ -167,3 +167,5 @@ ATOMIC_POSITIONS (crystal)
 K_POINTS {automatic}
 
        18  18  18  0  0  0
+
+這個輸入檔案的目的便是DFT中的自洽運算(scf):
