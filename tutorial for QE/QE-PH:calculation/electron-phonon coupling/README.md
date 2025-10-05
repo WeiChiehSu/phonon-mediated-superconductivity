@@ -16,7 +16,7 @@ sbatch qe_twnia3_lambda.sh
 
 腳本內總共創遭了7種輸入檔:pw.$name.scf-1.in pw.$name.scf-2.in ph.$name.in q2r.$name.in matdyn.$name.in matdyn.$name.in.dos lambda.$name.in 並進行了7次運算:
 
-# 第1個輸入檔案為pw.$name.scf.in:
+# 第1個輸入檔案為pw.$name.scf-1.in:
 
  &CONTROL
  
@@ -103,3 +103,67 @@ k點網格平均切割成的區間,可以當成k(0.8-1.2)的範圍:k點網格切
    2. K_POINTS設置的切點密度(72*72*72)須為第二步K_POINTS設置和第三步q點設置的整數倍,否則計算電聲耦合係數時,將無法進行插值!
 
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.$calcul-1.in > pw.$name.$calcul-1.out
+
+# 第2個輸入檔案為pw.$name.scf-2.in:
+
+ &CONTROL
+ 
+    calculation = '$calcul',
+    
+    prefix = '$name'
+    
+    outdir = './',
+    
+    pseudo_dir  = './',
+    
+    disk_io = 'low'
+    
+    wf_collect = .true.
+    
+    tstress = .true.
+    
+    tprnfor = .true.
+    
+ /
+
+ &system
+ 
+    ibrav= -3,
+    
+    celldm(1)=5.670829,
+    
+    nat= 1,
+    
+    ntyp = 1,
+    
+    ecutwfc = 100.0,
+    
+    ecutrho = 800.0, 
+
+    occupations =  'smearing',
+    
+    smearing    =  'mp',
+    
+    degauss     =  0.02,
+    
+ /
+ 
+ &electrons
+ 
+    conv_thr =  1.0d-10
+    
+    startingpot = 'file'
+    
+ /
+ 
+ATOMIC_SPECIES
+
+     V 50.9415 V.pbe-spn-rrkjus_psl.1.0.0.UPF
+  
+ATOMIC_POSITIONS (crystal)
+
+     V  0.0000000000  0.0000000000  0.000000000
+  
+K_POINTS {automatic}
+
+       18  18  18  0  0  0
