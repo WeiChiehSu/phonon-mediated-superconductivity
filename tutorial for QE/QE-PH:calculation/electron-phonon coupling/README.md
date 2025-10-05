@@ -465,4 +465,14 @@ $$
 
 這個輸入檔案的目的是將第三步計算得到的每個q點的動力學矩陣進行Fourier-Transformation,從q空間變換到實空間的原子間相互作用常數 (force constants)!
 
+得到系統的力常數後,將其變換至動量空間,可求得動力學矩陣:
 
+$$
+C_{k\gamma,k'\gamma'}(r_{\gamma}-r_{\gamma'})=\frac{1}{N}\sum_{q}^{} e^{iq(r_{\gamma}-r_{\gamma'})}C_{k\gamma,k'\gamma'}(q)  \Longrightarrow D_{k\gamma,k'\gamma'}(q)=\frac{C_{k\gamma,k'\gamma'}(q) }{\sqrt{m_{\gamma}m_{\gamma'}  } }
+$$
+
+擁有動力學矩陣後,便能計算出系統的聲子頻率.
+
+$$
+\sum_{k',\gamma'}^{} D_{k,\gamma;k',\gamma'}(q)u_{k',\gamma'}(q)=\omega _{q}^{2} u_{k',\gamma'}(q)
+$$
