@@ -954,14 +954,18 @@ $$
 
 qe_band.m需要注意幾個必須要設置的參數:
 
-name = 'V';                           ->    
+name = 'V';                                                           -> 要讀取的$name.freq的前贅詞    
 
-material_name = 'V 6187248';
+material_name = 'V 6187248';                                          -> 圖片phonon_band1.png的title
 
-natom = 1;
+ymin = 0;    % energy range [meV]                                     -> 繪圖的頻率區間下限
 
-ymin = 0;    % energy range [meV]
+ymax = 35;                                                            -> 繪圖的頻率區間上限
 
-ymax = 35;
+hs = 5;                                                               -> matdyn計算設置的高對稱點座標數量
 
-hs = 5;
+xticklabels({'\Gamma','H','P','\Gamma','N','interpreter','LaTex'});   -> matdyn計算設置的高對稱點座標名稱(在matlab code的第77行)
+
+# qephonondos.m 分析
+
+運行qephonondos.m 便可得到V(unit-cell)的聲子譜:phonon_band1.png
