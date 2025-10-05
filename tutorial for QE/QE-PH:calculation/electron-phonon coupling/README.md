@@ -323,7 +323,7 @@ $$
  (這邊範例是8原子晶格的聲子頻率[可在ph.$name.out查找])
 
  $$
- 並透過ph.$name.in設置的 el_ph_sigma =  0.002(Ry) [\sigma(degauss)便是雙重\delta積分近似中控制費米-狄拉克分布參數平緩或陡峭的參數] 和 el_ph_nsigma=30[0.002{}0.004{}0.006....總共設置30個值]和第一步保存在V.a2Fsave中計算電聲耦合係數(broadening法)中雙重\delta積分近似的能量採樣區間的資訊結合:
+ 並透過ph.$name.in設置的 el_{}ph_{}sigma =  0.002(Ry) [\sigma(degauss)便是雙重\delta積分近似中控制費米-狄拉克分布參數平緩或陡峭的參數] 和 el_ph_nsigma=30[0.002{}0.004{}0.006....總共設置30個值]和第一步保存在V.a2Fsave中計算電聲耦合係數(broadening法)中雙重\delta積分近似的能量採樣區間的資訊結合:
  $$
 
 $$
