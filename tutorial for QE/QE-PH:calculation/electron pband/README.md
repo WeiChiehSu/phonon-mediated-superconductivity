@@ -257,23 +257,28 @@ band_data,pw.4layers-graphene.scf.out和projwfc.4layers-graphene.out放到具有
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20pband/projected_band_all/1%20atom_%20p.png)
 
+可以看到P軌域的主要貢獻是在費米能級附近.
+
 qe_projected_band.m需要注意幾個必須要設置的參數:
 
 name = '4layers-graphene';
+
 material_name = 'ABCA-4layers-graphene without soc';
+
 high_symmetry_point_name = {'\Gamma','M','K','\Gamma','interpreter','LaTex'};
+
 hs = 4;
-% atom = {'W';'Se'};
-% n_atom = 1;
+
 name_compare = { 'C' };
+
 %name_compare = { 'C' ; 'S' };
+
 which_atom = [ 1:4]; % which atom to plot. when use name_compare, select 2 atom
-% which_orbital = [ 1 2 ]; % 1 atom : s, 2 atom : p
-scale = 100;  % size of dot
+
 ymin = -20;    % energy range [eV]
+
 ymax = 13;
-word_Ef_1 = "highest occupied level (ev):"; 
-word_Ef_2 = "the Fermi energy is"; 
+
 isSO = 0;    % 0 : w/o soc, 1 : spin polarized, 2 : w/ soc
 
 name = 'V'; -> 要讀取的bands.dat的前贅詞
