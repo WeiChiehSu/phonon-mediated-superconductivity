@@ -767,4 +767,11 @@ $$
      
       0.3                                           <- McMillan-Allen Dynes function中的屏蔽庫侖pseudo-potential參數值
 
-這個輸入檔案的目的是用第二步自洽運算得到的電荷密度和波函數,進行DFPT自洽運算:
+這個輸入檔案的目的是用第三步計運算得到的電聲耦合係數,透過每個q點的權重進行加權,解出電聲耦合強度和電子-聲子耦合權重:
+
+$$
+\lambda = \sum_{q}^{} \lambda _{q}
+$$
+$$
+\omega _{log}=e^{[\frac{2}{\lambda } \int_{}^{ }d\omega \alpha ^{2}F(\omega )\frac{log\omega }{\omega }   ]}
+$$
