@@ -333,7 +333,7 @@ $$
 $$
 
 $$
-G_{q}=< \psi _{n,k}|-iq\frac{1}{N_{p} }e^{i(k+q-k^{'} )r_{i} }\frac{1}{\sqrt{2M\omega _{q}} }V_{K-S}(q)   |\psi _{n^{'} ,k^{'}}>
+g_{nn^{'}}(k,q)=< \psi _{n,k}|-iq\frac{1}{N_{p} }e^{i(k+q-k^{'} )r_{i} }\frac{1}{\sqrt{2M\omega _{q}} }V_{K-S}(q)   |\psi _{n^{'} ,k^{'}}>
 $$
 
 $$
