@@ -532,5 +532,21 @@ $$
     
         12.2144   12.2127  120.7618  120.7569    4.9204    4.9299
 
+進行matdyn.$name.in有幾個要點:
 
+   1. zasr='simple':聲學求和條件,simple表只施加3個平移聲學條件,並透過修正力常數矩陣（force-constants matrix）的對角元素來實現
+
+   2. flfrc='$name.fc':要讀取的第四步Fourier-Transformationc後的力學常數檔案名稱
+
+   3. flfrq='$name.freq':根據q點設置座標和切點數(0.0000    0.0000    0.0000 90 !G),繪製的聲子譜檔案名稱:$name.freq
+
+   4. q_in_band_form=.true.:在$name.freq中繪製每個q點的座標
+
+   5. q_in_cryst_coord=.true.:在$name.freq中繪製的q點座標為晶體座標
+
+   6. la2F=.true.:表示計算電聲耦合
+
+   7. dos=.false.:表示不計算聲子態密度
+
+   8. 
 
