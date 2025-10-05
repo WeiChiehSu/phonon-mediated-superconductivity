@@ -255,7 +255,7 @@ band_data,pw.4layers-graphene.scf.out和projwfc.4layers-graphene.out放到具有
 
 下圖為projected_band_all資料夾內的第1個原子P軌域的投影:1 atom_ p.png
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20band/band.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20pband/projected_band_all/1%20atom_%20p.png)
 
 qe_projected_band.m需要注意幾個必須要設置的參數:
 
