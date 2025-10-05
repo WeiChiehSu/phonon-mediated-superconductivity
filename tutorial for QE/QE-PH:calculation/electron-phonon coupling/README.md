@@ -508,3 +508,5 @@ $$
 $$
 \lambda _{q}=\frac{\sum_{nn^{'}}^{} \int_{BZ}^{} \left | g_{nn^{'}}(k,q) ^{2} \right | \delta (\epsilon _{n,K}-\epsilon _{F})\delta (\epsilon _{n^{'} ,k^{'}}-\epsilon _{F})d\epsilon}{g_{electron} (\epsilon _{n^{'} ,k^{'}}-\epsilon _{F})\omega _{q}\Omega _{BZ}} 
 $$
+
+每個q點的電聲耦合係數保存在elph.gamma.()
