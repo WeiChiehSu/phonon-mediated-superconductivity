@@ -948,6 +948,20 @@ $$
 
 運行qephonon.m 便可得到V(unit-cell)的聲子譜:phonon_band1.png
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20band/band.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/phonon_band1.png)
+
+注:聲子頻率的單位是meV!
 
 qe_band.m需要注意幾個必須要設置的參數:
+
+name = 'V';                           ->    
+
+material_name = 'V 6187248';
+
+natom = 1;
+
+ymin = 0;    % energy range [meV]
+
+ymax = 35;
+
+hs = 5;
