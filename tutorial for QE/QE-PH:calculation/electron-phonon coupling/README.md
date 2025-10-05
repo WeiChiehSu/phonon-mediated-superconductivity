@@ -548,5 +548,38 @@ $$
 
    7. dos=.false.:表示不計算聲子態密度
 
-   8. 
+   8. 5:總共要計算幾個BZ內的高對稱點
 
+   9. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*5+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大
+
+運行matdyn計算指令為:mpiexec matdyn.x -in matdyn.$name.in > matdyn.$name.out
+
+# 第5個輸入檔案為matdyn.$name.in.dos:
+
+   &input
+ 
+    asr='simple', 
+    
+    flfrc='$name.fc',
+    
+    amass(1) = 50.9415,
+    
+    la2F=.true.,
+    
+    dos=.ture.,
+    
+    fldos='$name.dos',
+    
+    nk1=120,
+    
+    nk2=120,
+    
+    nk3=120,
+    
+    ndos=200,
+    
+ /
+
+$$
+這個輸入檔案的目的是將第四步計算得到的力學常數又進行Fourier-Transformation,從實空間變換到q空間,求得每個q點的動力學矩陣:
+$$
