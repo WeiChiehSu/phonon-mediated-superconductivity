@@ -1007,6 +1007,25 @@ xmin = 0;                               -> 繪圖的頻率區間下限
 
 xmax = 8;                               -> 繪圖的頻率區間上限
 
-ymin = 0;    % DOS range                
+ymin = 0;    % DOS range                -> 繪圖的y軸(聲子密度強度)下限    
 
-ymax = 0.5;
+ymax = 0.5;                             -> 繪圖的y軸(聲子密度強度)上限
+
+
+# qea2fdos.m 分析
+
+運行qea2fdos.m 會在banddos內創建a2F資料夾,在a2F可得到指定degauss的總Eliashberg spectral function:all_a2Fpng,指定degauss的總Eliashberg spectral function和每條聲子譜貢獻的Eliashberg spectral function對比:dos_all.png和all_a2F資料夾,資料夾內有全部degauss的Eliashberg spectral function:a2F_total_nsig * .png和依據電聲耦合公式:
+
+$$
+\lambda=2\int \frac{\alpha ^{2}F(\omega _{q} )}{\omega}d\omega
+$$
+
+解出的全部degauss的電聲耦合強度:lambda.png
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/dos/dos_total.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/dos/dos_total.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/dos/dos_total.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/dos/dos_total.png)
