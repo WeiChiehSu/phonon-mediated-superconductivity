@@ -1026,6 +1026,40 @@ $$
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/dos_all.png)
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/dos/dos_total.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/all_a2F/a2F_total_nsig1.png)
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/dos/dos_total.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/all_a2F/lambda.png)
+
+qephonondos.m需要注意幾個必須要設置的參數:
+
+name = 'V';                        -> 要讀取的lambda.$name.out的前贅詞 
+
+material_name = 'V 61872';         -> 圖片的title
+
+natom = 1;                         -> 原子的數量
+
+ndos = 200;                        -> 遵循matdyn.$name.in.dos上設置的ndos = 200
+
+which = 6; % which a2F to plot     ->要畫第幾個degauss的Eliashberg spectral function
+
+nsig = 30;                         -> 遵循ph.$name.in上設置的el_ph_nsigma=30
+
+nsigma = 30;                       -> 遵循ph.$name.in上設置的el_ph_nsigma=30
+
+xmin = 0;    % energy range [meV]  -> 繪圖的頻率區間下限
+
+xmax = 35;                         -> 繪圖的頻率區間上限
+
+ymin = 0;    % a2F range   [modes] -> 繪圖的y軸(Eliashberg spectral function強度)下限
+
+ymax = 2.5;                         -> 繪圖的y軸(Eliashberg spectral function強度)上限
+
+# Tclambda.m 分析
+
+運行qea2fdos.m 會在banddos內創建lambda.out資料夾和lambda_matdyn資料夾,lambda.out資料夾內有讀取lambda.$name.out得到的全部degauss的電聲耦合強度:lambda.png,電聲耦合權重:omega_log.png和超導轉變溫度:T_c.png
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/a2F_total.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/a2F_total.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/a2F_total.png)
