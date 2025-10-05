@@ -1058,8 +1058,8 @@ ymax = 2.5;                         -> 繪圖的y軸(Eliashberg spectral functio
 
 運行qea2fdos.m 會在banddos內創建lambda.out資料夾和lambda_matdyn資料夾,lambda.out資料夾內有讀取lambda.$name.out得到的全部degauss的電聲耦合強度:lambda.png,電聲耦合權重:omega_log.png和超導轉變溫度:T_c.png
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/a2F_total.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/lambda.out/lambda.png)
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/a2F_total.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/lambda.out/omega_log.png)
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/a2F_total.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/lambda.out/T_c.png)
