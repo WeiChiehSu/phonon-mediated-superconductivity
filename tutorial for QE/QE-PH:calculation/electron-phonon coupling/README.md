@@ -232,4 +232,47 @@ $$
 
 /
 
-這個輸入檔案的目的是用第二步自洽運算得到的電荷密度和波函數,
+這個輸入檔案的目的是用第二步自洽運算得到的電荷密度和波函數,進行DFPT自洽運算:
+
+$$
+\begin{aligned}
+\text{Obtain-grand-state-charge-density:} \, n(r) \\
+\Downarrow \\
+\text{Guess-perturbate-charge-density:} \, \Delta n(r) \\
+\Downarrow \\
+\Delta V_{\text{SCF}}(r) = \Delta V_{\text{per}}^{q} (r) + e^2 \int \frac{\Delta n(r')}{|r - r'|} dr' \\
+\Downarrow \\
+\text{Fourier-Transformation:} \, \Delta V_{K-S}(r) = -\frac{1}{\sqrt{N_{p}}} \sum_{k} e^{-i(q+G)\cdot r} \Delta V_{K-S}(q+G) \\
+\Downarrow \\
+\Delta n_{\text{new}}(q+G) = \frac{4}{N \Omega} \sum_{k} \sum_{c,v} \frac{\langle \psi_{v,k} | e^{-i(q+G)\cdot r} | \psi_{c,k+q} \rangle \langle \psi_{c,k+q} | \Delta V_{\text{SCF}}(q+G) | \psi_{v,k} \rangle}{\varepsilon_{v,k} - \varepsilon_{c,k+q}} \\
+\Downarrow \\
+\text{Fourier-Transformation:} \, \Delta n_{\text{new}}(q+G) \Longrightarrow \Delta n_{\text{new}}(r) \\
+\Downarrow \\
+\Delta n(r) = \Delta n_{\text{new}}(r) \vee \Delta n(r) \neq \Delta n_{\text{new}}(r)
+\end{aligned}
+$$
+
+QE會從ph.$name.in內讀取q點網格密度(nq1 nq2 nq3 ) 使用晶格對稱操作後,得到幾個不可約的q點.
+
+不可約的q點可以在ph.$name.out內查找:
+
+Dynamical matrices for ( 6, 6, 1)  uniform grid of q-points
+
+
+     (   7 q-points):
+     
+       N         xq(1)         xq(2)         xq(3) 
+       
+       1   0.000000000   0.000000000   0.000000000
+       
+       2   0.000000000   0.192450090   0.000000000
+       
+       3   0.000000000   0.384900179   0.000000000
+       
+       4   0.000000000  -0.577350269   0.000000000
+       
+       5   0.166666667   0.288675135   0.000000000
+       
+       6   0.166666667   0.481125224   0.000000000
+       
+       7   0.333333333   0.577350269   0.000000000
