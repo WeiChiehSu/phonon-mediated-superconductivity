@@ -772,6 +772,11 @@ $$
 $$
 \lambda = \sum_{q}^{} \lambda _{q}
 $$
+
 $$
 \omega _{log}=e^{[\frac{2}{\lambda } \int_{}^{ }d\omega \alpha ^{2}F(\omega )\frac{log\omega }{\omega }   ]}
 $$
+
+並透過設置的屏蔽庫侖pseudo-potential參數,解McMillan-Allen Dynes function:
+
+
