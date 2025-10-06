@@ -72,3 +72,9 @@ $$
 $$
 
 不過在V這個材料中, 屏蔽庫侖pseudo-potential值是0.368!
+
+我們可以在Tclambda.m中,調控mustar(pseudo-potential值)去計算超導轉變溫度,可以發現:若設mustar=0.1時,degauss = 0.008 Ry的超導轉變溫度為22.5 K,和V的實驗超導轉變溫度(5.4 K)相差非常大,和實驗不符,因此需要手動調整pseudo-potential值去貼合實驗值!
+
+注:若想要求解pseudo-potential值,需使用SCDFT去計算!
+
+# 影響超導轉變溫度問題幾個主要參數:第二步用來DFPT自洽的K點網格切點數
