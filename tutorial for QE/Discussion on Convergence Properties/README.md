@@ -52,3 +52,9 @@ $$
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/omega_log3.png)
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/T_c3%20.png)
+
+可以看到61872在 degauss = 0.008 Ry 時,61872設置計算出來的電聲耦合強度,電聲耦合權重和超導轉變溫度值與最密的61890設置計算出來的值開始吻合,達成收斂,表示(72 * 72 * 72)的能量採樣區間和degauss = 0.008 Ry的平滑函數匹配!而61854則在 degauss = 0.012 Ry 時,61854設置計算出來的電聲耦合強度,電聲耦合權重和超導轉變溫度值與較密的61890和61872設置計算出來的值開始吻合,達成收斂,表示(54 * 54 * 54)的能量採樣區間和degauss = 0.012 Ry的平滑函數匹配!
+
+最終我們可以得到,61872設置配合degauss = 0.008 Ry得到的準確電聲耦合強度為1.4685,電聲耦合權重為200.335和超導轉變溫度為5.83433 K ,和V的實驗超導轉變溫度(5.4 K)相差不大!
+
+# 影響超導轉變溫度問題幾個主要參數:
