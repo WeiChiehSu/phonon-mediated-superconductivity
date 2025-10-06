@@ -95,4 +95,7 @@ $$
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/phonondos%20k-mesh%20compare.png)
 
-若第二個參數的值為12(12 * 12 *12)的話,
+若第二個參數的值為12(12 * 12 *12)的話,造成計算出來的低頻聲子過多,導致其高估了電聲耦合係數,電聲耦合權重和超導轉變溫度;若第二個參數的值為16(16 * 16 *16)的話,造成計算出來的高頻聲子過多,導致其低估了電聲耦合係數,電聲耦合權重和超導轉變溫度;只有第二個參數的值大於18(18 * 18 *18)的話,計算出來的聲子性質才達成收斂且超導轉變溫度的計算值和實驗值吻合!
+
+因此第二步用來DFPT自洽的K點網格切點數是否足夠密,是影響聲子計算準確度的重要參數!
+
