@@ -51,4 +51,4 @@ $$
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/omega_log3.png)
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/T_c3%30.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/T_c3%20.png)
