@@ -57,6 +57,6 @@ https://thesis.lib.ncku.edu.tw/thesis/detail/55982d7b9fd66505eadfc9673f2c098d/
 
 鐘寅 凝聚态物理導論 2023.3.22版
 
-Origins of low- and high-pressure discontinuities of  in niobium	[arXiv:cond-mat/0504077](https://arxiv.org/abs/cond-mat/0504077)
+[arXiv:cond-mat/0504077](https://arxiv.org/abs/cond-mat/0504077)
 
-
+https://journals.aps.org/prb/abstract/10.1103/PhysRevB.43.7231
