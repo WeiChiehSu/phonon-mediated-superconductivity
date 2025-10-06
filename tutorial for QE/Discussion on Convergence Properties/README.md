@@ -79,3 +79,12 @@ $$
 
 # 影響超導轉變溫度問題幾個主要參數:第二步用來DFPT自洽的K點網格切點數
 
+這裡列出了用plot_compare_tc.m讀取不同參數設置保存的全部degauss電聲耦合係數,電聲耦合權重和超導轉變溫度(V_61248_data.mat....),進行比較:
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/lambda1.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/omega_log1.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/T_c2%20.png)
+
+可以注意到,若第二個參數的值為12(12 * 12 *12)的話
