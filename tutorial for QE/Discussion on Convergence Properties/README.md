@@ -37,5 +37,9 @@ $$
 
 這裡列出了不同參數設置的全部degauss電聲耦合係數,電聲耦合權重和超導轉變溫度:
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/lambda.out/lambda.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/lambda(compare%20qmesh%20and%20kmesh1.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/lambda(compare%20qmesh%20and%20kmesh1.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/lambda(compare%20qmesh%20and%20kmesh1.png)
 
