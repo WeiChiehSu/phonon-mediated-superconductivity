@@ -43,4 +43,12 @@ $$
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/T_c2%20.png)
 
-以61248設置為例:第一個6是指ph.x計算的q點網格切點數,第二個12是第二步用來DFPT自洽的K點網格切點數,第三個48是第一步自準備計算電聲耦合係數(broadening法)中雙重$\delta$積分近似的能量採樣區間的較密K點網格切點數
+以61248設置為例:第一個參數6是指ph.x計算的q點網格切點數,第二個參數12是第二步用來DFPT自洽的K點網格切點數,第三個參數48是第一步自準備計算電聲耦合係數(broadening法)中雙重狄拉克函數積分近似的能量採樣區間的較密K點網格切點數
+
+探討k點網格切點密度和degauss收斂只需調整第三個參數值,因此我們選了61854,61872和61890三個設置去進行比較全部degauss電聲耦合係數,電聲耦合權重和超導轉變溫度:
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/lambda3.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/omega_log3.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/T_c3%30.png)
