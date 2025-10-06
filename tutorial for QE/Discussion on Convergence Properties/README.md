@@ -89,6 +89,10 @@ $$
 
 可以注意到,若第二個參數的值為12(12 * 12 *12)的話,電聲耦合係數,電聲耦合權重和超導轉變溫度的計算值會過高;若第二個參數的值為16(16 * 16 *16)的話,電聲耦合係數,電聲耦合權重和超導轉變溫度的計算值會過低,只有第二個參數的值大於18(18 * 18 *18)的話,電聲耦合係數,電聲耦合權重和超導轉變溫度的計算值才不會過大,且和實驗值吻合,表示達成收斂!
 
-我們可以用plot_compare_phononband.m畫出讀取不同參數設置(V_61248_data.mat....)保存的聲子譜比較圖,可以發現:
+我們可以用plot_compare_phononband.m畫出讀取不同第二個參數設置(12phonon_band_data...)保存的聲子譜比較圖和plot_compare_phonondos.m畫出讀取不同第二個參數設置(12dos_data...)保存的聲子態密度比較圖;可以發現:
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/lambda1.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/phonon%20band%20q-mesh%20compare.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/phonon%20band%20q-mesh%20compare.png)
+
+若第二個參數的值為12(12 * 12 *12)的話,
