@@ -1,1 +1,21 @@
-0
+# 
+
+$$
+由於計算\lambda _{q}和\alpha ^{2}F(\omega )需要在Fermi-surface進行雙重\delta積分計算電子態密度,但電腦無法計算\delta方程,為了處理\delta方程,需要使用broadening(展寬)方法進行\delta方程近似:
+$$
+
+$$
+broadening:I=\int_{BZ}^{}dq \int_{BZ}^{}d\epsilon f(k,q)\delta (\epsilon _{n,K}-\epsilon _{F})\delta (\epsilon _{n^{'} ,k^{'}}-\epsilon _{F})
+$$
+
+$$
+QE中使用broadening法時,先將k點網格平均切割成的好幾個區間,每個區間中用一組'類似,模糊'的光滑連率函數去近似成尖銳地\delta方程(\sigma=degauss),去計算系統的電子佔據數,最終得到電子態密度.
+$$
+
+$$
+將broadening引入後,雙重\delta積分近似為:
+$$
+
+$$
+I\simeq \frac{\Omega _{BZ}^{2} }{N_{K} N_{q}} \sum_{k}^{} \sum_{q}^{}  \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k}-\epsilon _{F})^{2}   }{\sigma ^{2} } } \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k^{'}}-\epsilon _{F})^{2}   }{\sigma ^{2} } }   
+$$
