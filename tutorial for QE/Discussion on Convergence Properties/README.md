@@ -43,4 +43,4 @@ $$
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/T_c2%20.png)
 
-以61248設置為例:第一個6是指ph.x計算的q點網格切點數,第二個12是第二步用來DFPT自洽的K點網格切點數,第三個48是第一步自準備計算電聲耦合係數(broadening法)中雙重\delta積分近似的能量採樣區間的較密K點網格切點數
+以61248設置為例:第一個6是指ph.x計算的q點網格切點數,第二個12是第二步用來DFPT自洽的K點網格切點數,第三個48是第一步自準備計算電聲耦合係數(broadening法)中雙重$\delta$積分近似的能量採樣區間的較密K點網格切點數
