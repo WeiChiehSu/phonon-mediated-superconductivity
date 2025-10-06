@@ -21,6 +21,10 @@ If you have any questions,welcome use discussion.
 
 6.McMillan-Allen Dynes function
 
+This section covers the fundamentals of superconductivity theory, including the BCS theory:Cooper pairs, the Born–Oppenheimer approximation, the harmonic approximation, electron–phonon coupling, the canonical transformation, and the McMillan–Allen–Dynes function, along with their physical interpretations and derivations.
+
+If you find the theoretical derivations are too challenging, you may focus on the final physical pictures presented by the theory first, in order to build a foundational understanding of the logical framework of superconductivity.
+
 
 # introduction to The theory of First principle
 
@@ -32,7 +36,9 @@ If you have any questions,welcome use discussion.
 
 4.Delta function Approxima.mdte method
 
+This section introduces first-principles theory covering the fundamentals of Density Functional Theory (DFT) and its extension to Density Functional Perturbation Theory (DFPT). It explains how to calculate mechanical constants of materials and how these are connected to electron–phonon coupling.
 
+If the mathematical formulas appear too complicated, you may focus on the final physical pictures to first establish a basic logical understanding of DFPT.
 
 # tutorial for QE
 
@@ -41,6 +47,12 @@ If you have any questions,welcome use discussion.
 2.QE-PH:calculation
 
 3.Discussion on Convergence Properties
+
+This tutorial introduces how to install QE, calculate the electronic band structure, density of states (DOS), projected orbital band structure, and how to relax crystal structures. It also demonstrates how to compute phonon dispersion relations, phonon density of states (PDOS), and the Eliashberg spectral function, as well as how to use the McMillan–Allen–Dynes function to evaluate the superconducting transition temperature (Tc) of materials.
+
+The tutorial includes execution scripts, examples, and MATLAB codes for visualization.Among them, the most important part is the electron–phonon coupling tutorial, which focuses on calculating the superconducting transition temperature. In this section, I have integrated the theoretical foundations of superconductivity introduced in Parts I and II with the practical QE scripts, providing a detailed explanation of how each computational step corresponds to the relevant theoretical equations.
+
+Furthermore, the tutorial discusses the convergence of superconducting properties, explaining how to determine whether the superconductivity calculations are converged and which parameters have the greatest influence on the superconducting transition temperature
 
 
 # Special Cases:
