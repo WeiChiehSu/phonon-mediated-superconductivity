@@ -588,6 +588,8 @@ $$
 g_{phonon}(\omega _{q})= \int_{BZ}^{} \delta (\omega -\omega _{q})d\omega _{q}
 $$
 
+這邊計算聲子態密度是用tetrahedra法,tetrahedra法需要較密的q點網格去計算,好處是不需要像broadening法設置degauss
+
 $$
 得到每個頻率的聲子態密度g_{phonon}(\omega _{q})後,繪製系統的聲子態密度:V.dos,V.dos的內容為:
 $$
