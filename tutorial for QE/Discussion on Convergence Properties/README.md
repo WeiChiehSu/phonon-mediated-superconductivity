@@ -68,7 +68,7 @@ T_{c}=\frac{\omega _{log} }{1.2}e^{[\frac{-1.04(1+\lambda ) }{\lambda-\mu ^{*}(1
 $$
 
 $$
-其中\mu ^{*}是屏蔽庫侖pseudo-potential,是半經驗參數,通常設值為0.1,不過在V這個材料中,\mu ^{*}
+其中\mu ^{*}是屏蔽庫侖pseudo-potential,是半經驗參數,通常設值為0.1
 $$
 
-,不過在V這個材料中, \mu ^{*}值是0.368.
+不過在V這個材料中, 屏蔽庫侖pseudo-potential值是0.368!
