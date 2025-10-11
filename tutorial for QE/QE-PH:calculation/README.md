@@ -8,7 +8,7 @@ Therefore, this tutorial is divided into several parts:
 
 1. 如何使用QE去計算材料的電子能帶 (electron band)
 
-1.How to use QE to calculate the electronic band structure of a material (electron band)
+1. How to use QE to calculate the electronic band structure of a material (electron band)
 
 2. 如何使用QE去計算材料的電子態密度 (electron dos)
 
