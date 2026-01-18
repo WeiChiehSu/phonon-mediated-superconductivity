@@ -17,6 +17,10 @@ QE中使用broadening法時,先將k點網格平均切割成的好幾個區間,�
 $$
 
 $$
+In{}QE,{}when{}using{}the{}broadening{}method,{}the{}k-point{}grid{}is{}first{}divided{}into{}several{}small{}intervals.{}Within{}each{}interval,{}a{}smooth{}“smeared”{}function{}is{}used{}to{}approximate{}the{}sharp{} \delta{}function{}(\sigma=degauss){}in{}order{}to{}compute{}the{}electronic{}occupation{}numbers{}of{}the{}system.{}This{}procedure{}ultimately{}yields{}the{}electronic{}density{}of{}states{}(DOS).
+$$
+
+$$
 將broadening引入後,雙重\delta積分近似為:
 $$
 
