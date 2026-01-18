@@ -25,6 +25,10 @@ $$
 $$
 
 $$
+After{}introducing{}broadening,{}the{}double-\delta{}integration{}can{}be{}approximated{}as:
+$$
+
+$$
 I\simeq \frac{\Omega _{BZ}^{2} }{N_{K} N_{q}} \sum_{k}^{} \sum_{q}^{}  \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k}-\epsilon _{F})^{2}   }{\sigma ^{2} } } \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k^{'}}-\epsilon _{F})^{2}   }{\sigma ^{2} } }   
 $$
 
