@@ -5,6 +5,10 @@ $$
 $$
 
 $$
+Since{}calculating{} \lambda _{q}{}and{} \alpha ^{2}F(\omega ){}requires{}a{}double-\delta{}integration{}over{}the{}Fermi{}surface{}to{}evaluate{}the{}electronic{}density{}of{}states,{}and{}a{}computer{}cannot{}directly{}handle{}the{} \delta{}function,{}we{}need{}to{}approximate{}the{} \delta{}function{}using{}a{}broadening{}method:
+$$
+
+$$
 broadening:I=\int_{BZ}^{}dq \int_{BZ}^{}d\epsilon f(k,q)\delta (\epsilon _{n,K}-\epsilon _{F})\delta (\epsilon _{n^{'} ,k^{'}}-\epsilon _{F})
 $$
 
