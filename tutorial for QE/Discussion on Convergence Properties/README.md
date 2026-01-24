@@ -140,10 +140,18 @@ $$
 Superconducting{}transition{}temperature{}(Tc):{}5.83433{}K
 $$
 
-# 影響超導轉變溫度問題幾個主要參數:屏蔽庫侖pseudo-potential
+$$
+These{}results{}are{}quite{}close{}to{}the{}experimental{}superconducting{}transition{}temperature{}of{}V{}(5.4{}K)!
+$$
+
+# The main parameters affecting the superconducting transition temperature include:Screened Coulomb pseudo-potential (影響超導轉變溫度問題幾個主要參數:屏蔽庫侖pseudo-potential)
 
 $$
 根據McMillan-Allen{}Dynes{}function,得到\lambda和\omega _{log}後,便能初步推算材料的超導轉變溫度T_{c}:
+$$
+
+$$
+According{}to{}the{}McMillan–Allen–Dynes{}function,{}once{} \lambda{}and{} \omega _{log}{}are{}obtained,{}the{}superconducting{}transition{}temperature{}Tc{}of{}the{}material{}can{}be{}preliminarily{}estimated:
 $$
 
 $$
@@ -154,9 +162,25 @@ $$
 其中\mu ^{*}是屏蔽庫侖pseudo-potential,是半經驗參數,通常設值為0.1
 $$
 
+$$
+Here,{} \mu ^{*}{}is{}the{}screened{}Coulomb{}pseudo-potential,{}a{}semi-empirical{}parameter,{}which{}is{}usually{}set{}to{}0.1.
+$$
+
 不過在V這個材料中, 屏蔽庫侖pseudo-potential值是0.368!
 
+$$
+However,{}for{}vanadium{}(V),{}the{}screened{}Coulomb{}pseudo-potential{}is{}0.368!
+$$
+
 我們可以在Tclambda.m中,調控mustar(pseudo-potential值)去計算超導轉變溫度,可以發現:若設mustar=0.1時,degauss = 0.008 Ry的超導轉變溫度為22.5 K,和V的實驗超導轉變溫度(5.4 K)相差非常大,和實驗不符,因此需要手動調整pseudo-potential值去貼合實驗值!
+
+$$
+We{}can{}adjust{}the{}mustar{}(pseudo-potential{}value){}in{}Tclambda.m{}to{}calculate{}the{}superconducting{}transition{}temperature,{}and{}we{}find{}that:
+$$
+
+$$
+If{}we{}set{}mustar=0.1,{}the{}Tc{}calculated{}with{}degauss{}={}0.008{}Ry{}is{}22.5{}K,{}which{}is{}much{}higher{}than{}the{}experimental{}Tc{}of{}V{}(5.4{}K){}and{}clearly{}inconsistent{}with{}experiment.
+$$
 
 注:若想要求解pseudo-potential值,需使用SCDFT去計算!
 
