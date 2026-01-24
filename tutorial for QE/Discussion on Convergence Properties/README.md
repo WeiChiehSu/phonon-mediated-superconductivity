@@ -118,7 +118,14 @@ $$
 We{}can{}see{}that{}for{}the{}61872{}setup,{}at{}degauss{}={}0.008{}Ry,{}the{}electron–phonon{}coupling{}strength,{}electron–phonon{}weights,{}and{}superconducting{}transition{}temperature{}calculated{}with{}the{}61872{}grid{}begin{}to{}match{}those{}obtained{}with{}the{}densest{}61890{}setup,{}indicating{}convergence.{}This{}shows{}that{}the{}energy{}sampling{}grid{}of{}72×72×72{}matches{}well{}with{}the{}smoothing{}function{}at{}degauss{}={}0.008{}Ry.
 $$
 
+$$
+Similarly,{}for{}the{}61854{}setup,{}at{}degauss{}={}0.012{}Ry,{}the{}calculated{}electron–phonon{}coupling{}strength,{}weights,{}and{}Tc{}start{}to{}match{}the{}values{}from{}the{}denser{}61890{}and{}61872{}setups,{}achieving{}convergence.{}This{}indicates{}that{}the{}54×54×54{}energy{}sampling{}grid{}matches{}well{}with{}the{}smoothing{}function{}at{}degauss{}={}0.012{}Ry.
+$$
+
 最終我們可以得到,61872設置配合degauss = 0.008 Ry得到的準確電聲耦合強度為1.4685,電聲耦合權重為200.335和超導轉變溫度為5.83433 K ,和V的實驗超導轉變溫度(5.4 K)相差不大!
+
+$$
+
 
 # 影響超導轉變溫度問題幾個主要參數:屏蔽庫侖pseudo-potential
 
