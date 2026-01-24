@@ -70,8 +70,11 @@ $$
 If{}the{}k-point{}grid{}is{}very{}sparse{}and{} \sigma{}is{}very{}large,{}it{}can{}seriously{}overestimate{}the{}electronic{}density{}of{}states{}and{}cause{}numerical{}compensation{}issues,{}even{}leading{}to{}negative{}electronic{}occupation{}numbers{}in{}the{}calculation.
 $$
 
-
 這裡列出了用plot_compare_tc.m讀取不同參數設置保存的全部degauss電聲耦合係數,電聲耦合權重和超導轉變溫度(V_61248_data.mat....),進行比較:
+
+$$
+Here,{}we{}list{}all{}the{}electron–phonon{}coupling{}constants,{}electron–phonon{}weights,{}and{}superconducting{}transition{}temperatures{}saved{}under{}different{}parameter{}settings{}(e.g.,{}V_61248_data.mat…){}as{}read{}by{}plot_compa_
+$$
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/lambda1.png)
 
@@ -80,6 +83,22 @@ $$
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/T_c2%20.png)
 
 以61248設置為例:第一個參數6是指ph.x計算的q點網格切點數,第二個參數12是第二步用來DFPT自洽的K點網格切點數,第三個參數48是第一步自準備計算電聲耦合係數(broadening法)中雙重狄拉克函數積分近似的能量採樣區間的較密K點網格切點數
+
+$$
+Taking{}the{}61248{}setup{}as{}an{}example:
+$$
+
+$$
+The{}first{}parameter{}6{}refers{}to{}the{}number{}of{}q-points{}used{}in{}the{}ph.x{}calculation.
+$$
+
+$$
+The{}second{}parameter{}12{}refers{}to{}the{}K-point{}grid{}used{}in{}the{}second{}step{}for{}DFPT{}self-consistent{}calculations.
+$$
+
+$$
+The{}third{}parameter{}48{}refers{}to{}the{}denser{}K-point{}grid{}used{}in{}the{}first{}step{}to{}prepare{}for{}the{}electron–phonon{}coupling{}calculation{}(broadening{}method),{}i.e.,{}the{}energy{}sampling{}grid{}for{}the{}double-\delta{}function{}integration{}approximation.
+$$
 
 探討k點網格切點密度和degauss收斂只需調整第三個參數值,因此我們選了61854,61872和61890三個設置去進行比較全部degauss電聲耦合係數,電聲耦合權重和超導轉變溫度:
 
