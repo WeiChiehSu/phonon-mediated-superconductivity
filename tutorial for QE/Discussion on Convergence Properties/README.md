@@ -73,7 +73,7 @@ $$
 這裡列出了用plot_compare_tc.m讀取不同參數設置保存的全部degauss電聲耦合係數,電聲耦合權重和超導轉變溫度(V_61248_data.mat....),進行比較:
 
 $$
-Here,{}we{}list{}all{}the{}electron–phonon{}coupling{}constants,{}electron–phonon{}weights,{}and{}superconducting{}transition{}temperatures{}saved{}under{}different{}parameter{}settings{}(e.g.,{}V_61248_data.mat…){}as{}read{}by{}plot_compa_
+Here,{}we{}list{}all{}the{}electron–phonon{}coupling{}constants,{}electron–phonon{}weights,{}and{}superconducting{}transition{}temperatures{}saved{}under{}different{}parameter{}settings{}(e.g.,{}V_61248_data.mat…){}as{}read{}by{}plot_compare_tc.m
 $$
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/lambda1.png)
