@@ -102,6 +102,10 @@ $$
 
 探討k點網格切點密度和degauss收斂只需調整第三個參數值,因此我們選了61854,61872和61890三個設置去進行比較全部degauss電聲耦合係數,電聲耦合權重和超導轉變溫度:
 
+$$
+To{}study{}the{}convergence{}of{}the{}k-point{}grid{}density{}and{}degauss,{}we{}only{}need{}to{}adjust{}the{}third{}parameter.{}Therefore,{}we{}selected{}the{}61854,{}61872,{}and{}61890{}setups{}to{}compare{}all{}the{}degauss{}electron–phonon{}coupling{}constants,{}electron–phonon{}weights,{}and{}superconducting{}transition{}temperatures.
+$$
+
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/lambda3.png)
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/omega_log3.png)
