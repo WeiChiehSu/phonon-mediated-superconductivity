@@ -1,4 +1,4 @@
-# Discussion of the convergence of the superconducting transition temperature (超導轉變溫度收斂問題討論)
+# Discussion of the convergence in the superconducting transition temperature (超導轉變溫度收斂問題討論)
 
 $$
 由於計算\lambda _{q}和\alpha ^{2}F(\omega )需要在Fermi-surface進行雙重\delta積分計算電子態密度,但電腦無法計算\delta方程,為了處理\delta方程,需要使用broadening(展寬)方法進行\delta方程近似:
