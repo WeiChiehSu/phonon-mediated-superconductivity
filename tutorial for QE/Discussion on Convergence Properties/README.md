@@ -125,7 +125,20 @@ $$
 最終我們可以得到,61872設置配合degauss = 0.008 Ry得到的準確電聲耦合強度為1.4685,電聲耦合權重為200.335和超導轉變溫度為5.83433 K ,和V的實驗超導轉變溫度(5.4 K)相差不大!
 
 $$
+Finally,{}we{}can{}obtain{}that{}with{}the{}61872{}setup{}and{}degauss{}={}0.008{}Ry,{}the{}calculated{}values{}are:
+$$
 
+$$
+Electron–phonon{}coupling{}strength:{}1.4685
+$$
+
+$$
+Electron–phonon{}weight:{}200.335
+$$
+
+$$
+Superconducting{}transition{}temperature{}(Tc):{}5.83433{}K
+$$
 
 # 影響超導轉變溫度問題幾個主要參數:屏蔽庫侖pseudo-potential
 
