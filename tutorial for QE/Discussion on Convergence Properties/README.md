@@ -198,7 +198,17 @@ Here, we list all the degauss electron–phonon coupling constants, electron–p
 
 可以注意到,若第二個參數的值為12(12 * 12 *12)的話,電聲耦合係數,電聲耦合權重和超導轉變溫度的計算值會過高;若第二個參數的值為16(16 * 16 *16)的話,電聲耦合係數,電聲耦合權重和超導轉變溫度的計算值會過低,只有第二個參數的值大於18(18 * 18 *18)的話,電聲耦合係數,電聲耦合權重和超導轉變溫度的計算值才不會過大,且和實驗值吻合,表示達成收斂!
 
+It can be observed that:
+
+1.If the second parameter is set to 12 (12×12×12), the calculated electron–phonon coupling constant, electron–phonon weight, and superconducting transition temperature are too high.
+
+2.If the second parameter is set to 16 (16×16×16), the calculated values are too low.
+
+3.Only when the second parameter is greater than 18 (18×18×18) do the calculated electron–phonon coupling, weights, and Tc stop being overestimated and match the experimental values, indicating convergence.
+
 我們可以用plot_compare_phononband.m畫出讀取不同第二個參數設置(12phonon_band_data...)保存的聲子譜比較圖和plot_compare_phonondos.m畫出讀取不同第二個參數設置(12dos_data...)保存的聲子態密度比較圖;可以發現:
+
+We can use plot_compare_phononband.m to plot phonon dispersion comparison graphs by reading data saved under different second-parameter settings (e.g., 12phonon_band_data…), and plot_compare_phonondos.m to plot phonon density of states (DOS) comparison graphs from the corresponding data files (e.g., 12dos_data…). From these plots, we can observe that:
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/Discussion%20on%20Convergence%20Properties/phonon%20band%20q-mesh%20compare.png)
 
@@ -206,5 +216,13 @@ Here, we list all the degauss electron–phonon coupling constants, electron–p
 
 若第二個參數的值為12(12 * 12 *12)的話,造成計算出來的低頻聲子過多,導致其高估了電聲耦合係數,電聲耦合權重和超導轉變溫度;若第二個參數的值為16(16 * 16 *16)的話,造成計算出來的高頻聲子過多,導致其低估了電聲耦合係數,電聲耦合權重和超導轉變溫度;只有第二個參數的值大於18(18 * 18 *18)的話,計算出來的聲子性質才達成收斂且超導轉變溫度的計算值和實驗值吻合!
 
+If the second parameter is set to 12 (12×12×12), the calculation produces too many low-frequency phonons, which overestimates the electron–phonon coupling constant, electron–phonon weight, and superconducting transition temperature.
+
+If the second parameter is set to 16 (16×16×16), the calculation produces too many high-frequency phonons, which underestimates the electron–phonon coupling constant, weights, and Tc.
+
+Only when the second parameter is greater than 18 (18×18×18) do the calculated phonon properties converge, and the resulting superconducting transition temperature matches the experimental value.
+
 因此第二步用來DFPT自洽的K點網格切點數是否足夠密,是影響聲子計算準確度的重要參數!
+
+Therefore, whether the K-point grid used in the second step for DFPT self-consistent calculations is dense enough is an important factor affecting the accuracy of phonon calculations!
 
