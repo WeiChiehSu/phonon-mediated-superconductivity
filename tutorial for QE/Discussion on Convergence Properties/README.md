@@ -58,6 +58,18 @@ $$
 從費米-狄拉克分布的圖可以注意到:k點網格切點密度需要和\sigma值匹配!倘若k點網格切點密度很高,\sigma很低,會造成低估電子態密度;倘若k點網格切點密度很小,\sigma很高,會造成嚴重高估電子態密度和導致數值計算補償,讓計算出的電子佔據數出現負值!
 $$
 
+$$
+From{}the{}Fermi–Dirac{}distribution{}plot,{}we{}can{}observe{}that{}the{}density{}of{}k-point{}grid{}sampling{}must{}match{}the{} \sigma{}value!
+$$
+
+$$
+If{}the{}k-point{}grid{}is{}very{}dense{}but{} \sigma{}is{}very{}small,{}it{}will{}underestimate{}the{}electronic{}density{}of{}states.
+$$
+
+$$
+If{}the{}k-point{}grid{}is{}very{}sparse{}and{} \sigma{}is{}very{}large,{}it{}can{}seriously{}overestimate{}the{}electronic{}density{}of{}states{}and{}cause{}numerical{}compensation{}issues,{}even{}leading{}to{}negative{}electronic{}occupation{}numbers{}in{}the{}calculation.
+$$
+
 
 這裡列出了用plot_compare_tc.m讀取不同參數設置保存的全部degauss電聲耦合係數,電聲耦合權重和超導轉變溫度(V_61248_data.mat....),進行比較:
 
