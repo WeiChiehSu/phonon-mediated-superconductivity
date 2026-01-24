@@ -34,13 +34,25 @@ $$
 
 broadening法可以用費米-狄拉克分布去進行理解:
 
+$$
+The{}broadening{}method{}can{}be{}understood{}in{}terms{}of{}the{}Fermi–Dirac{}distribution:
+$$
+
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/introduction%20to%20The%20theory%20of%20First%20principle/degauss.png)
 
 $$
 \sigma(degauss)便是控制費米-狄拉克分布參數平緩或陡峭的參數:\sigma值越小,費米-狄拉克分布越陡峭;,\sigma值越大,費米-狄拉克分布越平緩
 $$
 
+$$
+The{}parameter{} \sigma(degauss){}controls{}how{}smooth{}or{}sharp{}the{}Fermi–Dirac{}distribution{}is:{}{}The{}smaller{} \sigma{}value,{}the{}Fermi–Dirac{}distribution{}is{}steeper.{}The{}larger{} \sigma{}value,{}the{}Fermi–Dirac{}distribution{}is{}smoother.
+$$
+
 k點網格平均切割成的區間,可以當成k(0.8-1.2)的範圍:k點網格切點值越疏,範圍越大;k點網格切點值越密,範圍越小
+
+$$
+The{}intervals{}created{}by{}averaging{}the{}k-point{}grid{}can{}be{}considered{}as{}a{}range,{}e.g.,{}k={} (0.8-1.2):{}The{}sparser{}k-point{}grid,{}which{}is{}larger{}than{}the{}range{}of{}each{}interval.;{}The{}denser{}k-point{}grid,{}which{}is{}smaller{}than{}the{}range{}of{}each{}interval.
+$$
 
 $$
 從費米-狄拉克分布的圖可以注意到:k點網格切點密度需要和\sigma值匹配!倘若k點網格切點密度很高,\sigma很低,會造成低估電子態密度;倘若k點網格切點密度很小,\sigma很高,會造成嚴重高估電子態密度和導致數值計算補償,讓計算出的電子佔據數出現負值!
