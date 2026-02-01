@@ -78,7 +78,7 @@ SSCHA:
 
 # Reference
 
-https://thesis.lib.ncku.edu.tw/thesis/detail/55982d7b9fd66505eadfc9673f2c098d/
+My Master's Thesis:https://thesis.lib.ncku.edu.tw/thesis/detail/55982d7b9fd66505eadfc9673f2c098d/
 
 鐘寅 凝聚态物理導論 2023.3.22版
 
