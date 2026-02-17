@@ -559,6 +559,8 @@ $$
 這個輸入檔案的目的是將第四步計算得到的力學常數又進行Fourier-Transformation,從實空間變換到q空間,求得每個q點的動力學矩陣:
 $$
 
+The purpose of this input file is to perform a Fourier transformation of the force constants obtained in Step 4, converting them from real space back into q-space, and thereby obtaining the dynamical matrix at each q-point:
+
 $$
 C_{k\gamma,k'\gamma'}(r_{\gamma}-r_{\gamma'})=\frac{1}{N}\sum_{q}^{} e^{iq(r_{\gamma}-r_{\gamma'})}C_{k\gamma,k'\gamma'}(q)  \Longrightarrow D_{k\gamma,k'\gamma'}(q)=\frac{C_{k\gamma,k'\gamma'}(q) }{\sqrt{m_{\gamma}m_{\gamma'}  } }
 $$
@@ -567,26 +569,34 @@ $$
 求得每個q點的動力學矩陣後,便能計算出系統的每個q點的聲子頻率.
 $$
 
+After obtaining the dynamical matrix at each q-point, the phonon frequencies at each q-point can be calculated.
+
 $$
 \sum_{k',\gamma'}^{} D_{k,\gamma;k',\gamma'}(q)u_{k',\gamma'}(q)=\omega _{q}^{2} u_{k',\gamma'}(q)
 $$
 
 根據q點設置座標和切點數(0.0000    0.0000    0.0000 90 !G),繪製聲子譜並將將聲子譜保存至V.freq中,V.freq的內容為:
 
-      &plot nbnd=   3, nks= 361 /            <-3條聲子譜(和晶格內的原子數量n有關:3 * n條) , 總共361個q點
+Based on the specified q-point coordinates and the number of points along the path (e.g., 0.0000 0.0000 0.0000 90 !G), the phonon dispersion is plotted and saved to V.freq. The contents of V.freq are:
+
+      &plot nbnd=   3, nks= 361 /            <-3條聲子譜(和晶格內的原子數量n有關:3 * n條) , 總共361個q點[three phonon branches (which depends on the number of atoms n in the unit cell: 3*n branches), with a total of 361 q-points]
  
-            0.000000  0.000000  0.000000     <-第一個q點座標
+            0.000000  0.000000  0.000000     <-第一個q點座標[the coordinates of the first q-point]
             
-         -0.0000    0.0000    0.0000         <-第一個q點座標的三個聲子頻率(和晶格內的原子數量n有關:3 * n個頻率)
+         -0.0000    0.0000    0.0000         <-第一個q點座標的三個聲子頻率(和晶格內的原子數量n有關:3 * n個頻率)[the three phonon frequencies at the first q-point (which depends on the number of atoms n in the unit cell: 3*n frequencies)]
    
-            0.000000  0.011111  0.000000     <-第二個q點座標
+            0.000000  0.011111  0.000000     <-第二個q點座標[the coordinates of the second q-point]
             
-         2.7942    2.7942    8.4798          <-第二個q點座標的三個聲子頻率(和晶格內的原子數量n有關:3 * n個頻率)
+         2.7942    2.7942    8.4798          <-第二個q點座標的三個聲子頻率(和晶格內的原子數量n有關:3 * n個頻率)[the three phonon frequencies at the second q-point (which depends on the number of atoms n in the unit cell: 3*n frequencies)]
 
 
 
 $$
 得到每個q點的聲子頻率後,結合第二步得到的波函數,對角化出每個q點電聲耦合矩陣元G_{q}:
+$$
+
+$$
+After{}obtaining{}the{}phonon{}frequencies{}at{}each{}q-point,{}they{}are{}combined{}with{}the{}wavefunctions{}from{}Step{}2{}to{}evaluate{}(by{}diagonalization){}the{}electron–phonon{}coupling{}matrix{}elements{}G_{q}{}at{}each{}q-point:
 $$
 
 $$
@@ -598,16 +608,22 @@ $$
 $$
 
 $$
+Finally,{}the{}electron–phonon{}coupling{}parameter{}\lambda_{q}{}(also{}known{}as{}the{}phonon{}linewidth){}at{}each{}q-point{}is{}calculated{}for{}30{}different{}values{}of{}\sigma{}(degauss):
+$$
+
+$$
 \lambda _{q}=\frac{\sum_{nn^{'}}^{} \int_{BZ}^{} \left | g_{nn^{'}}(k,q) ^{2} \right | \delta (\epsilon _{n,K}-\epsilon _{F})\delta (\epsilon _{n^{'} ,k^{'}}-\epsilon _{F})d\epsilon}{g_{electron} (\epsilon _{n^{'} ,k^{'}}-\epsilon _{F})\omega _{q}\Omega _{BZ}} 
 $$
 
 根據q點設置座標和切點數(0.0000    0.0000    0.0000 90 !G),繪製對應聲子譜的電聲耦合係數保存在elph.gamma.1,elph.gamma.2.......elph.gamma.30中(和第三步設置的el_ph_nsigma值有關),elph.gamma.5(這個是8個原子晶體的範例)的內容為:
 
-      &plot nbnd=  24, nks= 601 /                                   <-24條聲子譜(和晶格內的原子數量8有關:3 * 8條) , 總共601個q點(和聲子譜設置一致)
+Based on the specified q-point coordinates and the number of points along the path (e.g., 0.0000 0.0000 0.0000 90 !G), the electron–phonon coupling coefficients along the phonon dispersion are computed and saved in elph.gamma.1, elph.gamma.2, ..., elph.gamma.30 (corresponding to the el_ph_nsigma setting in Step 3). The contents of elph.gamma.5 (an example for an 8-atom crystal) are:
+
+      &plot nbnd=  24, nks= 601 /                                   <-24條聲子譜(和晶格內的原子數量8有關:3 * 8條) , 總共601個q點(和聲子譜設置一致)[24 phonon branches (since the unit cell contains 8 atoms: 3×8 branches), with a total of 601 q-points (consistent with the phonon-dispersion path settings)), with a total of 601 q-points (consistent with the phonon-dispersion path settings)]
     
-               0.000000  0.000000  0.000000                         <-第一個q點座標
+               0.000000  0.000000  0.000000                         <-第一個q點座標[the coordinates of the first q-point]
             
-       -0.0000   -0.0000   -0.0000   -0.1824   -0.1824   -0.4844    <-第一個q點座標的24個聲子頻率(和晶格內的原子數量n有關:3 * n個頻率)
+       -0.0000   -0.0000   -0.0000   -0.1824   -0.1824   -0.4844    <-第一個q點座標的24個聲子頻率(和晶格內的原子數量n有關:3 * n個頻率)[the 24 phonon frequencies at the first q-point (since the unit cell contains n atoms: 3*n frequencies)]
    
        -0.4844   -0.9939   -0.9939    0.1958   -0.0026    0.0228
    
@@ -615,8 +631,8 @@ $$
     
        12.2200   12.2200  120.8180  120.8180    4.9217    4.9217
    
-               0.002500  0.001443  0.000000                         <-第二個q點座標
-        -0.0004   -0.0010   -0.0013   -0.1833   -0.1830   -0.4851   <-第二個q點座標的24個聲子頻率(和晶格內的原子數量n有關:3 * n個頻率)
+               0.002500  0.001443  0.000000                         <-第二個q點座標[the coordinates of the second q-point]
+        -0.0004   -0.0010   -0.0013   -0.1833   -0.1830   -0.4851   <-第二個q點座標的24個聲子頻率(和晶格內的原子數量n有關:3 * n個頻率)[the 24 phonon frequencies at the second q-point (since the unit cell contains n atoms: 3*n frequencies)]
     
         -0.4853   -0.9945   -0.9948    0.1957   -0.0026    0.0227
    
@@ -626,25 +642,29 @@ $$
 
 進行matdyn.$name.in有幾個要點:
 
-   1. zasr='simple':聲學求和條件,simple表只施加3個平移聲學條件,並透過修正力常數矩陣（force-constants matrix）的對角元素來實現
+There are several key points to consider when running matdyn.$name.in:
 
-   2. flfrc='$name.fc':要讀取的第四步Fourier-Transformationc後的力學常數檔案名稱
+   1. zasr='simple':聲學求和條件,simple表只施加3個平移聲學條件,並透過修正力常數矩陣（force-constants matrix）的對角元素來實現[Acoustic sum rule: the simple option enforces only the three translational acoustic sum rules, implemented by correcting the diagonal elements of the force-constants matrix.]
 
-   3. flfrq='$name.freq':根據q點設置座標和切點數(0.0000    0.0000    0.0000 90 !G),繪製的聲子譜檔案名稱:$name.freq
+   2. flfrc='$name.fc':要讀取的第四步Fourier-Transformationc後的力學常數檔案名稱[the filename of the force constants obtained after the Fourier transformation in Step 4.]
 
-   4. q_in_band_form=.true.:在$name.freq中繪製每個q點的座標
+   3. flfrq='$name.freq':根據q點設置座標和切點數(0.0000    0.0000    0.0000 90 !G),繪製的聲子譜檔案名稱:$name.freq[the filename of the phonon-dispersion output based on the specified q-point path (e.g., 0.0000 0.0000 0.0000 90 !G): $name.freq]
 
-   5. q_in_cryst_coord=.true.:在$name.freq中繪製的q點座標為晶體座標
+   4. q_in_band_form=.true.:在$name.freq中繪製每個q點的座標[plot the coordinates of each q-point in $name.freq]
 
-   6. la2F=.true.:表示計算電聲耦合
+   5. q_in_cryst_coord=.true.:在$name.freq中繪製的q點座標為晶體座標[the q-point coordinates written in $name.freq are in crystal coordinates]
 
-   7. dos=.false.:表示不計算聲子態密度
+   6. la2F=.true.:表示計算電聲耦合[indicates that the electron–phonon coupling calculation is enabled]
+   
+   7. dos=.false.:表示不計算聲子態密度[indicates that the phonon density of states is not calculated]
 
-   8. 5:總共要計算幾個BZ內的高對稱點
+   8. 5:總共要計算幾個BZ內的高對稱點[the total number of high-symmetry points in the Brillouin zone to be calculated]
 
-   9. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*5+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大
+   10. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*5+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大[the coordinates and number of points for the first high-symmetry point to be calculated (the Gamma point). For example, if there are 90 points along Gamma→H, then the last high-symmetry point is sampled with only 1 point, giving a total number of points 90*5+1. A larger number of points makes the final band plot smoother but increases the computational cost.]
 
 運行matdyn計算指令為:mpiexec matdyn.x -in matdyn.$name.in > matdyn.$name.out
+
+The command to run the matdyn calculation is: mpiexec matdyn.x -in matdyn.$name.in > matdyn.$name.out
 
 # 第6個輸入檔案為matdyn.$name.in.dos:
 
