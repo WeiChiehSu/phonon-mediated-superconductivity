@@ -795,6 +795,10 @@ $$
 $$
 
 $$
+After{}obtaining{}the{}Eliashberg{}spectral{}function{}\alpha^{2}F(\omega_{q}){}over{}all{}frequencies,{}summing{}Eliashberg{}spectral{}function{}over{}frequency{}yields{}the{}total{}electron–phonon{}coupling{}strength{}\lambda:
+$$
+
+$$
 \lambda=2\int \frac{\alpha ^{2}F(\omega _{q} )}{\omega}d\omega= \sum_{q}^{} \lambda _{q}
 $$
 
@@ -803,11 +807,19 @@ $$
 $$
 
 $$
+After{}obtaining{}\lambda,{}the{}logarithmic{}average{}phonon{}frequency{}\omega_{log},{}which{}represents{}the{}effective{}electron–phonon{}coupling{}frequency,{}can{}be{}calculated:
+$$
+
+$$
 \omega _{log}=e^{[\frac{2}{\lambda } \int_{}^{ }d\omega \alpha ^{2}F(\omega )\frac{log\omega }{\omega }   ]}
 $$
 
 $$
 30個不同\sigma(degauss)值的\lambda和\omega _{log},被保存在lambda檔案中,lambda檔案的內容為:
+$$
+
+$$
+The{}values{}of{}\lambda{}and{}\omega_{log}{}for{}the{}30{}different{}\sigma{}(degauss){}values{}are{}stored{}in{}the{}lambda{}file.{}The{}contents{}of{}the{}lambda{}file{}are:
 $$
 
          Electron-phonon coupling constant, lambda 
@@ -828,23 +840,29 @@ $$
  
 第1行為Broadening,第2行為Broadening的值(由el_ph_sigma和el_ph_nsigma決定),第3行為lambda,第4行為lambda值,第5行為費米能級的電子態密度,第6行為費米能級的電子態密度值(單位Ry),第7行為電子-聲子耦合權重,第8行為電子-聲子耦合權重值
 
+The first line indicates Broadening, the second line gives the Broadening value (determined by el_ph_sigma and el_ph_nsigma), the third line indicates lambda, the fourth line gives the value of lambda, the fifth line indicates the electronic density of states at the Fermi level, the sixth line gives the value of the electronic density of states at the Fermi level (in units of Ry), the seventh line indicates the electron–phonon coupling weight, and the eighth line gives the value of the electron–phonon coupling weight.
+
 進行matdyn.$name.in有幾個要點:
 
-   1. zasr='simple':聲學求和條件,simple表只施加3個平移聲學條件,並透過修正力常數矩陣（force-constants matrix）的對角元素來實現
+here are several key points to consider when running matdyn.$name.in:
 
-   2. flfrc='$name.fc':要讀取的第四步Fourier-Transformationc後的力學常數檔案名稱
+   1. zasr='simple':聲學求和條件,simple表只施加3個平移聲學條件,並透過修正力常數矩陣（force-constants matrix）的對角元素來實現[Acoustic sum rule: the simple option enforces only the three translational acoustic sum rules, implemented by correcting the diagonal elements of the force-constants matrix.]
 
-   3. fldos='$name.dos':繪製的聲子態密度檔案名稱:$name.dos
+   2. flfrc='$name.fc':要讀取的第四步Fourier-Transformationc後的力學常數檔案名稱[the filename of the force constants obtained after the Fourier transformation in Step 4]
 
-   4. dos=.ture.:繪製聲子態密度
+   3. fldos='$name.dos':繪製的聲子態密度檔案名稱:$name.dos[fldos = '$name.dos': the filename of the calculated phonon density of states is $name.dos.]
 
-   5. nk1=120,nk2=120,nk3=120:xyz軸設置更密的q點切點網格,xyz軸分別切割120個q點
+   4. dos=.ture.:繪製聲子態密度[plot the phonon density of states]
 
-   6. ndos=200:控制繪圖取樣間距的參數,頻率軸上切200個點，繪製聲子態密度
+   5. nk1=120,nk2=120,nk3=120:xyz軸設置更密的q點切點網格,xyz軸分別切割120個q點[set a denser q-point grid along the x, y, and z directions, with 120 divisions along each axis]
+
+   6. ndos=200:控制繪圖取樣間距的參數,頻率軸上切200個點，繪製聲子態密度[a parameter that controls the plotting resolution: the frequency axis is divided into 200 points to plot the phonon density of states]
 
 運行matdyn計算指令為:mpiexec matdyn.x -in matdyn.$name.in.dos > matdyn.$name.out.dos(注:這個計算第二耗時!)
 
-# 第7個輸入檔案為lambda.$name.in:
+The command to run the matdyn DOS calculation is : mpiexec matdyn.x -in matdyn.$name.in.dos > matdyn.$name.out.dos (Note: this is the second most time-consuming part of the calculation.)
+
+# The seventh input file is lambda.$name.in:
 
      10 0.1 1                                       <- 最高的聲子頻率(單位THz),聲子態密度的degauss,smearing method
      
