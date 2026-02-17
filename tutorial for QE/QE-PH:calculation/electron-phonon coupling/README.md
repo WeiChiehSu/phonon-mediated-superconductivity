@@ -666,7 +666,7 @@ There are several key points to consider when running matdyn.$name.in:
 
 The command to run the matdyn calculation is: mpiexec matdyn.x -in matdyn.$name.in > matdyn.$name.out
 
-# 第6個輸入檔案為matdyn.$name.in.dos:
+# The sixth input file is matdyn.$name.in.dos:
 
    &input
  
@@ -697,13 +697,23 @@ $$
 $$
 
 $$
+The{}purpose{}of{}this{}input{}file{}is{}to{}read{}the{}force{}constants{}obtained{}in{}Step{}4{}and{}calculate{}the{}eigenvalues{}(phonon{}frequencies){}on{}a{}new{}and{}denser{}q-point{}grid{}(nk1=120,nk2=120,nk3=120).{}From{}these{}frequencies,{}the{}phonon{}energy{}distribution{}is{}evaluated,{}yielding{}the{}phonon{}density{}of{}states{}g_{phonon}(\omega_{q}){}at{}each{}frequency.
+$$
+
+$$
 g_{phonon}(\omega _{q})= \int_{BZ}^{} \delta (\omega -\omega _{q})d\omega _{q}
 $$
 
 這邊計算聲子態密度是用tetrahedra法,tetrahedra法需要較密的q點網格去計算,好處是不需要像broadening法設置degauss
 
+Here, the phonon density of states is calculated using the tetrahedron method. The tetrahedron method requires a dense q-point grid, but its advantage is that it does not require a smearing parameter such as degauss, unlike the broadening method.
+
 $$
 得到每個頻率的聲子態密度g_{phonon}(\omega _{q})後,繪製系統的聲子態密度:V.dos,V.dos的內容為:
+$$
+
+$$
+After{}obtaining{}the{}phonon{}density{}of{}states{}g_{phonon}(\omega_{q}){}at{}each{}frequency,{}the{}phonon{}density{}of{}states{}of{}the{}system{}is{}plotted{}and{}saved{}in{}V.dos.{}The{}contents{}of{}V.dos{}are:
 $$
 
        Frequency[cm^-1] DOS PDOS                  
@@ -726,9 +736,14 @@ $$
 
 第1行為聲子的頻率(單位是cm^-1),第2行為材料的總聲子態密度,第3行為材料的每個原子的投影態密度
 
+The first column contains the phonon frequency (in units of cm^-1), the second column contains the total phonon density of states of the material, and the third column contains the projected phonon density of states for each atom in the material.
 
 $$
 統計第五步每個q點的電聲耦合係數,結合每個頻率的聲子態密度g_{phonon}(\omega _{q}),得到全部頻率的Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} ):
+$$
+
+$$
+By{}summing{}the{}electron–phonon{}coupling{}coefficients{}at{}each{}q-point{}from{}Step{}5{}and{}combining{}them{}with{}the{}phonon{}density{}of{}states{}g_{phonon}(\omega_{q}){}at{}each{}frequency,{}the{}Eliashberg{}spectral{}function{}\alpha^{2}F(\omega_{q}){}over{}all{}frequencies{}is{}obtained:
 $$
 
 $$
@@ -737,6 +752,10 @@ $$
 
 $$
 得到30個不同\sigma(degauss)值的Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )後,將全部頻率的Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )保存在a2F.dos1,a2F.dos2.......a2F.dos30中(和第三步設置的el{}ph{}nsigma值有關),a2F.dos1的內容為:
+$$
+
+$$
+After{}obtaining{}the{}Eliashberg{}spectral{}function{}\alpha^{2}F(\omega_{q}){}for{}30{}different{}values{}of{}\sigma{}(degauss),{}the{}resulting{}\alpha^{2}F(\omega_{q}){}over{}all{}frequencies{}is{}saved{}in{}a2F.dos1,{}a2F.dos2,{}...,{}a2F.dos30{}(corresponding{}to{}the{}el_ph_nsigma{}setting{}in{}Step{}3).{}The{}contents{}of{}a2F.dos1{}are:
 $$
 
              Eliashberg function a2F (per both spin)
@@ -768,6 +787,8 @@ $$
        0.124970E-03    0.995221E-03    0.710205E-03    0.279327E-03    0.568917E-05
 
 第1行為聲子的頻率(單位是Ry),第2行為材料的總a2F,第3,4,5行為材料的每條聲子譜貢獻的a2F
+
+The first column contains the phonon frequency (in units of Ry), the second column contains the total a2F of the material, and the third, fourth, and fifth columns contain the contributions to a2F from each phonon branch.
 
 $$
 得到全部頻率的Eliashberg{}spectral{}function{} \alpha ^{2}F(\omega _{q} )後,將全部頻率Eliashberg{}spectral{}function加起來,得到系統的電子-聲子耦合強度\lambda:
