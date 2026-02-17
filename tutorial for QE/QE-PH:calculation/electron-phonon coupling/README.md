@@ -1,4 +1,4 @@
- # phonon dispersion, phonon density of states, Eliashberg spectral function, and superconducting transition temperature
+ # Phonon dispersion, Phonon density of states, Eliashberg spectral function, and Superconducting transition temperature
 
 本次計算的材料為V(unit-cell)的聲子譜,聲子態密度,Eliashberg譜函數和超導轉變溫度,運行計算只需把pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF和腳本:qe_twnia3_elph_all.sh和qe_twnia3_lambda.sh放進已經安裝好QE的slurm系統機器,先運行:
 
@@ -93,10 +93,16 @@ $$
 $$
 
 $$
+The{}purpose{}of{}this{}input{}file{}is{}to{}perform{}a{}self-consistent{}field{}(SCF){}calculation{}using{}a{}dense{}k-point{}grid{}to{}obtain{}the{}Fermi{}energy{}of{}the{}material{}and{}to{}prepare{}the{}energy{}sampling{}intervals{}required{}for{}the{}double{}\delta-function{}integral{}approximation{}in{}the{}electron–phonon{}coupling{}calculation{}using{}the{}broadening{}method.
+$$
+
+$$
 I\simeq \frac{\Omega _{BZ}^{2} }{N_{K} N_{q}} \sum_{k}^{} \sum_{q}^{}  \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k}-\epsilon _{F})^{2}   }{\sigma ^{2} } } \frac{1}{\sqrt{2\pi \sigma } }e^{-\frac{(\epsilon _{k^{'}}-\epsilon _{F})^{2}   }{\sigma ^{2} } }   
 $$
 
 類似於費米-狄拉克分布:
+
+similar to the Fermi–Dirac distribution:
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/introduction%20to%20The%20theory%20of%20First%20principle/degauss.png)
 
@@ -104,15 +110,25 @@ $$
 \sigma(degauss)便是控制費米-狄拉克分布參數平緩或陡峭的參數:\sigma值越小,費米-狄拉克分布越陡峭;,\sigma值越大,費米-狄拉克分布越平緩
 $$
 
+$$
+\sigma{}(degauss){}is{}the{}parameter{}that{}controls{}how{}smooth{}or{}steep{}the{}Fermi–Dirac{}distribution{}is:{}the{}smaller{}the{}value{}of{}\sigma,{}the{}steeper{}the{}Fermi–Dirac{}distribution;{}the{}larger{}the{}value{}of{}\sigma,{}the{}smoother{}the{}Fermi–Dirac{}distribution.
+$$
+
 k點網格平均切割成的區間,可以當成k(0.8-1.2)的範圍:k點網格切點值越疏,範圍越大;k點網格切點值越密,範圍越小
+
+The intervals obtained by dividing the k-point grid can be regarded as ranges such as k(0.8–1.2): the sparser the k-point grid, the larger the interval; the denser the k-point grid, the smaller the interval.
 
 準備計算電聲耦合係數(broadening法)中雙重\delta積分近似的能量採樣區間的資訊保存在V.a2Fsave中
 
+The information required for the energy sampling intervals used in the double \delta -function integral approximation in the electron–phonon coupling calculation (broadening method) is stored in V.a2Fsave.
+
 進行pw.$name.scf-1.in有幾個要點:
 
-   1. 必須設置:la2F = .true.,表示計算電聲耦合!
+There are several key points to consider when running pw.$name.scf-1.in:
 
-   2. K_POINTS設置的切點密度(72*72*72)須為第二步K_POINTS設置和第三步q點設置的整數倍,否則計算電聲耦合係數時,將無法進行插值!
+   1. 必須設置:la2F = .true.,表示計算電聲耦合!(The parameter la2F = .true. must be set, which indicates that the electron–phonon coupling calculation is enabled.)
+
+   2. K_POINTS設置的切點密度(72*72*72)須為第二步K_POINTS設置和第三步q點設置的整數倍,否則計算電聲耦合係數時,將無法進行插值!(The k-point grid density specified in K_POINTS (72×72×72) must be an integer multiple of the K_POINTS setting in the second step and the q-point grid in the third step; otherwise, interpolation cannot be performed when calculating the electron–phonon coupling coefficients.)
 
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.$calcul-1.in > pw.$name.$calcul-1.out
 
