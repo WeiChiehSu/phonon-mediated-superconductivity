@@ -347,6 +347,8 @@ $$
  
 得到每個q點內聲子頻率,聲子振動模態和動力學矩陣(聲子頻率,聲子振動模態和動力學矩陣資訊存放在$name.dyn中):
 
+This yields, for each q-point, the phonon frequencies, phonon eigenmodes, and the dynamical matrix (the information on the phonon frequencies, phonon eigenmodes, and dynamical matrix is stored in $name.dyn):
+
      Diagonalizing the dynamical matrix
 
      q = (    0.000000000   0.192450090   0.000000000 ) 
@@ -380,8 +382,14 @@ $$
 
  (這邊範例是8原子晶格的聲子頻率[可在ph.$name.out查找])
 
+ (Here is an example of the phonon frequencies for an 8-atom unit cell [they can be found in ph.$name.out].)
+
  $$
  並透過ph.$name.in設置的 el_{}ph_{}sigma =  0.002(Ry) [\sigma(degauss)便是雙重\delta積分近似中控制費米-狄拉克分布參數平緩或陡峭的參數] 和 el_{}ph_{}nsigma=30[0.002{}0.004{}0.006....總共設置30個值]和第一步保存在V.a2Fsave中計算電聲耦合係數(broadening法)中雙重\delta積分近似的能量採樣區間的資訊結合:
+ $$
+
+ $$
+In{}addition,{}ph.$name.in{}specifies{}el_{}ph_{}sigma{}={}0.002{}(Ry){}—{}where{}\sigma{}(degauss){}is{}the{}smearing{}parameter{}in{}the{}double-\delta{}integral{}approximation{}that{}controls{}how{}sharp{}or{}smooth{}the{}Fermi–Dirac–like{}broadening{}is{}—{}and{}el_{}ph_{}sigma{}={}30{}(i.e.,{}\sigma{}={}0.002,{}0.004,{}0.006,…,{}a{}total{}of{}30{}values).{}These{}settings{}are{}combined{}with{}the{}information{}stored{}in{}V.a2Fsave{}from{}Step{}1,{}which{}contains{}the{}energy{}sampling{}intervals{}needed{}for{}the{}double-\delta{}approximation{}in{}the{}electron–phonon{}coupling{}calculation{}(broadening{}method):
  $$
 
 $$
@@ -393,11 +401,19 @@ $$
 $$
 
 $$
+Together{}with{}the{}phonon{}frequencies{}obtained{}above{}and{}the{}wavefunctions{}from{}Step{}2,{}the{}electron–phonon{}coupling{}matrix{}elements{}G_{q}{}are{}then{}evaluated{}(by{}diagonalizing{}in{}the{}phonon{}eigenmode{}basis):
+$$
+
+$$
 g_{nn^{'}}(k,q)=< \psi _{n,k}|-iq\frac{1}{N_{p} }e^{i(k+q-k^{'} )r_{i} }\frac{1}{\sqrt{2M\omega _{q}} }V_{K-S}(q)   |\psi _{n^{'} ,k^{'}}>
 $$
 
 $$
 最終計算出30個不同\sigma(degauss)值的電聲耦合係數\lambda _{q}:
+$$
+
+$$
+Finally,{}the{}electron–phonon{}coupling{}parameter{}\lambda_{q}{}is{}computed{}for{}30{}different{}values{}of{}\sigma{}(degauss):
 $$
 
 $$
@@ -433,23 +449,31 @@ $$
 
   (這邊範例是8原子晶格的電聲耦合係數計算[Gaussian Broadening:0.096 Ry][可在ph.$name.out查找])
 
+  (Here is an example of the electron–phonon coupling calculation for an 8-atom unit cell (Gaussian broadening: 0.096 Ry), which can be found in ph.$name.out.)
+
   進行ph.$name.in有幾個要點:
+
+  There are several key points to consider when running ph.$name.in:
 
 $$
 1.tr2_{}ph=1.0d-16,當DFPT的scf計算的|\Delta n_{\text{new}}(r)|^2和上一次scf計算的|\Delta n(r)|^2能量差低於1.0d-16時,電子密度對聲子擾動的響應已經完全收斂,停止計算(非常重要!若精度不夠高,會在\Gamma點有虛頻,影響計算精確度)
 $$
 
-   2. amass(1) = 50.9415:晶格內第一種原子(遵循pw.$name.scf-2.in設置)的質量
+$$
+tr2_{}ph=1.0d-16:{}when{}the{}difference{}between{}|\Delta{}n_{\text{new}}(r)|^2{}from{}the{}current{}DFPT{}SCF{}iteration{}and{}|\Delta{}n(r)|^2{}from{}the{}previous{}iteration{}falls{}below{}1.0d-16,{}the{}response{}of{}the{}electron{}density{}to{}the{}phonon{}perturbation{}is{}considered{}fully{}converged{}and{}the{}calculation{}stops.{}This{}is{}very{}important:{}if{}the{}threshold{}is{}not{}tight{}enough,{}imaginary{}frequencies{}may{}appear{}at{}the{}\Gamma{}point,{}reducing{}the{}accuracy{}of{}the{}calculation.
+$$
 
-   3. nq1 = 6,nq2 = 6,nq3 = 6:q點網格的xyz軸切點數(6*6*6)須可整除第一步K_POINTS設置(72*72*72)和第二步K_POINTS設置(18*18*18),否則計算電聲耦合係數時,將無法進行插值!
+   2. amass(1) = 50.9415:晶格內第一種原子(遵循pw.$name.scf-2.in設置)的質量[ amass(1) = 50.9415: the mass of the first atomic species in the unit cell (as defined in pw.$name.scf-2.in).]
 
-   4. el_ph_sigma = 0.002:計算電聲耦合係數broadening法的sigma值,其控制函數平緩或陡峭的參數:sigma值越小,費米-函數越陡峭;,sigma值越大,函數越平緩
+   3. nq1 = 6,nq2 = 6,nq3 = 6:q點網格的xyz軸切點數(6*6*6)須可整除第一步K_POINTS設置(72*72*72)和第二步K_POINTS設置(18*18*18),否則計算電聲耦合係數時,將無法進行插值![nq1 = 6, nq2 = 6, nq3 = 6: the number of q-point divisions along the x, y, and z directions. The q-point grid (6×6×6) must be a divisor of both the first-step K_POINTS grid (72×72×72) and the second-step K_POINTS grid (18×18×18); otherwise, interpolation cannot be performed when calculating the electron–phonon coupling coefficients.]
 
-   5. el_ph_nsigma=30:0.002,0.004,0.006....總共設置30個值
+   4. el_ph_sigma = 0.002:計算電聲耦合係數broadening法的sigma值,其控制函數平緩或陡峭的參數:sigma值越小,費米-函數越陡峭;,sigma值越大,函數越平緩[el_ph_sigma = 0.002: the sigma value used in the broadening method for calculating the electron–phonon coupling coefficients. It is the parameter that controls how sharp or smooth the smearing function is: the smaller the sigma value, the steeper the Fermi-like function; the larger the sigma value, the smoother the function.]
 
-   6. fildyn='$name.dyn':動力學矩陣的檔案名稱為$name.dyn
+   5. el_ph_nsigma=30:0.002,0.004,0.006....總共設置30個值[el_ph_nsigma = 30: this specifies 30 sigma values, i.e., 0.002, 0.004, 0.006, ..., for the broadening method.]
 
-   7. alpha_mix(5)=0.1:控制scf響應勢混合迭代的參數(非常重要,若alpha_mix過大,將導致計算無法收斂!),默認值是alpha_mix(1)=0.7,alpha_mix(5)=0.1表示在第五步迭代時,混合參數從0.7更換到0.1,alpha_mix=0.1混合的定義是:
+   6. fildyn='$name.dyn':動力學矩陣的檔案名稱為$name.dyn[fildyn = '$name.dyn': the filename of the dynamical matrix is $name.dyn.]
+
+   7. alpha_mix(5)=0.1:控制scf響應勢混合迭代的參數(非常重要,若alpha_mix過大,將導致計算無法收斂!),默認值是alpha_mix(1)=0.7,alpha_mix(5)=0.1表示在第五步迭代時,混合參數從0.7更換到0.1,alpha_mix=0.1混合的定義是[alpha_mix(5) = 0.1: this parameter controls the mixing of the self-consistent response potential during the SCF iterations. It is very important—if alpha_mix is too large, the calculation may fail to converge. The default value is alpha_mix(1) = 0.7. Setting alpha_mix(5) = 0.1 means that at the fifth iteration, the mixing parameter is reduced from 0.7 to 0.1. The definition of mixing with alpha_mix = 0.1 is:]:
 
 $$
 \Delta n_{\text{out}}(r) * 0.1+\Delta n_{\text{in}}(r) * (1-0.1)=\Delta n_{\text{new}}(r)
@@ -457,9 +481,13 @@ $$
 
 其代表第一次迭代輸入的響應勢X0.9+第一次迭代輸出的響應勢X0.1=第二次迭代輸入的響應勢
 
+This means that the input response potential for the second iteration is formed by mixing 0.9 times the input response potential from the first iteration with 0.1 times the output response potential from the first iteration.
+
 運行DFPT的scf計算指令為:mpiexec ph.x -in ph.$name.in > ph.$name.out(注:這個計算最耗時!)
 
-# 第4個輸入檔案為q2r.$name.in:
+The command to run the DFPT SCF calculation is: mpiexec ph.x -in ph.$name.in > ph.$name.out (Note: this is the most time-consuming part of the calculation.)
+
+# The fourth input file is q2r.$name.in:
 
  &input
  
@@ -475,19 +503,25 @@ $$
 
 這個輸入檔案的目的是將第三步計算得到的每個q點的動力學矩陣進行Fourier-Transformation,從q空間變換到實空間的原子間相互作用常數 (force constants)!
 
+The purpose of this input file is to perform a Fourier transformation of the dynamical matrices obtained at each q-point in Step 3, converting them from q-space into the interatomic force constants in real space! 
+
 進行q2r.$name.in有幾個要點:
 
-   1. zasr='simple':聲學求和條件,simple表只施加3個平移聲學條件,並透過修正力常數矩陣（force-constants matrix）的對角元素來實現
+There are several key points to consider when running q2r.$name.in:
 
-   2. fildyn='$name.dyn':第三部計算得到的動力學矩陣檔案名稱
+   1. zasr='simple':聲學求和條件,simple表只施加3個平移聲學條件,並透過修正力常數矩陣（force-constants matrix）的對角元素來實現[Acoustic sum rule: the simple option enforces only the three translational acoustic sum rules, implemented by correcting the diagonal elements of the force-constants matrix.]
 
-   3. flfrc='$name.fc':Fourier-Transformationc後的力學常數檔案名稱
+   2. fildyn='$name.dyn':第三部計算得到的動力學矩陣檔案名稱[the filename of the dynamical matrix obtained in Step 3]
 
-   4. la2F=.true.:表示計算電聲耦合
+   3. flfrc='$name.fc':Fourier-Transformationc後的力學常數檔案名稱[the filename of the force constants after the Fourier transformation]
+
+   4. la2F=.true.:表示計算電聲耦合[indicates that the electron–phonon coupling calculation is enabled]
 
 運行q2r計算指令為:mpiexec q2r.x -in q2r.$name.in > q2r.$name.out
 
-# 第5個輸入檔案為matdyn.$name.in:
+The command to run the q2r calculation is:mpiexec q2r.x -in q2r.$name.in > q2r.$name.out
+
+# The fifth input file is matdyn.$name.in:
 
  &input
  
