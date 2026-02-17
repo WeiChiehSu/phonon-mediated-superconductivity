@@ -132,7 +132,9 @@ There are several key points to consider when running pw.$name.scf-1.in:
 
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.$calcul-1.in > pw.$name.$calcul-1.out
 
-# 第2個輸入檔案為pw.$name.scf-2.in:
+The command to run the SCF calculation is: mpiexec pw.x -in pw.$name.$calcul-1.in > pw.$name.$calcul-1.out
+
+# The second input file is pw.$name.scf-2.in:
 
  &CONTROL
  
@@ -198,6 +200,8 @@ K_POINTS {automatic}
 
 這個輸入檔案的目的是透過一次較疏k點密度進行自洽運算(scf):
 
+The purpose of this input file is to perform a self-consistent field (SCF) calculation using a relatively coarse k-point grid:
+
 $$
 \begin{aligned}
 \text{1.Guess-charge-density:} \, n(r) \\
@@ -214,17 +218,23 @@ $$
 
 得到下一步用來算DFPT的電荷密度和波函數!
 
+We Obtain the charge density and wavefunctions required for the next DFPT calculation step!
+
 進行pw.$name.scf-2.in有幾個要點:
 
-   1. 不設置:la2F = .true.!
+There are several key points to consider when running pw.$name.scf-2.in:
 
-   2. K_POINTS設置的切點密度(18*18*18)須可整除第一步K_POINTS設置(72*72*72)和第三步q點設置的整數倍,否則計算電聲耦合係數時,將無法進行插值!
+   1. 不設置:la2F = .true.!(Do not set la2F = .true.!)
 
-   3. 設置 tstress = .true.和 tprnfor = .true. 去計算材料內原子受力,應力和壓力,輸出內容可在force.txt中檢查
+   2. K_POINTS設置的切點密度(18*18*18)須可整除第一步K_POINTS設置(72*72*72)和第三步q點設置的整數倍,否則計算電聲耦合係數時,將無法進行插值!(The k-point grid density specified in K_POINTS (18×18×18) must be a divisor of the first-step K_POINTS setting (72×72×72) and must also be compatible as an integer multiple of the q-point grid in the third step; otherwise, interpolation cannot be performed when calculating the electron–phonon coupling coefficients!)
+
+   3. 設置 tstress = .true.和 tprnfor = .true. 去計算材料內原子受力,應力和壓力,輸出內容可在force.txt中檢查(Set tstress = .true. and tprnfor = .true. to calculate the forces acting on the atoms, as well as the stress and pressure of the material. The output results can be checked in force.txt.)
 
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.$calcul-2.in > pw.$name.$calcul-2.out
 
-# 第3個輸入檔案為ph.$name.in:
+The command to run the SCF calculation is:mpiexec pw.x -in pw.$name.$calcul-2.in > pw.$name.$calcul-2.out
+
+# The third input file is ph.$name.in:
 
  &inputph
  
@@ -262,6 +272,8 @@ $$
 
 這個輸入檔案的目的是用第二步自洽運算得到的電荷密度和波函數,進行DFPT自洽運算:
 
+The purpose of this input file is to perform a DFPT self-consistent calculation using the charge density and wavefunctions obtained from the second SCF step:
+
 $$
 \begin{aligned}
 \text{Obtain-grand-state-charge-density:} \, n(r) \\
@@ -282,7 +294,11 @@ $$
 
 QE會從ph.$name.in內讀取q點網格密度(nq1 nq2 nq3 ) 使用晶格對稱操作後,得到幾個不可約的q點.
 
+QE reads the q-point grid density (nq1, nq2, nq3) from ph.$name.in and, after applying crystal symmetry operations, determines the set of irreducible q-points.
+
 不可約的q點可以在ph.$name.out內查找:
+
+The irreducible q-points can be found in ph.$name.out:
 
      Dynamical matrices for ( 6, 6, 1)  uniform grid of q-points
 
@@ -307,13 +323,23 @@ QE會從ph.$name.in內讀取q點網格密度(nq1 nq2 nq3 ) 使用晶格對稱操
 
  (這邊範例是六角晶格用q:6, 6, 1網格)
 
+ (In this example, a q-point grid of 6 × 6 × 1 is used for a hexagonal lattice.)
+
  (這裡假設原子間的力是短程的,因此實空間短程力=>在動量空間中是平滑、可解析的函數,沒有存在尖點、非解析結構,所以只需要計算幾個q點動力學矩陣,便能很好構建實空間中正確的力常數!)
+
+ (Here, it is assumed that the interatomic forces are short-ranged. Therefore, short-range forces in real space correspond to smooth, well-behaved functions in momentum space, without sharp features or non-analytic structures. As a result, it is sufficient to calculate the dynamical matrices at a limited number of q-points to accurately reconstruct the force constants in real space.)
 
  (要注意:若是材料存在長程力的情況,需要更密的q點網格=>更多的q點的動力學矩陣給予存在尖點、非解析結構的函數插值,去構建實空間中正確的力常數!)
 
+ (Note that if long-range interactions are present in the material, a denser q-point grid is required. This provides more dynamical matrices at different q-points, allowing accurate interpolation of functions that contain sharp features or non-analytic behavior, and enabling the correct reconstruction of the force constants in real space.)
+
  (q點網格的選擇，本質上是在設定「預計材料的作用力有多長」。)
 
+ (The choice of the q-point grid essentially determines " the expected range of interactions in the material ".)
+
  每個不可約的q點內根據晶格內原子數量(n),計算3*n次DFPT自洽運算,並解Hellman-Feynman Theory:
+
+ For each irreducible q-point, QE performs 3*n DFPT self-consistent calculations (where n is the number of atoms in the unit cell) and applies the Hellmann–Feynman theorem:
 
  $$
 \varepsilon _{R} =\varepsilon _{0}+\sum_{k\gamma }^{}  R_{k\gamma} (r)\int n_{0} (r)\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}dr+\frac{1}{2}\sum_{R_{k,k'\gamma} }^{} R_{k\gamma} (r)R_{k'\gamma} (r) \int [\frac{\partial n(r)}{\partial R_{k'\gamma} (r)}\frac{\partial V_{SCF}(r) }{\partial R_{k\gamma} (r)}+n_{0}(r) \frac{\partial^2 V_{SCF}(r) }{\partial R_{k\gamma} (r)\partial R_{k'\gamma} (r)}]dr
