@@ -20,7 +20,7 @@ After waiting for a short period of time, the entire calculation will be complet
 
 Next, download the banddos folder, then place qephonon.m, qephonondos.m, qea2fdos.m, and Tclambda.m into the banddos folder. Run qephonon.m, qephonondos.m, qea2fdos.m, and Tclambda.m, and the phonon dispersion, phonon density of states, Eliashberg spectral function, and superconducting transition temperature of V (unit cell) can be obtained.
 
-# QE腳本分析
+# Analysis of the Quantum ESPRESSO script
 
 腳本內總共創遭了7種輸入檔:pw.$name.scf-1.in pw.$name.scf-2.in ph.$name.in q2r.$name.in matdyn.$name.in matdyn.$name.in.dos lambda.$name.in 並進行了7次運算:
 
