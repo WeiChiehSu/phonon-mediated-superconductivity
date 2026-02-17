@@ -2,21 +2,31 @@
 
 本次計算的材料為V(unit-cell)的聲子譜,聲子態密度,Eliashberg譜函數和超導轉變溫度,運行計算只需把pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF和腳本:qe_twnia3_elph_all.sh和qe_twnia3_lambda.sh放進已經安裝好QE的slurm系統機器,先運行:
 
+In this work, we calculate the phonon dispersion, phonon density of states, Eliashberg spectral function, and superconducting transition temperature of V (unit cell). To run the calculations, simply place the pseudopotential file V.pbe-spnl-kjpaw_psl.1.0.0.UPF and the scripts qe_twnia3_elph_all.sh and qe_twnia3_lambda.sh into a SLURM-based machine where Quantum ESPRESSO (QE) has already been installed, and first run:
+
 sbatch qe_twnia3_elph_all.sh
 
 先等很長一段時間,確認qe_twnia3_elph_all.sh的計算任務完成後,再運行:
+
+Then wait for a long period of time. After confirming that the calculation task in qe_twnia3_elph_all.sh has finished, run:
 
 sbatch qe_twnia3_lambda.sh
 
 稍等一段時間後,整個計算便完成了.
 
+After waiting for a short period of time, the entire calculation will be completed.
+
 接下來將banddos資料夾下載下來,再將qephonon.m,qephonondos.m,qea2fdos.m和Tclambda.m放置到banddos資料夾中 運行 qephonon.m,qephonondos.m,qea2fdos.m和Tclambda.m,便可得到V(unit-cell)的聲子譜,聲子態密度,Eliashberg譜函數和超導轉變溫度
+
+Next, download the banddos folder, then place qephonon.m, qephonondos.m, qea2fdos.m, and Tclambda.m into the banddos folder. Run qephonon.m, qephonondos.m, qea2fdos.m, and Tclambda.m, and the phonon dispersion, phonon density of states, Eliashberg spectral function, and superconducting transition temperature of V (unit cell) can be obtained.
 
 # QE腳本分析
 
 腳本內總共創遭了7種輸入檔:pw.$name.scf-1.in pw.$name.scf-2.in ph.$name.in q2r.$name.in matdyn.$name.in matdyn.$name.in.dos lambda.$name.in 並進行了7次運算:
 
-# 第1個輸入檔案為pw.$name.scf-1.in:
+The script generates a total of seven input files:pw.$name.scf-1.in, pw.$name.scf-2.in, ph.$name.in, q2r.$name.in, matdyn.$name.in, matdyn.$name.in.dos, and lambda.$name.in, and performs seven corresponding calculations:g calculations:
+
+# 第1個輸入檔案為pw.$name.scf-1.in (The first input file is pw.$name.scf-1.in) :
 
  &CONTROL
  
