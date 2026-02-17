@@ -26,7 +26,7 @@ Next, download the banddos folder, then place qephonon.m, qephonondos.m, qea2fdo
 
 The script generates a total of seven input files:pw.$name.scf-1.in, pw.$name.scf-2.in, ph.$name.in, q2r.$name.in, matdyn.$name.in, matdyn.$name.in.dos, and lambda.$name.in, and performs seven corresponding calculations:g calculations:
 
-# 第1個輸入檔案為pw.$name.scf-1.in (The first input file is pw.$name.scf-1.in) :
+# The first input file is pw.$name.scf-1.in :
 
  &CONTROL
  
