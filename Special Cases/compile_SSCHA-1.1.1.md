@@ -1,10 +1,10 @@
-%%% compile Anaconda (https://www.taki.com.tw/blog/how-to-install-anaconda-on-ubuntu/?srsltid=AfmBOorCrHpUjb20gk407qZvZafDZAy59Ock60Q8p4iN7leKu6Xg2l3p)%%%
+# download  compile Anaconda (https://www.taki.com.tw/blog/how-to-install-anaconda-on-ubuntu/?srsltid=AfmBOorCrHpUjb20gk407qZvZafDZAy59Ock60Q8p4iN7leKu6Xg2l3p)
 
 wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
 
 bash  Anaconda3-2024.02-1-Linux-x86_64.sh
 
-$$$$$$$$$$$Enter a specific virtual ring$$$$$$$$$$$$
+# Enter a specific virtual ring
 
 conda activate base 
 
@@ -14,11 +14,11 @@ conda activate /home/880212l26111201/anaconda3/envs/sscha/
 
 source ~/.bashrc
 
-$$$$$$$$$$$Exit a specific virtual ring$$$$$$$$$$$$
+# Exit a specific virtual ring
 
 conda deactivate
 
-$$$$$$$$$$$ compile sscha $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+# compile sscha 
 
 conda create -n sscha -c conda-forge python=3.10 gfortran libblas lapack openmpi julia openmpi-mpicc pip numpy scipy spglib=2.2
 
@@ -28,7 +28,7 @@ conda install -c conda-forge ase=3.22.1 julia mpi4py
 
 conda install -c conda-forge cellconstructor python-sscha tdscha
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# deal sscha error
 (sscha) -bash-4.2$ pip show cellconstructor python-sscha tdscha
 Name: CellConstructor
 Version: 1.4.1
