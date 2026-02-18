@@ -1,4 +1,6 @@
-# download  compile Anaconda (https://www.taki.com.tw/blog/how-to-install-anaconda-on-ubuntu/?srsltid=AfmBOorCrHpUjb20gk407qZvZafDZAy59Ock60Q8p4iN7leKu6Xg2l3p)
+# download and compile Anaconda 
+
+Anaconda website : https://www.taki.com.tw/blog/how-to-install-anaconda-on-ubuntu/?srsltid=AfmBOorCrHpUjb20gk407qZvZafDZAy59Ock60Q8p4iN7leKu6Xg2l3p
 
 wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
 
@@ -28,7 +30,10 @@ conda install -c conda-forge ase=3.22.1 julia mpi4py
 
 conda install -c conda-forge cellconstructor python-sscha tdscha
 
-# deal sscha error
+# the message indicating successful installation of SSCHA
+
+pip show cellconstructor python-sscha tdscha
+
     (sscha) -bash-4.2$ pip show cellconstructor python-sscha tdscha
     Name: CellConstructor
     Version: 1.4.1
@@ -63,9 +68,9 @@ conda install -c conda-forge cellconstructor python-sscha tdscha
    Requires: ase, cellconstructor, numpy, python-sscha, scipy
     Required-by:
 
-THAT is OK.
+This means that SSCHA has been successfully installed.
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# compile julia
 
 pip install julia
 
