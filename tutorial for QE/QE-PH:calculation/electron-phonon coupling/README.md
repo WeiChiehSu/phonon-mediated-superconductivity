@@ -864,11 +864,11 @@ The command to run the matdyn DOS calculation is : mpiexec matdyn.x -in matdyn.$
 
 # The seventh input file is lambda.$name.in:
 
-     10 0.1 1                                       <- 最高的聲子頻率(單位THz),聲子態密度的degauss,smearing method
+     10 0.1 1                                       <- 最高的聲子頻率(單位THz),聲子態密度的degauss,smearing method(the maximum phonon frequency (in units of THz), the degauss parameter for the phonon density of states, and the smearing method)
      
-        16                                          <-總共計算了16個q點的動力學矩陣
+        16                                          <-總共計算了16個q點的動力學矩陣(a total of 16 dynamical matrices were calculated at different q-points)
         
-        0.000000000   0.000000000   0.000000000  1  <-q點的座標和權重(在BZ中有幾個具有一樣對稱性的q點)
+        0.000000000   0.000000000   0.000000000  1  <-q點的座標和權重(在BZ中有幾個具有一樣對稱性的q點)[the coordinates and weights of the q-points (i.e., how many symmetry-equivalent q-points each represents in the Brillouin zone)]
         
         0.166666667   0.166666667   0.000000000 12
         
@@ -900,7 +900,7 @@ The command to run the matdyn DOS calculation is : mpiexec matdyn.x -in matdyn.$
        
        -1.000000000  -1.000000000  -1.000000000  1
        
-     elph_dir/elph.inp_lambda.1                     <- 第三步PH計算保存的第一個q點的電聲耦合係數
+     elph_dir/elph.inp_lambda.1                     <- 第三步PH計算保存的第一個q點的電聲耦合係數[the electron–phonon coupling coefficient at the first q-point saved from the Step 3 PH calculation]
      
      elph_dir/elph.inp_lambda.2
      
@@ -932,9 +932,11 @@ The command to run the matdyn DOS calculation is : mpiexec matdyn.x -in matdyn.$
      
      elph_dir/elph.inp_lambda.16
      
-      0.3                                           <- McMillan-Allen Dynes function中的屏蔽庫侖pseudo-potential參數值
+      0.3                                           <- McMillan-Allen Dynes function中的屏蔽庫侖pseudo-potential參數值[the value of the screened Coulomb pseudopotential parameter in the McMillan–Allen–Dynes function]
 
 這個輸入檔案的目的是用第三步計運算得到的電聲耦合係數,透過每個q點的權重進行加權,解出電聲耦合強度和電子-聲子耦合權重:
+
+The purpose of this input file is to use the electron–phonon coupling coefficients obtained in Step 3 and compute the electron–phonon coupling strength and the electron–phonon coupling weight by applying the appropriate weights of each q-point:
 
 $$
 \lambda = \sum_{q}^{} \lambda _{q}
@@ -946,13 +948,19 @@ $$
 
 並透過設置的屏蔽庫侖pseudo-potential參數,解McMillan-Allen Dynes function:
 
+and, using the specified screened Coulomb pseudopotential parameter, solve the McMillan–Allen–Dynes equation:
+
 $$
 T_{c}=\frac{\omega _{log} }{1.2}e^{[\frac{-1.04(1+\lambda ) }{\lambda-\mu ^{*}(1+0.62\lambda)   }] }
 $$
 
 得到超導轉變溫度!
 
+ we obtain the superconducting transition temperature!
+
 每個q點的權重可以在ph.$name.out中,每個q點結束全部自洽運算後得到:
+
+The weight of each q-point can be found in ph.$name.out, and it is obtained after the completion of all self-consistent calculations for each q-point:
 
      End of self-consistent calculation
 
@@ -974,9 +982,15 @@ $$
 
 這個q點(0.000000000  -0.577350269   0.000000000)的權重為3!
 
+The weight of this q-point (0.000000000,−0.577350269,0.000000000) is 3!
+
 運行matdyn計算指令為:mpiexec lambda.x  < lambda.$name.in > lambda.$name.out
 
+The command to run the lambda calculation is: mpiexec lambda.x < lambda.$name.in > lambda.$name.out
+
 在lambda.$name.out內可以看到:
+
+The following information can be found in lambda.$name.out:
 
      lambda = 1.513187 (   1.513185 )  <log w>=  198.878 K  N(Ef)= 12.027346 at degauss= 0.002
      
@@ -1103,9 +1117,13 @@ $$
 
 注:由於lambda.x不會計算所有q點的電聲耦合係數,因此準確度會比matdyn.x計算出來的電聲耦合係數和電聲耦合權重低,且qe-6.8的lambda.x較不完善,不會對設置錯誤進行報錯,因此這裡較為推薦用matdyn.x計算出來的電聲耦合係數和電聲耦合權重!
 
-# matlab code 繪圖順序
+Note: since lambda.x does not calculate the electron–phonon coupling coefficients at all q-points, its accuracy is lower than that obtained from matdyn.x for the electron–phonon coupling coefficients and the electron–phonon coupling weight. In addition, the lambda.x program in QE-6.8 is less robust and does not report errors when incorrect settings are used. Therefore, it is recommended to use the electron–phonon coupling coefficients and coupling weight calculated by matdyn.x for more reliable results!
+
+# MATLAB code plotting order
 
 在全部計算完成後,將banddos下載下來,banddos內有:
+
+After all calculations are completed, download the banddos folder. Inside the banddos folder, there are:
 
     a2F.dos *  $name.dos $name.freq lambda pw.$name.$calcul-1.out pw.$name.$calcul-2.out force.txt lambda.$name.in lambda.$name.out
 
