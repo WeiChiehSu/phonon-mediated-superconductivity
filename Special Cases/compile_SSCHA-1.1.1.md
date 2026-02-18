@@ -29,15 +29,15 @@ conda install -c conda-forge ase=3.22.1 julia mpi4py
 conda install -c conda-forge cellconstructor python-sscha tdscha
 
 # deal sscha error
-(sscha) -bash-4.2$ pip show cellconstructor python-sscha tdscha
-Name: CellConstructor
-Version: 1.4.1
-Summary: Python utilities that is interfaced with ASE for atomic crystal analysis
-Home-page: https://github.com/mesonepigreco/CellConstructor
-Author: Lorenzo Monacelli
-Author-email:
-License: MIT
-Location: /home/880212l26111201/anaconda3/envs/sscha/lib/python3.10/site-packages
+    (sscha) -bash-4.2$ pip show cellconstructor python-sscha tdscha
+    Name: CellConstructor
+    Version: 1.4.1
+    Summary: Python utilities that is interfaced with ASE for atomic crystal analysis
+    Home-page: https://github.com/mesonepigreco/CellConstructor
+    Author: Lorenzo Monacelli
+    Author-email:
+    License: MIT
+    Location: /home/880212l26111201/anaconda3/envs/sscha/lib/python3.10/site-packages
 Requires:
 Required-by: tdscha
 ---
