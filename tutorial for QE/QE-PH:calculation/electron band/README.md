@@ -66,6 +66,8 @@ K_POINTS {automatic}
 
  這個輸入檔案的目的便是DFT中的自洽運算(scf):
 
+The purpose of this input file is to perform a self-consistent field (SCF) calculation within DFT:
+
  $$
 \begin{aligned}
 \text{1.Guess-charge-density:} \, n(r) \\
@@ -82,28 +84,34 @@ $$
 
 透過自洽運算得到V(unit-cell)的電荷密度和波函數
 
+we obtain the charge density and wavefunctions of V (unit cell) from the self-consistent calculation.
+
 需要注意幾個必須要設置的參數:
 
-1. prefix='$name':運行計算工作的名字
+There are several parameters that must be set:
 
-2. pseudo_dir  = './':pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄
+1. prefix='$name':運行計算工作的名字[the name of the calculation job]
 
-3. ibrav= -3 celldm(1)=5.671987:定義晶格參數,詳情請看https://www.quantum-espresso.org/Doc/INPUT_PW.html
+2. pseudo_dir  = './':pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄[the pseudopotential file : V.pbe-spnl-kjpaw_psl.1.0.0.UPF is read from the current directory]
 
-4. nat= 1:晶格內的原子數為1個
+3. ibrav= -3 celldm(1)=5.671987:定義晶格參數,詳情請看https://www.quantum-espresso.org/Doc/INPUT_PW.html[Define the lattice parameters; for details, please refer to: https://www.quantum-espresso.org/Doc/INPUT_PW.html]
 
-5. ntyp = 1:晶格內的原子種類為1種
+4. nat= 1:晶格內的原子數為1個[The unit cell contains one atom.]
 
-6. ecutwfc = 50.0: 用來展開平面波基底的截斷能,截斷能越大,計算越精準,耗時也會加大
+5. ntyp = 1:晶格內的原子種類為1種[There is one atomic species in the unit cell.]
 
-7. V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF:原子種類 原子質量 原子pseudopotential
+6. ecutwfc = 50.0: 用來展開平面波基底的截斷能,截斷能越大,計算越精準,耗時也會加大[The cutoff energy used to expand the plane-wave basis set; a larger cutoff energy leads to higher accuracy but also increases the computational cost.]
 
-8. 6 6 6 0 0 0 BZ內K空間三個維度的切點數(用來積化求和),切點數越大,計算越精準,耗時也會加大
+7. V 50.9415 V.pbe-spnl-kjpaw_psl.1.0.0.UPF:原子種類 原子質量 原子pseudopotential[atomic species, atomic mass, and atomic pseudopotential]
+
+8. 6 6 6 0 0 0 BZ內K空間三個維度的切點數(用來積化求和),切點數越大,計算越精準,耗時也會加大[the number of k-point divisions along the three dimensions in reciprocal (Brillouin zone) space (used for Brillouin-zone integration); a larger number of k-points leads to higher accuracy but increases the computational cost]
 
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.scf.in > pw.$name.scf.out
 
+The command to run the SCF calculation is: mpiexec pw.x -in pw.$name.scf.in > pw.$name.scf.out
 
-# 第2個輸入檔案為pw.$name.bands.in:
+
+# The second input file is pw.$name.bands.in:
 
  &CONTROL
  
@@ -169,19 +177,25 @@ K_POINTS {crystal_b}
 
 這個輸入檔案的目的是讀取前面scf計算的電荷密度和波函數 用來計算材料的電子能帶,也就是系統的eigenvalue.
 
+The purpose of this input file is to read the charge density and wavefunctions obtained from the previous SCF calculation and use them to compute the electronic band structure of the material, i.e., the eigenvalues of the system.
+
 需要注意幾個必須要設置的參數:
 
-1. calculation = 'bands':運行計算電子能帶
+There are several parameters that must be set:
 
-2. nbnd = 30:總共要計算幾條能帶 (可以在pw.V.scf.out找number of Kohn-Sham states=           11 進行參考)
+1. calculation = 'bands':運行計算電子能帶[run the electronic band structure calculation]
 
-3. K_POINTS {crystal_b}中的8:總共要計算幾個BZ內的高對稱點
+2. nbnd = 30:總共要計算幾條能帶 (可以在pw.V.scf.out找number of Kohn-Sham states=           11 進行參考) [the total number of bands to be calculated (this can be referenced from pw.V.scf.out, e.g., Kohn-Sham states=           11 )]
 
-4. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*7+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大
+3. K_POINTS {crystal_b}中的8:總共要計算幾個BZ內的高對稱點 [the value 8 in K_POINTS {crystal_b} indicates the total number of high-symmetry points in the Brillouin zone to be calculated]
+
+4. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*7+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大[the coordinates and number of points for the first high-symmetry point (the Gamma point). For example, if there are 90 points along Gamma→H, then the final high-symmetry point is sampled with only 1 point, giving a total number of points 90*7+1. A larger number of points produces a smoother band structure but increases the computational cost.]
 
 運行bands計算的指令為:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
 
-# 第3個輸入檔案為bands.$name.in:
+The command to run the bands calculation is:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
+
+# The third input file is bands.$name.in:
 
  &BANDS
  
@@ -194,13 +208,19 @@ K_POINTS {crystal_b}
 
 這個輸入檔案的目的是讀取前面bands計算的eigenvalue,並輸出成可以讀取數值的檔案.
 
+The purpose of this input file is to read the eigenvalues obtained from the previous bands calculation and output them in a numerical format that can be read for further processing.
+
 需要注意幾個必須要設置的參數:
 
-1. filband = '$name.bands.dat':最終輸出可以讀取數值的檔案名:$name.bands.dat
+There are several parameters that must be set:
 
-2. lsym = .true.:數值輸出遵循bands計算設置的高對稱點座標和切點數
+1. filband = '$name.bands.dat':最終輸出可以讀取數值的檔案名:$name.bands.dat[he final output file containing readable numerical data is named $name.bands.dat.]
+
+2. lsym = .true.:數值輸出遵循bands計算設置的高對稱點座標和切點數[The values are written according to the high-symmetry point coordinates and the number of points specified in the bands calculation.]
 
 運行bands計算的指令為:mpiexec bands.x < bands.$name.in > bands.$name.out
+
+The command to run the bands calculation is::mpiexec bands.x < bands.$name.in > bands.$name.out
 
 便能得到材料的能帶數值檔案$name.bands.dat
 
