@@ -1,18 +1,26 @@
-# 電子能帶
+# Electron Band
 
 本次計算的材料為V(unit-cell)的電子能帶,運行計算只需把pseudopotential:V.pbe-spnl-kjpaw_psl.1.0.0.UPF和腳本:qe_twnia3_pbspropwtk.sh放進已經安裝好QE的slurm系統機器,運行:
+
+In this calculation, the electronic band structure of V (unit cell) is computed. To run the calculation, simply place the pseudopotential file V.pbe-spnl-kjpaw_psl.1.0.0.UPF and the script qe_twnia3_pbspropwtk.sh into a SLURM-based machine where Quantum ESPRESSO (QE) has already been installed, and run:
 
 sbatch qe_twnia3_pbspropwtk.sh
 
 稍等一段時間後,計算便完成了.
 
+After waiting for a short period of time, the calculation will be completed.
+
 接下來將V.bands.dat和pw.V.scf.out放到具有qe_band.m的資料夾中 運行qe_band.m 便可得到V(unit-cell)的電子能帶:band.png
 
-# QE腳本分析
+Next, place V.bands.dat and pw.V.scf.out into the folder containing qe_band.m. Run qe_band.m to obtain the electronic band structure of V (unit cell): band.png.
+
+# Analysis of the Quantum ESPRESSO script
 
 腳本內總共創遭了三種輸入檔:pw.$name.scf.in pw.$name.bands.in bands.$name.in 並進行了三次運算:
 
-# 第1個輸入檔案為pw.$name.scf.in:
+The script generates three input files—pw.$name.scf.in, pw.$name.bands.in, and bands.$name.in—and performs three corresponding calculations:
+
+# The first input file is pw.$name.scf.in:
 
  &CONTROL
  
