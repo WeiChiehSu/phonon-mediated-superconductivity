@@ -31,10 +31,17 @@
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/Symmetry%20breaking.png)
 
-# Stochastic Self-Consistent harmonic Approximation
+# Stochastic Self-Consistent harmonic Approximation (SSCHA)
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/SSCHA1.png)
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/SSCHA2.png)
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/SSCHA3.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/GB.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/SSCHA4.png)
+
+
+
