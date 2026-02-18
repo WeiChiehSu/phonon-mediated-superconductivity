@@ -14,7 +14,7 @@ After waiting for a short period of time, the calculation will be completed.
 
 Next, place 10Nb.dos and pw.10Nb.nscf.out into the folder containing qe_dos.m. Run qe_dos.m to obtain the electronic density of states of Nb (unit cell): dos1.png
 
-# QE腳本分析
+# Analysis of the Quantum ESPRESSO script
 
 腳本內總共創遭了三種輸入檔:pw.$name.scf.in pw.$name.nscf.in dos.$name.in 並進行了三次運算:
 
