@@ -38,30 +38,30 @@ conda install -c conda-forge cellconstructor python-sscha tdscha
     Author-email:
     License: MIT
     Location: /home/880212l26111201/anaconda3/envs/sscha/lib/python3.10/site-packages
-Requires:
-Required-by: tdscha
----
-Name: python-sscha
-Version: 1.4.1
-Summary: Python implementation of the sscha code
-Home-page: https://github.com/mesonepigreco/python-sscha
-Author: Lorenzo Monacelli
-Author-email:
-License: GPLv3
-Location: /home/880212l26111201/anaconda3/envs/sscha/lib/python3.10/site-packages
-Requires:
-Required-by: tdscha
----
-Name: tdscha
-Version: 1.4.0
-Summary: Time Dependent Self Consistent Harmonic Approximation
-Home-page: https://github.com/SSCHAcode/tdscha
-Author: Lorenzo Monacelli
-Author-email:
-License: GPLv3
-Location: /home/880212l26111201/anaconda3/envs/sscha/lib/python3.10/site-packages
-Requires: ase, cellconstructor, numpy, python-sscha, scipy
-Required-by:
+    Requires:
+    Required-by: tdscha
+    ---
+    Name: python-sscha
+    Version: 1.4.1
+    Summary: Python implementation of the sscha code
+    Home-page: https://github.com/mesonepigreco/python-sscha
+    Author: Lorenzo Monacelli
+    Author-email:
+    License: GPLv3
+    Location: /home/880212l26111201/anaconda3/envs/sscha/lib/python3.10/site-packages
+    Requires:
+    Required-by: tdscha
+    ---
+    Name: tdscha
+    Version: 1.4.0
+    Summary: Time Dependent Self Consistent Harmonic Approximation
+    Home-page: https://github.com/SSCHAcode/tdscha
+    Author: Lorenzo Monacelli
+    Author-email:
+    License: GPLv3
+    Location: /home/880212l26111201/anaconda3/envs/sscha/lib/python3.10/site-packages
+   Requires: ase, cellconstructor, numpy, python-sscha, scipy
+    Required-by:
 
 THAT is OK.
 
