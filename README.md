@@ -68,9 +68,7 @@ Toturial裡面還有超導性質收斂探討,介紹了如何判斷超導計算�
 Furthermore, the tutorial discusses the convergence of superconducting properties, explaining how to determine whether the superconductivity calculations are converged and which parameters have the greatest influence on the superconducting transition temperature
 
 
-# Special Cases : Phonon Anharmonicity effect
-
-SSCHA:
+# Special Cases : Phonon Anharmonicity effect - SSCHA
 
 1.SSCHA Theory : readme.md
 
