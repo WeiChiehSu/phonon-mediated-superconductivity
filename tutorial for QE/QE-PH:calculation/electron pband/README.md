@@ -1,12 +1,18 @@
-# 電子軌域投影能帶
+# electron projected intensity band
 
 本次計算的材料為4層 Rhombohedral Multilayer Graphene (ABCA堆疊)的電子軌域投影能帶,運行計算只需把pseudopotential:C.pbe-n-kjpaw_psl.1.0.0.UPF和腳本:qe_pband.sh放進已經安裝好QE的pbs系統機器,運行:
+
+In this calculation, the orbital-projected band structure of 4-layer rhombohedral multilayer graphene (ABCA stacking) is computed. To run the calculation, simply place the pseudopotential file C.pbe-n-kjpaw_psl.1.0.0.UPF and the script qe_pband.sh into a PBS-based machine where Quantum ESPRESSO (QE) has already been installed, and run:
 
 qsub qe_pband.sh
 
 稍等一段時間後,計算便完成了.
 
+After waiting for a short period of time, the calculation will be completed.
+
 接下來將$name.bands.dat,pw.$name.scf.out和projwfc.$name.out放到具有qe_band.m和qe_projected_band.m的資料夾中,先運行qe_band.m 得到4層 Rhombohedral Multilayer Graphene (ABCA堆疊)的能帶:band.png和band_data ,再運行qe_projected_band.m,會創建一個projected_band_all資料夾,裡面會有晶格內每顆原子每個軌域的投影強度圖
+
+Next, place $name.bands.dat, pw.$name.scf.out, and projwfc.$name.out into the folder containing qe_band.m and qe_projected_band.m. First, run qe_band.m to obtain the band structure of 4-layer rhombohedral multilayer graphene (ABCA stacking): band.png and band_data. Then, run qe_projected_band.m, which will create a folder named projected_band_all, containing the orbital-projected intensity plots for each atomic orbital of every atom in the unit cell.
 
 # QE腳本分析
 
