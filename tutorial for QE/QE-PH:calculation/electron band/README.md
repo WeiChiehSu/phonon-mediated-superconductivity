@@ -224,23 +224,29 @@ The command to run the bands calculation is::mpiexec bands.x < bands.$name.in > 
 
 便能得到材料的能帶數值檔案$name.bands.dat
 
-# qe_band.m分析
+This produces the numerical band structure data file $name.bands.dat.
+
+# Analysis of qe_band.m:
 
 V.bands.dat和pw.V.scf.out放到具有qe_band.m的資料夾中 運行qe_band.m 便可得到V(unit-cell)的電子能帶:band.png
+
+Place V.bands.dat and pw.V.scf.out into the folder containing qe_band.m. Run qe_band.m to obtain the electronic band structure of V (unit cell): band.png
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20band/band.png)
 
 qe_band.m需要注意幾個必須要設置的參數:
 
-name = 'V'; -> 要讀取的bands.dat的前贅詞
+There are several parameters that must be set when running qe_band.m:
 
-material_name = 'V w/o soc'; -> 圖片band.png的title
+name = 'V'; -> 要讀取的bands.dat的前贅詞[the prefix of the bands.dat file to be read]
 
-high_symmetry_point_name = {'\Gamma','H','N','\Gamma','P','H','P','N','interpreter','LaTex'}; -> bands計算設置的高對稱點座標名稱
+material_name = 'V w/o soc'; -> 圖片band.png的title[the title of the figure band.png]
 
-hs = 8; -> bands計算設置的高對稱點座標數量
+high_symmetry_point_name = {'\Gamma','H','N','\Gamma','P','H','P','N','interpreter','LaTex'}; -> bands計算設置的高對稱點座標名稱[the names of the high-symmetry points specified in the bands calculation]
 
-ymin = -8; -> 繪圖的能量區間下限
+hs = 8; -> bands計算設置的高對稱點座標數量[the number of high-symmetry points specified in the bands calculation]
 
-ymax = 10; -> 繪圖的能量區間上限
+ymin = -8; -> 繪圖的能量區間下限[the lower bound of the energy range for plotting]
+
+ymax = 10; -> 繪圖的能量區間上限[the upper bound of the energy range for plotting]
 
