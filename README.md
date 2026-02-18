@@ -72,9 +72,11 @@ Furthermore, the tutorial discusses the convergence of superconducting propertie
 
 SSCHA:
 
-1.SSCHA-Theory
+1.SSCHA Theory : readme.md
 
 2.How to install SSCHA
+
+3.tutorial for 1BL stanene
 
 # Reference
 
