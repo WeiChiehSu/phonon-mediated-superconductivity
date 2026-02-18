@@ -1,4 +1,4 @@
-# harmonic approximation<img defect
+# harmonic approximation defect
 
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/harmonic-defect.png)
@@ -23,6 +23,9 @@
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/minimum.png)
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/free-energy.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/temperature.png)
 
-![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/free-energy.png)
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/order.png)
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/minimum2.png)
+
