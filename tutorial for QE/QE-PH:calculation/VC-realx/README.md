@@ -1,16 +1,22 @@
-# 晶格結構放鬆
+# Lattice structure relaxation
 
 本次計算的材料為Al(fcc)的晶格結構放鬆,運行計算只需把pseudopotential:Al.pbe-n-kjpaw_psl.1.0.0.UPF和腳本:qencku_relax.sh放進已經安裝好QE的pbs系統機器,運行:
+
+In this calculation, the lattice structure relaxation of Al (fcc) is performed. To run the calculation, simply place the pseudopotential file Al.pbe-n-kjpaw_psl.1.0.0.UPF and the script qencku_relax.sh into a PBS-based machine where Quantum ESPRESSO (QE) has already been installed, and run:
 
 qsub qencku_relax.sh
 
 稍等一段時間後,計算便完成了.
 
-# QE腳本分析
+After waiting for a short period of time, the calculation will be completed.
+
+# Analysis of the Quantum ESPRESSO script
 
 腳本內總共創遭了一種輸入檔:pw.$name.vc-relax.in 並進行了三次運算:
 
-# 輸入檔案為pw.$name.vc-relax.in:
+The script generates one input file, pw.$name.vc-relax.in, and performs three calculations:
+
+# The input file is pw.$name.vc-relax.in:
 
 cat > pw.$name.$calcul.in << EOF
 
@@ -90,20 +96,28 @@ K_POINTS {automatic}
     12 12 12 0 0 0
 這個輸入檔案的目的是進行DFT中的自洽運算(scf),得到結構的總能和受力,透過拉伸晶格常數和調整原子位置,進行多次自洽運算,去尋找能量最低的結構
 
+The purpose of this input file is to perform a self-consistent field (SCF) calculation within DFT to obtain the total energy and forces of the structure. By repeatedly carrying out SCF calculations while varying the lattice constants and adjusting the atomic positions, the lowest-energy structure is determined.
+
 需要注意幾個必須要設置的參數:
 
-1. prefix='$name':運行計算工作的名字
+There are several parameters that must be set:
 
-2. calculation = 'vc-relax':結構放鬆時需要同時拉伸晶格常數和調整原子位置;若設置calculation = 'relax'則表示結構放鬆時只調整原子位置,不拉伸晶格常數
+1. prefix='$name':運行計算工作的名字[the name of the calculation job]
 
-3. conv_thr = 1.0d-8:當scf計算的總能和上一次scf計算的總能能量差低於1.0d-8時,默認找到了能量最低結構,達成收斂,停止計算
+2. calculation = 'vc-relax':結構放鬆時需要同時拉伸晶格常數和調整原子位置;若設置calculation = 'relax'則表示結構放鬆時只調整原子位置,不拉伸晶格常數[During structural relaxation, both the lattice constants and the atomic positions must be optimized. If calculation = 'relax' is set, only the atomic positions are relaxed, while the lattice constants remain fixed.]
 
-4  etot_conv_thr = 1.0d-7:當scf計算的離子能和上一次scf計算的離子能能量差低於1.0d-7時,默認找到了能量最低結構,達成收斂,停止計算
+3. conv_thr = 1.0d-8:當scf計算的總能和上一次scf計算的總能能量差低於1.0d-8時,默認找到了能量最低結構,達成收斂,停止計算[When the difference between the total energy of the current SCF calculation and that of the previous SCF calculation falls below 1.0d-8, the lowest-energy structure is considered to have been found, convergence is achieved, and the calculation stops.]
 
-5. forc_conv_thr = 1.0d-6:當scf計算的原子力和上一次scf計算的原子力力差低於1.0d-6時,默認找到了能量最低結構,達成收斂,停止計算
+4  etot_conv_thr = 1.0d-7:當scf計算的離子能和上一次scf計算的離子能能量差低於1.0d-7時,默認找到了能量最低結構,達成收斂,停止計算[When the difference between the ionic energy of the current SCF calculation and that of the previous SCF calculation falls below 1.0d-7, the lowest-energy structure is considered to have been found, convergence is achieved, and the calculation stops.]
 
-6. outdir = './':輸出檔案pw.$name.vc-relax.out的存放位置
+5. forc_conv_thr = 1.0d-6:當scf計算的原子力和上一次scf計算的原子力力差低於1.0d-6時,默認找到了能量最低結構,達成收斂,停止計算[When the difference between the atomic forces in the current SCF calculation and those in the previous SCF calculation falls below 1.0d-6, the lowest-energy structure is considered to have been found, convergence is achieved, and the calculation stops.]
+
+6. outdir = './':輸出檔案pw.$name.vc-relax.out的存放位置[the storage location of the output file pw.$name.vc-relax.out]
 
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.vc-relax.in > pw.$name.vc-relax.out
 
+The command to run the SCF calculation is: mpiexec pw.x -in pw.$name.vc-relax.in > pw.$name.vc-relax.out
+
 計算完後,會得到pw.$name.vc-relax.out檔案,使用 (https://www.densityflow.com/en/pwout.php) 的功能,便能得到能量最低的結構
+
+After the calculation is completed, the file pw.$name.vc-relax.out will be generated. By using the tool at ( https://www.densityflow.com/en/pwout.php ), the lowest-energy structure can be obtained.
