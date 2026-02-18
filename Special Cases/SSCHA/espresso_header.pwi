@@ -1,0 +1,35 @@
+&control
+	calculation = "scf"
+	disk_io = "none" ! Avoid storing the wavefunction on file
+	tprnfor = .true. ! Print the forces in the standard output
+	tstress = .true. ! Print the stress tensor in the standard output
+	pseudo_dir = './'
+&end
+
+&system
+	nat = 18  ! 18 atoms in the primitive cell times a 3x3x1 supercell
+	ntyp = 1
+	ibrav = 0 
+
+	! Cutoff for the plane wave basis set
+	ecutwfc = 90
+	ecutrho = 900
+
+	! H3S is a metal, we must use a smearing
+	occupations = "smearing"
+	smearing = "mp" ! Marzari-Vanderbilt cold smearing
+	degauss = 0.02  ! Electronic temperature of 0.02 Ry 
+&end
+
+&electrons
+	mixing_beta = 0.2
+	conv_thr = 1e-9
+&end
+
+ATOMIC_SPECIES
+Sn 118.71 Sn_ONCV_PBE_FR-1.1.upf
+
+K_POINTS automatic
+12 12 1 0 0 0
+
+
