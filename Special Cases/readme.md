@@ -12,3 +12,7 @@
 
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/Anharmonicity-effect-2.png)
+
+# Landau Second order phase transition
+
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/Anharmonicity-effect-2.png)
