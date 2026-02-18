@@ -189,7 +189,7 @@ There are several parameters that must be set:
 
 3. K_POINTS {crystal_b}中的8:總共要計算幾個BZ內的高對稱點 [the value 8 in K_POINTS {crystal_b} indicates the total number of high-symmetry points in the Brillouin zone to be calculated]
 
-4. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*7+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大[the coordinates and number of points for the first high-symmetry point (the Gamma point). For example, if there are 90 points along Gamma→H, then the final high-symmetry point is sampled with only 1 point, giving a total number of points 90*7+1. A larger number of points produces a smoother band structure but increases the computational cost.]
+4. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*7+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大[the coordinates and number of points for the first high-symmetry point (the Gamma point). For example, if there are 90 points along Gamma→H, then the final high-symmetry point is sampled with only 1 point, giving a total number of points 90x7+1. A larger number of points produces a smoother band structure but increases the computational cost.]
 
 運行bands計算的指令為:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
 
