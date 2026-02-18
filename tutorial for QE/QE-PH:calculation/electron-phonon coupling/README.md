@@ -1129,31 +1129,41 @@ After all calculations are completed, download the banddos folder. Inside the ba
 
 將qephonon.m,qephonondos.m,qea2fdos.m和Tclambda.m放入banddos內,依次運行qephonon.m,qephonondos.m,qea2fdos.m和Tclambda.m,便可得到材料的聲子性質和超導性質!
 
-# qephonon.m 分析
+Place qephonon.m, qephonondos.m, qea2fdos.m, and Tclambda.m into the banddos folder, and run qephonon.m, qephonondos.m, qea2fdos.m, and Tclambda.m in sequence. This will yield the phonon properties and superconducting properties of the material!
+
+# Analysis of qephonon.m
 
 運行qephonon.m 便可得到V(unit-cell)的聲子譜:phonon_band1.png
+
+Running qephonon.m produces the phonon dispersion of V (unit cell): phonon_band1.png.
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/phonon_band1.png)
 
 注:聲子頻率的單位是meV!
 
+Note: the unit of the phonon frequency is meV!
+
 qe_band.m需要注意幾個必須要設置的參數:
 
-name = 'V';                                                           -> 要讀取的$name.freq的前贅詞    
+There are several parameters that must be set when running qe_band.m:
 
-material_name = 'V 6187248';                                          -> 圖片phonon_band1.png的title
+name = 'V';                                                           -> 要讀取的$name.freq的前贅詞[the prefix of the $name.freq file to be read]  
 
-ymin = 0;    % energy range [meV]                                     -> 繪圖的頻率區間下限
+material_name = 'V 6187248';                                          -> 圖片phonon_band1.png的title[the title of the figure phonon_band1.png]
 
-ymax = 35;                                                            -> 繪圖的頻率區間上限
+ymin = 0;    % energy range [meV]                                     -> 繪圖的頻率區間下限[the lower bound of the frequency range for plotting]
 
-hs = 5;                                                               -> matdyn計算設置的高對稱點座標數量
+ymax = 35;                                                            -> 繪圖的頻率區間上限[the upper bound of the frequency range for plotting]
 
-xticklabels({'\Gamma','H','P','\Gamma','N','interpreter','LaTex'});   -> matdyn計算設置的高對稱點座標名稱(在matlab code的第77行)
+hs = 5;                                                               -> matdyn計算設置的高對稱點座標數量[the number of high-symmetry point coordinates specified in the matdyn calculation]
 
-# qephonondos.m 分析
+xticklabels({'\Gamma','H','P','\Gamma','N','interpreter','LaTex'});   -> matdyn計算設置的高對稱點座標名稱(在matlab code的第77行)[the names of the high-symmetry points specified in the matdyn calculation (in line 77 of the MATLAB code)]
+
+# Analysis of qephonondos.m
 
 運行qephonondos.m 會在banddos內創建dos資料夾,在dos可得到V(unit-cell)的總聲子態密度:dos_total.png,總聲子態密度和每個原子的投影聲子態密度對比:dos_all.png和每個原子的投影聲子態密度:dos_1.png
+
+Running qephonondos.m will create a dos folder inside banddos. In the dos folder, the following results for V (unit cell) can be obtained: the total phonon density of states (dos_total.png), a comparison between the total phonon density of states and the projected phonon density of states of each atom (dos_all.png), and the projected phonon density of states for each individual atom (dos_1.png).
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/dos/dos_total.png)
 
@@ -1163,29 +1173,34 @@ xticklabels({'\Gamma','H','P','\Gamma','N','interpreter','LaTex'});   -> matdyn�
 
 注:聲子頻率的單位是THz(可換成meV)!
 
+Note: the unit of the phonon frequency is meV!
+
 qephonondos.m需要注意幾個必須要設置的參數:
 
-name = 'V';                             -> 要讀取的$name.freq的前贅詞 
+There are several parameters that must be set when running qephonondos.m:
+
+name = 'V';                             -> 要讀取的$name.freq的前贅詞 [The prefix of the $name.freq file to be read]
+
+material_name = 'V 61872';              -> 圖片dos_total.png,dos_all.png和dos_1.png的title[the titles of the figures dos_total.png, dos_all.png, and dos_1.png]
+
+natom = 1;                              -> 原子的數量[the number of atoms]
+
+ndos = 200;                             -> 遵循matdyn.$name.in.dos上設置的ndos = 200[as specified in `matdyn.$name.in.dos set ndos = 200 ]
+
+xmin = 0;                               -> 繪圖的頻率區間下限[the lower bound of the frequency range for plotting]
+
+xmax = 8;                               -> 繪圖的頻率區間上限[the upper bound of the frequency range for plotting]
+
+ymin = 0;    % DOS range                -> 繪圖的y軸(聲子密度強度)下限[the lower bound of the y-axis (phonon density intensity) for plotting]
+
+ymax = 0.5;                             -> 繪圖的y軸(聲子密度強度)上限[the upper bound of the y-axis (phonon density intensity) for plotting]
 
 
-material_name = 'V 61872';              -> 圖片dos_total.png,dos_all.png和dos_1.png的title
-
-natom = 1;                              -> 原子的數量
-
-ndos = 200;                             -> 遵循matdyn.$name.in.dos上設置的ndos = 200
-
-xmin = 0;                               -> 繪圖的頻率區間下限
-
-xmax = 8;                               -> 繪圖的頻率區間上限
-
-ymin = 0;    % DOS range                -> 繪圖的y軸(聲子密度強度)下限    
-
-ymax = 0.5;                             -> 繪圖的y軸(聲子密度強度)上限
-
-
-# qea2fdos.m 分析
+# Analysis of qea2fdos.m
 
 運行qea2fdos.m 會在banddos內創建a2F資料夾,在a2F可得到指定degauss的總Eliashberg spectral function:all_a2Fpng,指定degauss的總Eliashberg spectral function和每條聲子譜貢獻的Eliashberg spectral function對比:dos_all.png和all_a2F資料夾,資料夾內有全部degauss的Eliashberg spectral function:a2F_total_nsig * .png和依據電聲耦合公式:
+
+Running qea2fdos.m will create an a2F folder inside banddos. In the a2F folder, the following results can be obtained: the total Eliashberg spectral function for the specified degauss value (all_a2F.png), a comparison between the total Eliashberg spectral function and the contributions from each phonon branch (dos_all.png), and a subfolder named all_a2F, which contains the Eliashberg spectral functions for all degauss values (a2F_total_nsig*.png). These results are obtained based on the electron–phonon coupling formula:
 
 $$
 \lambda=2\int \frac{\alpha ^{2}F(\omega _{q} )}{\omega}d\omega
