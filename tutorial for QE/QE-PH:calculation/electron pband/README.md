@@ -93,7 +93,7 @@ K_POINTS (automatic)
 \end{aligned}
 $$
 
-透過自洽運算得到V(unit-cell)的電荷密度和波函數
+透過自洽運算得到4-layer rhombohedral multilayer graphene)的電荷密度和波函數
 
 需要注意幾個必須要設置的參數:
 
