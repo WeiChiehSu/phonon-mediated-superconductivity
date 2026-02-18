@@ -299,25 +299,27 @@ The figure below shows the projection of the p orbital of the first atom in the 
 
 可以看到P軌域的主要貢獻是在費米能級附近.
 
+It can be seen that the main contribution of the p orbital is located near the Fermi level.
+
 qe_projected_band.m需要注意幾個必須要設置的參數:
 
 Parameters that must be set in qe_projected_band.m:
 
-name = '4layers-graphene'; -> 要讀取的projwfc.$name.out的前贅詞
+name = '4layers-graphene'; -> 要讀取的projwfc.$name.out的前贅詞[the prefix of projwfc.$name.out to read]
 
-material_name = 'ABCA-4layers-graphene without soc'; -> 圖片X atom_ X.png的title
+material_name = 'ABCA-4layers-graphene without soc'; -> 圖片X atom_ X.png的title[the figure title for X atom_ X.png]
 
-high_symmetry_point_name = {'\Gamma','M','K','\Gamma','interpreter','LaTex'}; -> bands計算設置的高對稱點座標名稱
+high_symmetry_point_name = {'\Gamma','M','K','\Gamma','interpreter','LaTex'}; -> bands計算設置的高對稱點座標名稱[the names of the high-symmetry points used in the bands calculation]
 
-hs = 4; -> bands計算設置的高對稱點座標數量
+hs = 4; -> bands計算設置的高對稱點座標數量[the number of high-symmetry points used in the bands calculation]
 
-name_compare = { 'C' }; ->要投影的原子的名稱
+name_compare = { 'C' }; ->要投影的原子的名稱[the name(s) of the atom(s) to project]
 
-which_atom = [ 1:4]; % which atom to plot. when use name_compare, select 2 atom; ->總共要投影幾顆原子
+which_atom = [ 1:4]; % which atom to plot. when use name_compare, select 2 atom; ->總共要投影幾顆原子[the total number of atoms to project]
 
-ymin = -20;    % energy range [eV] -> 繪圖的能量區間下限
+ymin = -20;    % energy range [eV] -> 繪圖的能量區間下限[the lower bounds of the energy window for plotting]
 
-ymax = 13;                         -> 繪圖的能量區間上限
+ymax = 13;                         -> 繪圖的能量區間上限[the upper bounds of the energy window for plotting]
 
-isSO = 0;    % 0 : w/o soc, 1 : spin polarized, 2 : w/ soc; -> 0 (沒有考慮soc效應) 1(考慮自旋極化[磁性],沒有考慮soc效應) 2(考慮soc效應)
+isSO = 0;    % 0 : w/o soc, 1 : spin polarized, 2 : w/ soc; -> 0 (沒有考慮soc效應) 1(考慮自旋極化[磁性],沒有考慮soc效應) 2(考慮soc效應)[calculation mode selection:0: no spin polarization, no SOC;1: spin-polarized (magnetic), no SOC;2: SOC included]
 
