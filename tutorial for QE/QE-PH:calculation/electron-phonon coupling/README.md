@@ -1208,6 +1208,8 @@ $$
 
 解出的全部degauss的電聲耦合強度:lambda.png
 
+Sloving the electron–phonon coupling strength for all degauss values: lambda.png
+
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/a2F_total.png)
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/dos_all.png)
@@ -1216,33 +1218,37 @@ $$
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/a2F/all_a2F/lambda.png)
 
-qephonondos.m需要注意幾個必須要設置的參數:
+qea2fdos.m需要注意幾個必須要設置的參數:
 
-name = 'V';                        -> 要讀取的lambda.$name.out的前贅詞 
+There are several parameters that must be set when running qea2fdos.m:
 
-material_name = 'V 61872';         -> 圖片的title
+name = 'V';                        -> 要讀取的lambda.$name.out的前贅詞[the prefix of the lambda.$name.out file to be read]
 
-natom = 1;                         -> 原子的數量
+material_name = 'V 61872';         -> 圖片的title[the title of the figure]
 
-ndos = 200;                        -> 遵循matdyn.$name.in.dos上設置的ndos = 200
+natom = 1;                         -> 原子的數量[the number of atoms]
 
-which = 6; % which a2F to plot     ->要畫第幾個degauss的Eliashberg spectral function
+ndos = 200;                        -> 遵循matdyn.$name.in.dos上設置的ndos = 200[as specified in `matdyn.$name.in.dos set ndos = 200 ]
 
-nsig = 30;                         -> 遵循ph.$name.in上設置的el_ph_nsigma=30
+which = 6; % which a2F to plot     ->要畫第幾個degauss的Eliashberg spectral function[which degauss index to plot for the Eliashberg spectral function]
 
-nsigma = 30;                       -> 遵循ph.$name.in上設置的el_ph_nsigma=30
+nsig = 30;                         -> 遵循ph.$name.in上設置的el_ph_nsigma=30[as specified by el_ph_nsigma = 30 in ph.$name.in]
 
-xmin = 0;    % energy range [meV]  -> 繪圖的頻率區間下限
+nsigma = 30;                       -> 遵循ph.$name.in上設置的el_ph_nsigma=30[as specified by el_ph_nsigma = 30 in ph.$name.in]
 
-xmax = 35;                         -> 繪圖的頻率區間上限
+xmin = 0;    % energy range [meV]  -> 繪圖的頻率區間下限[the lower bound of the frequency range for plotting]
 
-ymin = 0;    % a2F range   [modes] -> 繪圖的y軸(Eliashberg spectral function強度)下限
+xmax = 35;                         -> 繪圖的頻率區間上限[the upper bound of the frequency range for plotting]
 
-ymax = 2.5;                         -> 繪圖的y軸(Eliashberg spectral function強度)上限
+ymin = 0;    % a2F range   [modes] -> 繪圖的y軸(Eliashberg spectral function強度)下限[the lower bound of the y-axis (Eliashberg spectral function intensity) for plotting]
 
-# Tclambda.m 分析
+ymax = 2.5;                         -> 繪圖的y軸(Eliashberg spectral function強度)上限[the upper bound of the y-axis (Eliashberg spectral function intensity) for plotting]
+
+# Analysis of Tclambda.m
 
 運行qea2fdos.m 會在banddos內創建lambda.out資料夾和lambda_matdyn資料夾,lambda.out資料夾內有讀取lambda.$name.out得到的全部degauss的電聲耦合強度:lambda.png,電聲耦合權重:omega_log.png和超導轉變溫度:T_c.png
+
+Running qea2fdos.m will create the lambda.out and lambda_matdyn folders inside banddos. In the lambda.out folder, the following results obtained from reading lambda.$name.out are available: the electron–phonon coupling strength for all degauss values (lambda.png), the electron–phonon coupling weight (omega_log.png), and the superconducting transition temperature (T_c.png).
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/lambda.out/lambda.png)
 
@@ -1253,11 +1259,15 @@ ymax = 2.5;                         -> 繪圖的y軸(Eliashberg spectral functio
 
 lambda_matdyn資料夾內有讀取lambda得到的全部degauss的電聲耦合強度:lambda.png,電聲耦合權重:omega_log.png和超導轉變溫度:T_c.png
 
+The lambda_matdyn folder contains the electron–phonon coupling strength (lambda.png), the electron–phonon coupling weight (omega_log.png), and the superconducting transition temperature (T_c.png) for all degauss values, obtained from the lambda file.
+
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/lambda_matdyn/lambda.png)
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/lambda_matdyn/omega_log.png)
 
 並透過matlab code 內設置的屏蔽庫侖pseudo-potential參數(mustar),解McMillan-Allen Dynes function:
+
+and, using the screened Coulomb pseudopotential parameter (mustar) set in the MATLAB code, the McMillan–Allen–Dynes equation is solved:
 
 $$
 T_{c}=\frac{\omega _{log} }{1.2}e^{[\frac{-1.04(1+\lambda ) }{\lambda-\mu ^{*}(1+0.62\lambda)   }] }
@@ -1265,15 +1275,19 @@ $$
 
 得到超導轉變溫度:T_c.png
 
+we obtain the superconducting transition temperature: T_c.png.
+
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron-phonon%20coupling/banddos/lambda_matdyn/T_c.png)
 
 Tclambda.m需要注意幾個必須要設置的參數:
 
-nsig = 30;            -> 遵循ph.$name.in上設置的el_ph_nsigma=30
+There are several parameters that must be set when running Tclambda.m:
 
-degauss_number = 30;  -> 遵循ph.$name.in上設置的el_ph_nsigma=30
+nsig = 30;            -> 遵循ph.$name.in上設置的el_ph_nsigma=30[as specified by el_ph_nsigma = 30 in ph.$name.in]
 
-name = 'V';           -> 要讀取的lambda.$name.out的前贅詞
+degauss_number = 30;  -> 遵循ph.$name.in上設置的el_ph_nsigma=30[as specified by el_ph_nsigma = 30 in ph.$name.in]
 
-mustar = 0.368;       > McMillan-Allen Dynes function需要設置的屏蔽庫侖pseudo-potential參數
+name = 'V';           -> 要讀取的lambda.$name.out的前贅詞[the prefix of the lambda.$name.out file to be read]
+
+mustar = 0.368;       > McMillan-Allen Dynes function需要設置的屏蔽庫侖pseudo-potential參數[the screened Coulomb pseudopotential parameter required for the McMillan–Allen–Dynes function]
 
