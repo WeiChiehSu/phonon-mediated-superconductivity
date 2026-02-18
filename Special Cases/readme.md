@@ -29,4 +29,4 @@
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/minimum2.png)
 
-
+![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/Special%20Cases/Symmetry%breaking.png)
