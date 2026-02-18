@@ -70,7 +70,9 @@ pip show cellconstructor python-sscha tdscha
 
 This means that SSCHA has been successfully installed.
 
-# compile julia
+Next, Julia and PyCall must be installed so that SSCHA can run properly!!!!!
+
+# compile julia and PyCall
 
 pip install julia
 
@@ -78,10 +80,10 @@ cd anaconda3/
 
 find . -type d -wholename "*/julia/packages"
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#######################
 (sscha) -bash-4.2$ find . -type d -wholename "*/julia/packages"
 ./anaconda3/envs/sscha/share/julia/packages
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#######################
 
 cd anaconda3/envs/sscha/share/julia/packages
 
@@ -97,7 +99,7 @@ using Pkg
 
 Pkg.add(path="/home/880212l26111201/anaconda3/envs/sscha/share/julia/packages/PyCall.jl")
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#######################
 
 julia> using Pkg
 
@@ -114,14 +116,13 @@ julia> Pkg.add(path="/home/880212l26111201/anaconda3/envs/sscha/share/julia/pack
 Precompiling project...
   1 dependency successfully precompiled in 10 seconds. 9 already precompiled.
 
+#######################
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-add PyCall successfully
+This means that PyCall has been successfully installed.
 
 python -c 'import julia; julia.install()'
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# entering this sscha environment
 
 To use this sscha, entering this environment 
 
