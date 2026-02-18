@@ -14,11 +14,13 @@ After waiting for a short period of time, the calculation will be completed.
 
 Next, place $name.bands.dat, pw.$name.scf.out, and projwfc.$name.out into the folder containing qe_band.m and qe_projected_band.m. First, run qe_band.m to obtain the band structure of 4-layer rhombohedral multilayer graphene (ABCA stacking): band.png and band_data. Then, run qe_projected_band.m, which will create a folder named projected_band_all, containing the orbital-projected intensity plots for each atomic orbital of every atom in the unit cell.
 
-# QE腳本分析
+# QE script analysis
 
 腳本內總共創遭了四種輸入檔:pw.$name.scf.in pw.$name.bands.in projwfc.$name.in bands.$name.in 並進行了四次運算:
 
-# 第1個輸入檔案為pw.$name.scf.in:
+The script generates four input files—pw.$name.scf.in, pw.$name.bands.in, projwfc.$name.in, and bands.$name.in—and runs four corresponding calculations:
+
+# pw.$name.scf.in:
 
  &CONTROL
  
@@ -79,6 +81,8 @@ K_POINTS (automatic)
 
  這個輸入檔案的目的便是DFT中的自洽運算(scf):
 
+ This input file performs the DFT self-consistent field (SCF) calculation 
+
  $$
 \begin{aligned}
 \text{1.Guess-charge-density:} \, n(r) \\
@@ -95,28 +99,34 @@ $$
 
 透過自洽運算得到4-layer rhombohedral multilayer graphene)的電荷密度和波函數
 
+we obtain the charge density and wavefunctions of 4-layer rhombohedral multilayer graphene (ABCA stacking).
+
 需要注意幾個必須要設置的參數:
 
-1. prefix='$name':運行計算工作的名字
+Key parameters to set:
 
-2. pseudo_dir  = './':pseudopotentialC.pbe-n-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄
+1. prefix='$name':運行計算工作的名字[the job name]
+
+2. pseudo_dir  = './':pseudopotentialC.pbe-n-kjpaw_psl.1.0.0.UPF讀取位置為當前目錄[the pseudopotential file C.pbe-n-kjpaw_psl.1.0.0.UPF (currently read from the current directory)
 
 3. ibrav= 4, celldm(1) = 4.64769327,celldm(3) = 12.18080231:定義晶格參數,詳情請看https://www.quantum-espresso.org/Doc/INPUT_PW.html
 
-4. nat= 1:晶格內的原子數為1個
+4. nat= 1:晶格內的原子數為1個[the number of atoms in the unit cell]
 
-5. ntyp = 1:晶格內的原子種類為1種
+5. ntyp = 1:晶格內的原子種類為1種[the number of atomic species in the unit cell]
 
-6. ecutwfc = 80.0: 用來展開平面波基底的截斷能,截斷能越大,計算越精準,耗時也會加大
+6. ecutwfc = 80.0: 用來展開平面波基底的截斷能,截斷能越大,計算越精準,耗時也會加大[the plane-wave cutoff energy (higher cutoff -> higher accuracy, higher cost)]
 
-7. C 12.0107 C.pbe-n-kjpaw_psl.1.0.0.UPF:原子種類 原子質量 原子pseudopotential
+7. C 12.0107 C.pbe-n-kjpaw_psl.1.0.0.UPF:原子種類 原子質量 原子pseudopotential[atomic species, atomic mass, and atomic pseudopotential]
 
-8. 12 12 1 0 0 0 BZ內K空間三個維度的切點數(用來積化求和),切點數越大,計算越精準,耗時也會加大(4層 Rhombohedral Multilayer Graphene為二維材料,z方向只需設1)
+8. 12 12 1 0 0 0 BZ內K空間三個維度的切點數(用來積化求和),切點數越大,計算越精準,耗時也會加大(4層 Rhombohedral Multilayer Graphene為二維材料,z方向只需設1)[the k-point grid in the Brillouin zone (denser grid -> higher accuracy, higher cost).
+For 2D multilayer graphene, the z-direction k sampling can be set to 1.]
 
 運行scf計算的指令為:mpiexec pw.x -in pw.$name.scf.in > pw.$name.scf.out
 
+Run command:mpiexec pw.x -in pw.$name.scf.in > pw.$name.scf.out
 
-# 第2個輸入檔案為pw.$name.bands.in:
+# pw.$name.bands.in:
 
  &CONTROL
  
@@ -191,19 +201,25 @@ K_POINTS {crystal_b}
 
 這個輸入檔案的目的是讀取前面scf計算的電荷密度和波函數 用來計算材料的電子能帶,也就是系統的eigenvalue.
 
+This input file reads the converged SCF charge density and wavefunctions and computes the band structure (eigenvalues).
+
 需要注意幾個必須要設置的參數:
 
-1. calculation = 'bands':運行計算電子能帶
+Key parameters to set:
 
-2. nbnd = 30:總共要計算幾條能帶
+1. calculation = 'bands':運行計算電子能帶[set the calculation to a bands run]
 
-3. K_POINTS {crystal_b}中的8:總共要計算幾個BZ內的高對稱點
+2. nbnd = 30:總共要計算幾條能帶[the total number of bands to calculate]
 
-4. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*3+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大
+3. K_POINTS {crystal_b}中的8:總共要計算幾個BZ內的高對稱點[the number in K_POINTS {crystal_b} (e.g., 8) = the number of high-symmetry points along the path]
+
+4. 0.0000    0.0000    0.0000 90 !G:第一個要計算的高對稱點(Gamma點)座標和切點數(從G->H共切90點,因此最後一個高對稱點只切1點:總共切點數為90*3+1),切點數越多,最終畫出來的能帶越平滑,耗時也會加大[the coordinates and point counts for each segment (e.g., if  Gamma→H has 90 points, and there are 3 segments, total points are 90×3+1).More points -> smoother plot, higher cost.
 
 運行bands計算的指令為:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
 
-# 第3個輸入檔案為projwfc.$name.in:
+Run command:mpiexec pw.x -in pw.$name.bands.in > pw.$name.bands.out
+
+# projwfc.$name.in:
 
  &projwfc
  
@@ -224,15 +240,21 @@ K_POINTS {crystal_b}
 
 這個輸入檔案的目的是把原子軌域投影至能帶上,得到每個原子每個軌域的強度分布
 
-運行projwfc計算的指令為:mpiexec projwfc.x < projwfc.$name.in > projwfc.$name.out
+This input file projects atomic orbitals onto the bands, giving the orbital weight distribution for each atom/orbital.
 
 需要注意幾個必須要設置的參數:
 
-1. outdir='./':輸出檔案projwfc.$name.out放置在當前目錄中
+Key parameters to set:
+
+1. outdir='./':輸出檔案projwfc.$name.out放置在當前目錄中[ensure the output file projwfc.$name.out is written to the current directory (as intended by your workflow)
 
 2. kresolveddos=.true.
 
-# 第4個輸入檔案為bands.$name.in:
+運行projwfc計算的指令為:mpiexec projwfc.x < projwfc.$name.in > projwfc.$name.out
+
+Run command:mpiexec projwfc.x < projwfc.$name.in > projwfc.$name.out
+
+# bands.$name.in:
 
  &BANDS
  
@@ -245,27 +267,41 @@ K_POINTS {crystal_b}
 
 這個輸入檔案的目的是讀取前面bands計算的eigenvalue,並輸出成可以讀取數值的檔案.
 
+This input file reads the eigenvalues from the bands calculation and writes them into a numerical data file that can be post-processed.
+
 需要注意幾個必須要設置的參數:
 
-1. filband = '$name.bands.dat':最終輸出可以讀取數值的檔案名:$name.bands.dat
+Key parameters to set:
 
-2. lsym = .true.:數值輸出遵循bands計算設置的高對稱點座標和切點數
+1. filband = '$name.bands.dat':最終輸出可以讀取數值的檔案名:$name.bands.dat[the final output numerical filename: $name.bands.dat]
+
+2. lsym = .true.:數值輸出遵循bands計算設置的高對稱點座標和切點數[the output follows the same high-symmetry path and sampling as defined in the bands calculation]
 
 運行bands計算的指令為:mpiexec bands.x < bands.$name.in > bands.$name.out
 
+Run command:mpiexec bands.x < bands.$name.in > bands.$name.out
+
 便能得到材料的能帶數值檔案$name.bands.dat
 
-# qe_band.m分析
+This produces the numerical band structure data file $name.bands.dat.
+
+# qe_projected_band.m analysis
 
 band_data,pw.4layers-graphene.scf.out和projwfc.4layers-graphene.out放到具有qe_projected_band.m的資料夾中 運行qe_projected_band.m,便可在projected_band_all資料夾內得到4層 Rhombohedral Multilayer Graphene (ABCA堆疊)的電子軌域投影能帶:X atom_ X.png
 
+Place band_data, pw.4layers-graphene.scf.out, and projwfc.4layers-graphene.out into the folder containing qe_projected_band.m. Run qe_projected_band.m, and it will create a folder projected_band_all containing orbital-projected band plots like X atom_ X.png.
+
 下圖為projected_band_all資料夾內的第1個原子P軌域的投影:1 atom_ p.png
+
+The figure below shows the projection of the p orbital of the first atom in the projected_band_all folder: 1 atom_p.png.
 
 ![圖片描述](https://github.com/WeiChiehSu/phonon-mediated-superconductivity/blob/main/tutorial%20for%20QE/QE-PH%3Acalculation/electron%20pband/projected_band_all/1%20atom_%20p.png)
 
 可以看到P軌域的主要貢獻是在費米能級附近.
 
 qe_projected_band.m需要注意幾個必須要設置的參數:
+
+Parameters that must be set in qe_projected_band.m:
 
 name = '4layers-graphene'; -> 要讀取的projwfc.$name.out的前贅詞
 
