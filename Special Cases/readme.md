@@ -27,7 +27,7 @@ $$
 We can use a Taylor expansion to describe the potential energy near the equilibrium position:
 
 $$
-V(R_0+u)=V(R_0)+\left.\frac{\partial V}{\partial r}\right|_{R_0}u+\frac{1}{2}\left.\frac{\partial^2 V}{\partial r^2}\right|_{R_0}u^2+\frac{1}{3!}\left.\frac{\partial^3 V}{\partialr^3}\right|_{R_0}u^3+\cdots
+V(R_0+u)=V(R_0)+\left.\frac{\partial V}{\partial r}\right|_{R_0}u+\frac{1}{2}\left.\frac{\partial^2 V}{\partial r^2}\right|_{R_0}u^2+\frac{1}{3!}\left.\frac{\partial^3 V}{\partial r^3}\right|_{R_0}u^3+\cdots
 $$
 
 由於原子位於平衡位置時，受到的淨作用力為零，因此勢能的一階導數為零：
