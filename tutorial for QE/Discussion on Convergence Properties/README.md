@@ -20,6 +20,14 @@ $$
 In{}QE,{}when{}using{}the{}broadening{}method,{}the{}k-point{}grid{}is{}first{}divided{}into{}several{}small{}intervals.{}Within{}each{}interval,{}a{}smooth{}“smeared”{}function{}is{}used{}to{}approximate{}the{}sharp{} \delta{}function{}(\sigma=degauss){}in{}order{}to{}compute{}the{}electronic{}occupation{}numbers{}of{}the{}system.{}This{}procedure{}ultimately{}yields{}the{}electronic{}density{}of{}states{}(DOS).
 $$
 
+更多關於密度泛函理論（DFT）計算收斂參數的詳細推導與物理圖像，請參考我的筆記
+
+For more detailed derivations and physical pictures of DFT convergence parameters, please see my notes:
+
+1. Plane waves, Bloch theorem, reciprocal lattice, and energy cutoffs: https://github.com/WeiChiehSu/NOTE-for-wei-chieh/blob/main/magnetice/Plane_Wave_Bloch_Theorem.md
+
+2. K-points and smearing in plane-wave DFT: https://github.com/WeiChiehSu/NOTE-for-wei-chieh/blob/main/magnetice/Kpoint_Smearing.md
+
 $$
 將broadening引入後,雙重\delta積分近似為:
 $$
