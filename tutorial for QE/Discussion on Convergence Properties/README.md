@@ -20,13 +20,14 @@ $$
 In{}QE,{}when{}using{}the{}broadening{}method,{}the{}k-point{}grid{}is{}first{}divided{}into{}several{}small{}intervals.{}Within{}each{}interval,{}a{}smooth{}“smeared”{}function{}is{}used{}to{}approximate{}the{}sharp{} \delta{}function{}(\sigma=degauss){}in{}order{}to{}compute{}the{}electronic{}occupation{}numbers{}of{}the{}system.{}This{}procedure{}ultimately{}yields{}the{}electronic{}density{}of{}states{}(DOS).
 $$
 
-更多關於密度泛函理論（DFT）計算收斂參數的詳細推導與物理圖像，請參考我的筆記
+### Supplementary Notes: DFT Convergence Parameters（補充筆記：密度泛函理論收斂參數）
 
-For more detailed derivations and physical pictures of DFT convergence parameters, please see my notes:
+如果想了解平面波基底、布洛赫定理、能量截斷、動量點取樣與展寬方法的詳細推導及物理意義，可以參考我的補充筆記。
 
-1. Plane waves, Bloch theorem, reciprocal lattice, and energy cutoffs: https://github.com/WeiChiehSu/NOTE-for-wei-chieh/blob/main/magnetice/Plane_Wave_Bloch_Theorem.md
+For more detailed derivations and physical explanations of plane waves, energy cutoffs, k-point sampling, and smearing, please see my additional notes.
 
-2. K-points and smearing in plane-wave DFT: https://github.com/WeiChiehSu/NOTE-for-wei-chieh/blob/main/magnetice/Kpoint_Smearing.md
+- [Plane Waves, Bloch Theorem, and Energy Cutoffs](https://github.com/WeiChiehSu/NOTE-for-wei-chieh/blob/main/magnetice/Plane_Wave_Bloch_Theorem.md)
+- [K-point Sampling and Smearing](https://github.com/WeiChiehSu/NOTE-for-wei-chieh/blob/main/magnetice/Kpoint_Smearing.md)
 
 $$
 將broadening引入後,雙重\delta積分近似為:
