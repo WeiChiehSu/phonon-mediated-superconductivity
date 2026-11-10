@@ -95,16 +95,7 @@ However, atomic vibrations in real materials are not always small. Higher-order 
 When atomic vibrations become large, the potential energy cannot be described by only a quadratic function. We need to include third-order, fourth-order, and higher-order terms.
 
 $$
-\boxed{
-V(u)
-=
-\frac{1}{2}Cu^2
-+
-\frac{1}{3!}\Phi^{(3)}u^3
-+
-\frac{1}{4!}\Phi^{(4)}u^4
-+\cdots
-}
+V(u)=\frac{1}{2}Cu^2+\frac{1}{3!}\Phi^{(3)}u^3+\frac{1}{4!}\Phi^{(4)}u^4+\cdots
 $$
 
 其中，$\Phi^{(3)}$ 和 $\Phi^{(4)}$ 分別表示三階與四階非諧力常數。
@@ -170,11 +161,7 @@ In Landau theory, we can write the free energy as a function of the order parame
 For a system with symmetry under $\eta\rightarrow-\eta$, the free energy contains only even powers of the order parameter:
 
 $$
-\boxed{
-F(\eta)
-=
-F_0+\frac{r}{2}\eta^2+\frac{u}{4}\eta^4+\cdots
-}
+F(\eta)=F_0+\frac{r}{2}\eta^2+\frac{u}{4}\eta^4+\cdots
 $$
 
 其中 $r$ 與溫度有關，而 $u>0$ 用來確保系統在這個模型中的穩定性。
@@ -291,9 +278,7 @@ The main goal is to minimize the free energy and find better average atomic posi
 In statistical mechanics, the Helmholtz free energy is:
 
 $$
-\boxed{
 F=E-TS
-}
 $$
 
 其中 $E$ 為內能、$T$ 為溫度、$S$ 為熵。
@@ -309,13 +294,7 @@ The system can have different quantum states. We use a density matrix $\rho$ to 
 We can write the free energy as a functional of the density matrix:
 
 $$
-\boxed{
-F[\rho]
-=
-\mathrm{Tr}(\rho H)
-+
-k_BT\,\mathrm{Tr}(\rho\ln\rho)
-}
+F[\rho]=\mathrm{Tr}(\rho H)+k_BT\,\mathrm{Tr}(\rho\ln\rho)
 $$
 
 其中第一項為系統的平均能量，第二項與系統的熵有關。
@@ -347,13 +326,7 @@ The trial density matrix depends on two main parameters:
 We use this trial density matrix to calculate the variational free energy:
 
 $$
-\boxed{
-\mathcal F[\mathcal R,\Phi]
-=
-\left\langle K+V\right\rangle_{\widetilde{\rho}_{\mathcal R,\Phi}}
--
-T S[\widetilde{\rho}_{\mathcal R,\Phi}]
-}
+\mathcal F[\mathcal R,\Phi]=\left\langle K+V\right\rangle_{\widetilde{\rho}_{\mathcal R,\Phi}}-T S[\widetilde{\rho}_{\mathcal R,\Phi}]
 $$
 
 其中 \(K\) 為原子核動能，\(V\) 為真實系統的勢能，而平均值是使用試探密度矩陣計算的。
@@ -365,9 +338,7 @@ Here, \(K\) is the nuclear kinetic energy and \(V\) is the real potential energy
 From the free-energy variational principle, the trial free energy cannot be lower than the true equilibrium free energy:
 
 $$
-\boxed{
 \mathcal F[\mathcal R,\Phi]\geq F_{\mathrm{exact}}
-}
 $$
 
 因此，我們可以調整 \(\mathcal R\) 與 \(\Phi\)，尋找試探自由能的最小值：
@@ -375,12 +346,7 @@ $$
 Therefore, we can change \(\mathcal R\) and \(\Phi\) to find the lowest trial free energy:
 
 $$
-\boxed{
-F_{\mathrm{SSCHA}}
-=
-\min_{\mathcal R,\Phi}
-\mathcal F[\mathcal R,\Phi]
-}
+F_{\mathrm{SSCHA}}=\min_{\mathcal R,\Phi}\mathcal F[\mathcal R,\Phi]
 $$
 
 這就是隨機自洽諧和近似方法的主要思想。
@@ -396,15 +362,7 @@ This is the main idea of SSCHA.
 In SSCHA, we use a trial harmonic Hamiltonian to describe atomic vibrations around the average positions.
 
 $$
-\boxed{
-\widetilde H_{\mathcal R,\Phi}
-=
-K+
-\frac{1}{2}
-\sum_{ab}
-\Phi_{ab}
-(R_a-\mathcal R_a)(R_b-\mathcal R_b)
-}
+\widetilde H_{\mathcal R,\Phi}=K+\frac{1}{2}\sum_{ab}\Phi_{ab}(R_a-\mathcal R_a)(R_b-\mathcal R_b)
 $$
 
 其中 \(R_a\) 為原子座標，\(\mathcal R_a\) 為平均原子位置，\(\Phi_{ab}\) 為試探力常數矩陣。
