@@ -85,3 +85,5 @@ My Master's Thesis: https://thesis.lib.ncku.edu.tw/thesis/detail/55982d7b9fd6650
 [arXiv:cond-mat/0504077](https://arxiv.org/abs/cond-mat/0504077)
 
 https://journals.aps.org/prb/abstract/10.1103/PhysRevB.43.7231
+
+https://journals.aps.org/prb/abstract/10.1103/PhysRevB.96.014111
